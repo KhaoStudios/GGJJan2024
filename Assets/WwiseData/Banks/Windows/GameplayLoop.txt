@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1336322353	testDing			\Default Work Unit\UI\testSounds\testDing	
+	2444254063	testClick			\Default Work Unit\UI\testSounds\testClick	
+	2770287305	testBoop			\Default Work Unit\UI\testSounds\testBoop	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	159714313	Ding	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\mailReady_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Ding		1686384
+	887665778	Boop	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\GameStart_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Boop		348768
+	892390417	Click	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\buttonClick_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Click		250388
+

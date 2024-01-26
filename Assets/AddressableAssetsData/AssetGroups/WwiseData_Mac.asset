@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_Mac
+  m_EditorClassIdentifier: 
+  m_GroupName: WwiseData_Mac
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1901b73b6b3ad1f44b972873b601af0d
+  m_SerializeEntries:
+  - m_GUID: f27343e652f7a9841bc1e1c2d22ec1f2
+    m_Address: Assets/WwiseData/Banks/Mac/GameplayLoop.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 00ea417862b51da4dbe1fd425374986e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 89338aa0f99a2194bbd61a46ba630cff, type: 2}
+    - {fileID: 11400000, guid: f90d6ff29ad0cf84d9159975266cd413, type: 2}

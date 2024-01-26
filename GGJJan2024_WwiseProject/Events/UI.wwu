@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" SchemaVersion="119" RootDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" ParentDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}">
+	<Events>
+		<WorkUnit Name="UI" ID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="testSounds" ID="{4357F13D-B1A0-44FF-B153-BBBAD52248E5}" ShortID="460218132">
+					<ChildrenList>
+						<Event Name="testBoop" ID="{7CFA9C83-78F9-42E9-81DE-0DE9B84AF62B}">
+							<ChildrenList>
+								<Action Name="" ID="{4A41BE8E-896C-4354-A59C-0924C48F4BA5}" ShortID="539081825">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Boop" ID="{6021789D-3A60-49D9-B540-CE68E8A08472}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="testClick" ID="{40CEBC37-97B5-4F79-9FD2-5A2D597E6C58}">
+							<ChildrenList>
+								<Action Name="" ID="{5C635EDA-11F1-41A9-B03D-4E357A9F1FBD}" ShortID="1001244259">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Click" ID="{18FBEBD2-FF42-4F6A-9152-708B725BA802}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="testDing" ID="{56C7B9AD-BDE1-4534-AEFC-8EDDDACC7E12}">
+							<ChildrenList>
+								<Action Name="" ID="{F798A82C-8B53-4FD4-8107-477B4074D94E}" ShortID="255323457">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ding" ID="{E699DEC9-DC29-4962-B551-5A8A8C9F328C}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

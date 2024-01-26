@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../GGJJan2024_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../GGJJan2024_WwiseProject/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../GGJJan2024_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DCC5151C-CA34-02C9-68DF-65958559B72F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="77978275" Name="Ambient"/>
+				<Bus Id="833916109" Name="NPCs"/>
+				<Bus Id="838047381" Name="Non-World"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1695690031" Name="Objects"/>
+				<Bus Id="2609808943" Name="World"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{049A117E-528E-60E1-C1AB-D6E8FA416A83}">
+			<ShortName>GameplayLoop</ShortName>
+			<Path>GameplayLoop.bnk</Path>
+			<Media>
+				<File Id="159714313" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mailReady.wav</ShortName>
+					<CachePath>SFX/mailReady_818F3B66.wem</CachePath>
+				</File>
+				<File Id="887665778" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GameStart.wav</ShortName>
+					<CachePath>SFX/GameStart_818F3B66.wem</CachePath>
+				</File>
+				<File Id="892390417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>buttonClick.wav</ShortName>
+					<CachePath>SFX/buttonClick_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2770287305" Name="testBoop" DurationType="OneShot" DurationMin="1.816" DurationMax="1.816">
+					<MediaRefs>
+						<MediaRef Id="887665778"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2444254063" Name="testClick" DurationType="OneShot" DurationMin="1.4188889" DurationMax="1.4188889">
+					<MediaRefs>
+						<MediaRef Id="892390417"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1336322353" Name="testDing" DurationType="OneShot" DurationMin="8.78275" DurationMax="8.78275">
+					<MediaRefs>
+						<MediaRef Id="159714313"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{180314CF-80E4-BF61-C7ED-241AFB54CE7C}</FileHash>
+</SoundBanksInfo>

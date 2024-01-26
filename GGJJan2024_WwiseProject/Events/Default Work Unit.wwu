@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Ambient" ID="{DCD70017-EC6A-426E-BFCB-FEE98614E475}" PersistMode="Reference"/>
+				<WorkUnit Name="Music" ID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" PersistMode="Reference"/>
+				<WorkUnit Name="NPCs" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" PersistMode="Reference"/>
+				<WorkUnit Name="Objects" ID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" PersistMode="Reference"/>
+				<WorkUnit Name="Player" ID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

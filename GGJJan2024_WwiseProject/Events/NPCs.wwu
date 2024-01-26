@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" SchemaVersion="119" RootDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" ParentDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}">
+	<Events>
+		<WorkUnit Name="NPCs" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested"/>
+	</Events>
+</WwiseDocument>
