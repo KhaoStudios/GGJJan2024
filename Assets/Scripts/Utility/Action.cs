@@ -36,6 +36,8 @@ namespace Act
         /// </summary>
         EaseType easing;
 
+        AnimationCurve curve;
+
         /// <summary>
         /// Has the action been started?
         /// </summary>
@@ -65,6 +67,8 @@ namespace Act
             Cubic,
 
             SquareRoot,
+
+            AnimationCurve
 
         }
 
@@ -138,6 +142,26 @@ namespace Act
             isBlocking = blocking;
             actionGroup = group;
             easing = ease;
+        }
+
+        /// <summary>
+        /// The basic constructor for the action
+        /// </summary>
+        /// <param name="dur"></param>
+        /// <param name="delay"></param>
+        /// <param name="blocking"></param>
+        /// <param name="group"></param>
+        public Action(float dur, float delay, bool blocking, Group group, AnimationCurve animCurve)
+        {
+            // Initialize the actions
+            duration = dur;
+            this.delay = delay;
+            isBlocking = blocking;
+            actionGroup = group;
+            easing = EaseType.AnimationCurve;
+            curve = animCurve;
+
+            // Condense the curve
         }
 
         #region State Management
@@ -263,6 +287,10 @@ namespace Act
                     {
                         return value * value * value;
                     }
+                case EaseType.AnimationCurve:
+                    {
+                        return curve.Evaluate(value);
+                    }
             }
 
             // Return the default value
@@ -325,6 +353,27 @@ namespace Act
 
             endPos = targetPos;
         }
+
+        /// <summary>
+        /// Creates an action to move to a location.
+        /// </summary>
+        /// <param name="targetPos">The target position of the move action.</param>
+        /// <param name="objToMove">The object being moved.</param>
+        /// <param name="duration">The length of time the action will last.</param>
+        /// <param name="delay">The delay before the action begins.</param>
+        /// <param name="blocking">Does this action block the group.</param>
+        /// <param name="group">The group the action is in.</param>
+        /// <param name="curve">The easing done on the action to smooth interpoloation</param>
+        public Move(Vector3 targetPos, GameObject objToMove, float duration, AnimationCurve curve, float delay = 0, bool blocking = false, Group group = Group.None)
+            : base(duration, delay, blocking, group, curve)
+        {
+            this.objToMove = objToMove;
+            useCurrent = true;
+
+            endPos = targetPos;
+
+        }
+
 
         public override void Start()
         {
