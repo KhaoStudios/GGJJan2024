@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Accepts input from the input handler!
+public class PlayerController : MonoBehaviour
+{
+
+    [SerializeField]
+    protected int playerIndex = 0;
+    protected Vector2 inputVector = Vector2.zero;
+
+
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
+    }
+
+    public void SetInputVector(Vector2 direction)
+    {
+        inputVector = direction;
+    }
+    
+    public virtual void OnPrimaryButtonPressed()
+    {
+        Debug.Log("Base - primary button pressed");
+    }
+
+    public virtual void OnSecondaryButtonPressed()
+    {
+        Debug.Log("Base - secondary button pressed");
+    }
+}

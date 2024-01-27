@@ -2,32 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class Mover : PlayerController
 {
     [SerializeField]
     private float MoveSpeed = 3f;
 
-    [SerializeField]
-    private int playerIndex = 0;
-
     private CharacterController controller;
 
     private Vector3 moveDirection = Vector3.zero;
-    private Vector2 inputVector = Vector2.zero;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-    }
-
-    public int GetPlayerIndex()
-    {
-        return playerIndex;
-    }
-
-    public void SetInputVector(Vector2 direction)
-    {
-        inputVector = direction;
     }
 
     void Update()
@@ -37,5 +23,15 @@ public class Mover : MonoBehaviour
         moveDirection *= MoveSpeed;
 
         controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    public override void OnPrimaryButtonPressed()
+    {
+        Debug.Log("Mover - Pressed primary button", this.gameObject);
+    }
+
+    public override void OnSecondaryButtonPressed()
+    {
+        Debug.Log("Mover - Pressed secondary button");
     }
 }
