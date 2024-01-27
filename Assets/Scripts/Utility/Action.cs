@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Act
 {
@@ -134,7 +135,7 @@ namespace Act
         /// <param name="delay"></param>
         /// <param name="blocking"></param>
         /// <param name="group"></param>
-        public Action(float dur,  float delay, bool blocking, Group group, EaseType ease)
+        public Action(float dur,  float delay, bool blocking, Group group, EaseType ease = EaseType.Linear)
         {
             // Initialize the actions
             duration = dur;
@@ -395,6 +396,106 @@ namespace Act
 
             /// throw new System.NotImplementedException();
             /// 
+
+            return IsDone;
+        }
+
+    }
+    
+    public class UIMove: Action
+    {
+
+        /// <summary>
+        /// The object being moved by the action
+        /// </summary>
+        GameObject objToMove;
+
+        /// <summary>
+        /// The start position of the object
+        /// </summary>
+        Vector3 startPos;
+
+        /// <summary>
+        /// The end position of the object
+        /// </summary>
+        Vector3 endPos;
+
+        /// <summary>
+        /// Should this action use the object's current start position
+        /// </summary>
+        bool useCurrent;
+
+        public UIMove(Vector3 targetPos,GameObject objToMove, float duration, float delay =0, bool blocking = false, Group group= Group.None, EaseType et = EaseType.Linear)
+            : base(duration,delay,blocking,group, et) 
+        {
+            this.objToMove = objToMove;
+            useCurrent = true;
+
+            endPos = targetPos;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            
+            // If using the current position
+            if (useCurrent)
+            {
+                // Set the start pos
+                startPos = objToMove.GetComponent<RectTransform>().position;
+            }
+        }
+
+
+        public override bool Execute(float deltaTime)
+        {
+
+            objToMove.transform.position = Vector3.Lerp(startPos, endPos, PercentDone);
+
+            /// throw new System.NotImplementedException();
+            /// 
+
+            return IsDone;
+        }
+
+    }
+    
+    public class LoadSceneAction : Action
+    {
+
+        /// <summary>
+        /// The object being moved by the action
+        /// </summary>
+        private int i;
+
+        /// <summary>
+        /// The end position of the object
+        /// </summary>
+        Vector3 endPos;
+
+        /// <summary>
+        /// Should this action use the object's current start position
+        /// </summary>
+        bool useCurrent;
+
+        public LoadSceneAction(int sceneIndex, float duration, float delay =0, bool blocking = false, Group group= Group.None): base(duration,delay,blocking,group)
+        {
+            i = sceneIndex;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+        }
+
+
+        public override bool Execute(float deltaTime)
+        {
+
+            if (IsDone)
+            {
+                SceneManager.LoadScene(i);
+            }
 
             return IsDone;
         }
