@@ -129,6 +129,15 @@ public bool IsDone
         {
 
         }
+
+        /// <summary>
+        /// What happens when an action is cancelled mid way
+        /// </summary>
+        public virtual void Cancel()
+        {
+
+        }
+
         #endregion
 
         #region Time Management
@@ -271,6 +280,65 @@ public bool IsDone
             return IsDone;
         }
 
+    }
+
+    public class Rotate : Action
+    {
+        /// <summary>
+        /// The obj being moved
+        /// </summary>
+        GameObject objToMove;
+
+        /// <summary>
+        /// The start rotation of the object
+        /// </summary>
+        Vector3 startRot;
+
+        /// <summary>
+        /// The end rotation of the object
+        /// </summary>
+        Vector3 endRot;
+
+
+        /// <summary>
+        /// Should the start rot of the object be used as start
+        /// </summary>
+        bool useCurrent;
+
+        public Rotate(GameObject objToMove, Vector3 startRot, Vector3 endRot, float duration, float delay =0, bool blocking = false, Group group = Group.None ) 
+            : base(duration,delay, blocking, group)
+        {
+            this.objToMove = objToMove;
+            this.startRot = startRot;
+            this.endRot = endRot;
+        }
+        public Rotate(GameObject objToMove, Vector3 endRot, float duration, float delay = 0, bool blocking = false, Group group = Group.None)
+    : base(duration, delay, blocking, group)
+        {
+            this.objToMove = objToMove;
+            this.endRot = endRot;
+
+            // Set the current
+            useCurrent = true;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            if(useCurrent)
+            {
+                startRot = objToMove.transform.rotation.eulerAngles;
+            }
+        }
+
+        public override bool Execute(float deltaTime)
+        {
+
+            objToMove.transform.rotation = Quaternion.Euler(Vector3.Lerp(startRot, endRot, PercentDone));
+
+            // Return whether the action is complete
+            return IsDone;
+        }
     }
 
 }

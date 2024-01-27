@@ -24,6 +24,10 @@ public class ActionList
         list.Add(action);
     }
 
+    /// <summary>
+    /// Updates all of the actions in the list
+    /// </summary>
+    /// <param name="deltaTime">The time step to update each action.</param>
     public void Update(float deltaTime)
     {
         // Initialize the blockflags as zero
@@ -86,6 +90,21 @@ public class ActionList
             // Append the block flags
             blockFlags |= (1 << (int)group);
         }
+    }
+
+    /// <summary>
+    /// Clear all of the actions on the list.
+    /// </summary>
+    public void Clear()
+    {
+        // Update all of the list
+        for(int i=0; i<list.Count; i++)
+        {
+            // Cancel each of the actions
+            list[i].Cancel();
+        }
+        // Remove all of the actions
+        list.Clear();
     }
 
 }
