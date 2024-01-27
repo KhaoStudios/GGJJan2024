@@ -19,14 +19,12 @@ public class TestMinigame : MonoBehaviour
     {
         if (Input.GetKeyDown(player1Code))
         {
-            GameManager.Instance.DecrementPlayer2Lives();
-            GameManager.Instance.EndMinigame();
+            GameManager.Instance.EndMinigame(GameManager.players.Player1);
         }
 
         if (Input.GetKeyDown(player2Code))
         {
-            GameManager.Instance.DecrementPlayer1Lives();
-            GameManager.Instance.EndMinigame();
+            GameManager.Instance.EndMinigame(GameManager.players.Player2);
         }
             
     }

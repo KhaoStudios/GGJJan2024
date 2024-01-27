@@ -36,4 +36,9 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Base - secondary button pressed");
     }
+
+    public virtual void OnJoinedButtonPressed()
+    {
+        Debug.Log("Joined pressed");
+    }
 }
