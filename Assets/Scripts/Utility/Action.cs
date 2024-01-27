@@ -32,6 +32,11 @@ namespace Act
         float timeElapsed;
 
         /// <summary>
+        /// What type of easing is applied to the action
+        /// </summary>
+        EaseType easing;
+
+        /// <summary>
         /// Has the action been started?
         /// </summary>
         bool hasStarted;
@@ -53,10 +58,20 @@ namespace Act
             All,
         }
 
+        public enum EaseType
+        {
+            Linear,
+            Quadratic,
+            Cubic,
+
+            SquareRoot,
+
+        }
+
         /// <summary>
         /// Returns whether or not the action has completed its update.
         /// </summary>
-public bool IsDone
+        public bool IsDone
         {
             get
             {
@@ -72,9 +87,19 @@ public bool IsDone
         {
             get
             {
+                return Ease(percentDone);
+            }
+        }
+
+
+        public float UnscaledPercentDone
+        {
+            get
+            {
                 return percentDone;
             }
         }
+
         /// <summary>
         /// Does this action block other actions from its group?
         /// </summary>
@@ -105,13 +130,14 @@ public bool IsDone
         /// <param name="delay"></param>
         /// <param name="blocking"></param>
         /// <param name="group"></param>
-        public Action(float dur,  float delay, bool blocking, Group group)
+        public Action(float dur,  float delay, bool blocking, Group group, EaseType ease)
         {
             // Initialize the actions
             duration = dur;
             this.delay = delay;
             isBlocking = blocking;
             actionGroup = group;
+            easing = ease;
         }
 
         #region State Management
@@ -211,6 +237,37 @@ public bool IsDone
 
         #endregion
 
+        /// <summary>
+        /// Eases the given value according the action's ease type
+        /// </summary>
+        /// <param name="value">The value being eased</param>
+        /// <returns>The eased value.</returns>
+        public float Ease(float value)
+        {
+            // Perform the easing on the action
+            switch(easing)
+            {
+                case EaseType.Linear:
+                    {
+                        return value;
+                    }
+                case EaseType.SquareRoot:
+                    {
+                        return Mathf.Sqrt(value);
+                    }
+                case EaseType.Quadratic:
+                    {
+                        return value * value;
+                    }
+                case EaseType.Cubic:
+                    {
+                        return value * value * value;
+                    }
+            }
+
+            // Return the default value
+            return value;
+        }
 
         public bool CompareGroup(int blockFlags)
         {
@@ -259,7 +316,9 @@ public bool IsDone
         /// <param name="delay">The delay before the action begins.</param>
         /// <param name="blocking">Does this action block the group.</param>
         /// <param name="group">The group the action is in.</param>
-        public Move(Vector3 targetPos,GameObject objToMove, float duration, float delay =0, bool blocking = false, Group group= Group.None): base(duration,delay,blocking,group) 
+        /// <param name="ease">The easing done on the action to smooth interpoloation</param>
+        public Move(Vector3 targetPos,GameObject objToMove, float duration, float delay =0, bool blocking = false, Group group= Group.None, EaseType ease = EaseType.Linear)
+            : base(duration,delay,blocking,group,ease) 
         {
             this.objToMove = objToMove;
             useCurrent = true;
@@ -326,8 +385,8 @@ public bool IsDone
         /// <param name="delay">The time before the action starts.</param>
         /// <param name="blocking">Does the action block another action in the group.</param>
         /// <param name="group">The group the action is within.</param>
-        public Rotate(GameObject objToMove, Vector3 startRot, Vector3 endRot, float duration, float delay =0, bool blocking = false, Group group = Group.None ) 
-            : base(duration,delay, blocking, group)
+        public Rotate(GameObject objToMove, Vector3 startRot, Vector3 endRot, float duration, float delay =0, bool blocking = false, Group group = Group.None, EaseType ease = EaseType.Linear ) 
+            : base(duration,delay, blocking, group,ease)
         {
             this.objToMove = objToMove;
             this.startRot = startRot;
@@ -343,8 +402,9 @@ public bool IsDone
         /// <param name="delay">The time before the action starts.</param>
         /// <param name="blocking">Does the action block another action in the group.</param>
         /// <param name="group">The group the action is within.</param>
-        public Rotate(GameObject objToMove, Vector3 endRot, float duration, float delay = 0, bool blocking = false, Group group = Group.None)
-    : base(duration, delay, blocking, group)
+        /// <param name="easing">The easing done on the action to smooth interpoloation</param>
+        public Rotate(GameObject objToMove, Vector3 endRot, float duration, float delay = 0, bool blocking = false, Group group = Group.None, EaseType easing = EaseType.Linear)
+    : base(duration, delay, blocking, group,easing)
         {
             this.objToMove = objToMove;
             this.endRot = endRot;
