@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     protected int playerIndex = 0;
     protected Vector2 inputVector = Vector2.zero;
+    protected Vector2 secondaryInputVector = Vector2.zero;
 
 
     public int GetPlayerIndex()
@@ -20,7 +21,12 @@ public class PlayerController : MonoBehaviour
     {
         inputVector = direction;
     }
-    
+
+    public void SetSecondaryInputVector(Vector2 direction)
+    {
+        secondaryInputVector = direction;
+    }
+
     public virtual void OnPrimaryButtonPressed()
     {
         Debug.Log("Base - primary button pressed");

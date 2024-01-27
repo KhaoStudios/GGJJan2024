@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Secondary Joystick",
+                    "type": "Value",
+                    "id": "75d48fd3-383a-451c-81a0-e76ba41d9b35",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Join",
                     "type": "Button",
                     "id": "3f22c517-da0b-48a3-865f-967c6fd816c6",
@@ -84,6 +93,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Secondary Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9ce1d6c-74e0-4484-9882-dd9da0995a73",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Secondary Joystick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

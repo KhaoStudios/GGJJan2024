@@ -40,6 +40,11 @@ public class PlayerInputHandler : MonoBehaviour
         playerController.SetInputVector(ctx.ReadValue<Vector2>());
     }
 
+    public void OnRightStickMove(CallbackContext ctx)
+    {
+        playerController.SetSecondaryInputVector(ctx.ReadValue<Vector2>());
+    }
+
     public void OnPrimaryInput(CallbackContext ctx)
     {
         if (ctx.performed)
