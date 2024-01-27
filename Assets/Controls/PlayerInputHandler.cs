@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerInputHandler : MonoBehaviour
 {
     PlayerInput playerInput;
-    Mover mover;
+    PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
-        mover = GetComponent<Mover>();
         playerInput = GetComponent<PlayerInput>();
 
         int playerIndex = playerInput.playerIndex;
 
         // Tie this to the mover with the same index (Can tie this to any other player input method)
-        Mover[] allMovers = FindObjectsOfType<Mover>();
-        for (int i = 0; i < allMovers.Length; i++)
+        PlayerController[] allControllers = FindObjectsOfType<PlayerController>();
+        for (int i = 0; i < allControllers.Length; i++)
         {
-            if (allMovers[i].GetPlayerIndex() == playerIndex)
+            if (allControllers[i].GetPlayerIndex() == playerIndex)
             {
-                mover = allMovers[i];
+                playerController = allControllers[i];
                 break;
             }
         }
-        if (mover == null)
+        if (playerController == null)
         {
-            Debug.LogError("WARNING: PlayerInputHandler did not find a mover with player index " + playerIndex);
+            Debug.LogError("WARNING: PlayerInputHandler did not find a controller with player index " + playerIndex);
             return;
         }
     }
@@ -37,6 +37,28 @@ public class PlayerInputHandler : MonoBehaviour
     // Call this from the PlayerInput event
     public void OnMove(CallbackContext ctx)
     {
-        mover.SetInputVector(ctx.ReadValue<Vector2>());
+        playerController.SetInputVector(ctx.ReadValue<Vector2>());
+    }
+
+    public void OnRightStickMove(CallbackContext ctx)
+    {
+        playerController.SetSecondaryInputVector(ctx.ReadValue<Vector2>());
+    }
+
+    public void OnPrimaryInput(CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            playerController.OnPrimaryButtonPressed();
+        }
+        // Can use context.cancelled if we need button up
+    }
+
+    public void OnSecondaryInput(CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            playerController.OnSecondaryButtonPressed();
+        }
     }
 }
