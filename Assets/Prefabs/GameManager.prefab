@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc248392de51cb040a46d064823ec591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredWins: 3
   Player1WinsText: {fileID: 2173655736244200747}
   Player2WinsText: {fileID: 5126918924991296625}
   curtainMoveValues:
-    topPos: {x: 367, y: 623, z: 0}
-    buttonPos: {x: 367, y: 205, z: 0}
+    canvas: {fileID: 3427666683744014081}
     dur: 0.32
   curtain: {fileID: 6661861750815569735}
 --- !u!1 &3427666683744014081
