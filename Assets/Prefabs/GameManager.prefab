@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc248392de51cb040a46d064823ec591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLives: 5
-  Player1LivesText: {fileID: 2173655736244200747}
-  Player2LivesText: {fileID: 5126918924991296625}
+  Player1WinsText: {fileID: 2173655736244200747}
+  Player2WinsText: {fileID: 5126918924991296625}
   curtainMoveValues:
-    topPos: {x: 960, y: 1700, z: 0}
-    buttonPos: {x: 960, y: 540, z: 0}
+    topPos: {x: 367, y: 623, z: 0}
+    buttonPos: {x: 367, y: 205, z: 0}
     dur: 0.32
   curtain: {fileID: 6661861750815569735}
 --- !u!1 &3427666683744014081
@@ -113,7 +112,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_TargetDisplay: 0
 --- !u!114 &3027646749120962002
 MonoBehaviour:
@@ -167,7 +166,7 @@ GameObject:
   - component: {fileID: 8778832193843462685}
   - component: {fileID: 2173655736244200747}
   m_Layer: 0
-  m_Name: Player 1 Lives Count
+  m_Name: Player 1 Wins Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,7 +377,7 @@ GameObject:
   - component: {fileID: 2903575234647612322}
   - component: {fileID: 5126918924991296625}
   m_Layer: 0
-  m_Name: Player 2 Lives Count
+  m_Name: Player 2 Wins Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
