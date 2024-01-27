@@ -963,6 +963,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 706146872715650595, guid: bb302981e1071b947978cc8a54853335, type: 3}
+      propertyPath: m_JoinBehavior
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 706146872715650595, guid: bb302981e1071b947978cc8a54853335, type: 3}
+      propertyPath: m_JoinAction.m_Reference
+      value: 
+      objectReference: {fileID: 2339679350271492924, guid: ff9d241888a7d6748a2a2a406dd25e2f, type: 3}
+    - target: {fileID: 706146872715650595, guid: bb302981e1071b947978cc8a54853335, type: 3}
+      propertyPath: m_JoinAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 706146872715650595, guid: bb302981e1071b947978cc8a54853335, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Name
+      value: Join
+      objectReference: {fileID: 0}
     - target: {fileID: 1606563974989909257, guid: bb302981e1071b947978cc8a54853335, type: 3}
       propertyPath: m_Name
       value: PlayerInputManager
