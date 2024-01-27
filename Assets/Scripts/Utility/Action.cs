@@ -40,6 +40,8 @@ namespace Act
         float percentDone;
         #endregion
 
+        //@@NOTE: Add further groups here
+
         /// <summary>
         /// The group the action is stuck in
         /// </summary>
@@ -248,6 +250,15 @@ public bool IsDone
         /// </summary>
         bool useCurrent;
 
+        /// <summary>
+        /// Creates an action to move to a location.
+        /// </summary>
+        /// <param name="targetPos">The target position of the move action.</param>
+        /// <param name="objToMove">The object being moved.</param>
+        /// <param name="duration">The length of time the action will last.</param>
+        /// <param name="delay">The delay before the action begins.</param>
+        /// <param name="blocking">Does this action block the group.</param>
+        /// <param name="group">The group the action is in.</param>
         public Move(Vector3 targetPos,GameObject objToMove, float duration, float delay =0, bool blocking = false, Group group= Group.None): base(duration,delay,blocking,group) 
         {
             this.objToMove = objToMove;
@@ -305,6 +316,16 @@ public bool IsDone
         /// </summary>
         bool useCurrent;
 
+        /// <summary>
+        /// Constructs a rotate action on an object
+        /// </summary>
+        /// <param name="objToMove">The object being targeted by the action.</param>
+        /// <param name="startRot">The initial rotation of the object.</param>
+        /// <param name="endRot">The end rotation of the object.</param>
+        /// <param name="duration">The amount of time the action will take.</param>
+        /// <param name="delay">The time before the action starts.</param>
+        /// <param name="blocking">Does the action block another action in the group.</param>
+        /// <param name="group">The group the action is within.</param>
         public Rotate(GameObject objToMove, Vector3 startRot, Vector3 endRot, float duration, float delay =0, bool blocking = false, Group group = Group.None ) 
             : base(duration,delay, blocking, group)
         {
@@ -312,6 +333,16 @@ public bool IsDone
             this.startRot = startRot;
             this.endRot = endRot;
         }
+
+        /// <summary>
+        /// Constructs a rotate action on an object
+        /// </summary>
+        /// <param name="objToMove">The object being targeted by the action.</param>
+        /// <param name="endRot">The end rotation of the object.</param>
+        /// <param name="duration">The amount of time the action will take.</param>
+        /// <param name="delay">The time before the action starts.</param>
+        /// <param name="blocking">Does the action block another action in the group.</param>
+        /// <param name="group">The group the action is within.</param>
         public Rotate(GameObject objToMove, Vector3 endRot, float duration, float delay = 0, bool blocking = false, Group group = Group.None)
     : base(duration, delay, blocking, group)
         {
@@ -325,6 +356,7 @@ public bool IsDone
         public override void Start()
         {
             base.Start();
+            // If using current position...
             if(useCurrent)
             {
                 startRot = objToMove.transform.rotation.eulerAngles;
