@@ -8,6 +8,7 @@ namespace Act
 {
     public abstract class Action
     {
+        
         /// <summary>
         /// How long this action goes on
         /// </summary>
