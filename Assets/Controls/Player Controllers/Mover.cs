@@ -14,9 +14,9 @@ public class Mover : PlayerController //for banana game
     public float HoppingInterval = 0.5f;
     float PlayerStartHeight;
     bool PlayerReajusting = false;
-    float TimeSinceTripped = 0;
     float TimeInBalance = 0;
     float TimeSinceKnocked;
+    float TimeSinceLastBounce = 0;
     Vector3 ReadjustingBeginPos;
 
     private void Awake()
@@ -28,9 +28,15 @@ public class Mover : PlayerController //for banana game
 
     void BeginTrippedState()
     {
-        TimeSinceTripped = 0;
         BananaUpright = false;
         TimeSinceKnocked = 0;
+        RB.freezeRotation = false;
+        RB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+
+        RB.angularVelocity = Vector3.zero;
+        RB.velocity = Vector3.zero;
+        RB.AddTorque(new Vector3(-400, 0, 0));
+
     }
     bool IsThereInput()
     {
@@ -49,13 +55,16 @@ public class Mover : PlayerController //for banana game
     {
         Vector3 Vel = RB.velocity;
         float HeightModifier = 3.0f;
-        if (transform.position.y <= PlayerStartHeight)
+        if (transform.position.y <= PlayerStartHeight && TimeSinceLastBounce > 0.25f)
         {
-            RB.velocity = new Vector3(Vel.x, 5 * HeightModifier, Vel.z);
+           RB.velocity = new Vector3(Vel.x, 20, Vel.z);
+           RB.AddForce(new Vector3(5f, 10f, 0));
+           TimeSinceLastBounce = 0;
         }
         else
         {
-            RB.velocity = new Vector3(Vel.x, -1.5f * HeightModifier, Vel.z);
+           RB.velocity = new Vector3(Vel.x, Vel.y - 2, Vel.z);
+           TimeSinceLastBounce += Time.deltaTime;
         }
     }
 
@@ -69,7 +78,7 @@ public class Mover : PlayerController //for banana game
             RB.freezeRotation = true;
             RB.isKinematic = false;
 
-            RB.velocity = new Vector3(inputVector.x * MoveSpeed, 0, inputVector.y * MoveSpeed);
+            RB.velocity = new Vector3(inputVector.x * MoveSpeed, RB.velocity.y, inputVector.y * MoveSpeed);
             if (IsThereInput() == true)
             {
                 Hop();
@@ -77,11 +86,9 @@ public class Mover : PlayerController //for banana game
         }
         else //banana is currently tripped
         {
-
-            RB.freezeRotation = false;
-            RB.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+   
             Vector3 Rotation = transform.rotation.eulerAngles;
-
+   
             if (PlayerReajusting)
             {
                 float ReadjustingDirection = -1;
@@ -89,10 +96,8 @@ public class Mover : PlayerController //for banana game
                 {
                     ReadjustingDirection = 1;
                 }
-                // RB.freezeRotation = true;
                 Vector3 Spin = new Vector3(ReadjustingDirection * 5 * Mathf.Abs(inputVector.y), 0, 0);
                 RB.AddTorque(Spin);
-                //transform.Rotate(Spin);
                 float RotationTolerance = 20;
                 if (Rotation.x <= RotationTolerance && Rotation.x >= -RotationTolerance)
                 {
