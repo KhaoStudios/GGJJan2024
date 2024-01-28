@@ -11,6 +11,14 @@ public class FartPlayer : PlayerController
     public int speed;             // speed
     private bool active;          // if it is active or not
 
+    public GameObject exclamationPoint;
+
+
+    public void ToggleExclamation(bool enabled)
+    {
+        exclamationPoint.SetActive(enabled);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
