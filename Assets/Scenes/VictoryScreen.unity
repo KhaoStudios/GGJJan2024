@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1101.8706, y: 169.9532}
+  m_SizeDelta: {x: 1885.9487, y: 975.2393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40718681
 MonoBehaviour:
@@ -185,8 +185,8 @@ MonoBehaviour:
 
     Press Space To Play Again'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8904606da6176a5428798c2f168220da, type: 2}
+  m_sharedMaterial: {fileID: -5787338771932468720, guid: 8904606da6176a5428798c2f168220da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc6eb78e9006ee4c8d4c1be16b5dc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndex: 0
   text: {fileID: 40718681}
 --- !u!4 &690075826
 Transform:
@@ -715,7 +716,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.14596646, g: 0.8838614, b: 0.93207544, a: 0}
+  m_BackGroundColor: {r: 0.11806937, g: 0, b: 0.2603773, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

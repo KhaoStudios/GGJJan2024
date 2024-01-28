@@ -810,7 +810,7 @@
 										<AudioFileSource Name="timerOver" ID="{7BD498E2-2208-4B48-B04F-04E99A2B8C2E}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.481025299600533"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.539208249196052"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.10352862849534"/>
 											</PropertyList>
 											<Language>SFX</Language>

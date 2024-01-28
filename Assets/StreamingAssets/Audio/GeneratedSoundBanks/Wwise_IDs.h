@@ -14,11 +14,16 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AMBIENCESTART = 1720073155U;
+        static const AkUniqueID ANVILLAND = 1043149746U;
+        static const AkUniqueID BALLLAND = 2148016713U;
         static const AkUniqueID BANANASTEP = 3057288620U;
+        static const AkUniqueID BLOBFISHLAND = 2920938985U;
         static const AkUniqueID CARDRIVING = 4174385922U;
         static const AkUniqueID CARGONE = 411168428U;
         static const AkUniqueID CARHONK = 2009521539U;
         static const AkUniqueID CHAIRCOLLIDE = 2107827546U;
+        static const AkUniqueID CUBELAND = 634583257U;
+        static const AkUniqueID DUCKLAND = 3572911865U;
         static const AkUniqueID EIGHTSECONDCOUNTDOWN = 1119290663U;
         static const AkUniqueID FAILUREDING = 3649084381U;
         static const AkUniqueID FARTALERT = 785996010U;
@@ -27,6 +32,7 @@ namespace AK
         static const AkUniqueID FARTMASSIVE = 3500500370U;
         static const AkUniqueID FARTMID = 180502814U;
         static const AkUniqueID FARTSMALL = 1426002253U;
+        static const AkUniqueID FRISBEELAND = 1805644152U;
         static const AkUniqueID LEVELBANANATALK = 2452814208U;
         static const AkUniqueID LEVELFARTTALK = 3139477882U;
         static const AkUniqueID LEVELKICKTALK = 420782237U;
@@ -42,10 +48,11 @@ namespace AK
         static const AkUniqueID MUSICSTATERACE = 1317058574U;
         static const AkUniqueID MUSICSTATESPIN = 3717746713U;
         static const AkUniqueID MUSICSTATESTACK = 1089682851U;
+        static const AkUniqueID PARTYHATLAND = 3636083381U;
         static const AkUniqueID PLAYERHAMMER = 268427392U;
         static const AkUniqueID PLAYERKICKNORMAL = 672392345U;
         static const AkUniqueID PLAYERKICKSTRONG = 1553801141U;
-        static const AkUniqueID PLAYEROBJECTDROP = 3715532380U;
+        static const AkUniqueID PLAYEROBJECTFELL = 3006996396U;
         static const AkUniqueID PLAYERROLLEND = 1098376466U;
         static const AkUniqueID PLAYERROLLING = 562081045U;
         static const AkUniqueID PLAYERROTATESTART = 1933175613U;
@@ -57,6 +64,8 @@ namespace AK
         static const AkUniqueID SLIDEREND = 4271478305U;
         static const AkUniqueID SLIDERSTART = 2671641362U;
         static const AkUniqueID SUCCESSDING = 2891550330U;
+        static const AkUniqueID TACKLAND = 2806050493U;
+        static const AkUniqueID TEETHLAND = 238246742U;
         static const AkUniqueID TESTBOOP = 2770287305U;
         static const AkUniqueID TESTCLICK = 2444254063U;
         static const AkUniqueID TESTDING = 1336322353U;
@@ -88,7 +97,6 @@ namespace AK
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
-        static const AkUniqueID SPINSPEED = 782298490U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
