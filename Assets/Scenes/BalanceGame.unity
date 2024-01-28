@@ -788,7 +788,7 @@ MonoBehaviour:
   radius: 4
   player1: {fileID: 752426845}
   player2: {fileID: 1825799074}
-  speed: 1
+  speed: 20
   angularSpeed: 1
   Player1SpawnLocation: {fileID: 496730187}
   Player2SpawnLocation: {fileID: 1950065156}
