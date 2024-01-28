@@ -54,7 +54,7 @@ MonoBehaviour:
   curtain: {fileID: 6661861750815569735}
   VictorySceneIndex: 4
   MainMenuSceneIndex: 0
-  ValidGameScenes: 010000000200000003000000
+  ValidGameScenes: 01000000020000000300000004000000
 --- !u!1 &3427666683744014081
 GameObject:
   m_ObjectHideFlags: 0

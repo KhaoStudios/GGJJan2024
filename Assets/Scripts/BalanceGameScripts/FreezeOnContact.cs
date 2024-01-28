@@ -8,6 +8,5 @@ public class FreezeOnContact : MonoBehaviour
     {
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<Rigidbody>().useGravity = false;
-        GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 }

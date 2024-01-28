@@ -7,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	411168428	carGone			\Default Work Unit\NPCs\bananaGame\carGone	
 	420782237	levelKickTalk			\Default Work Unit\UI\levelSounds\levelKickTalk	
 	554093570	playerSquished			\Default Work Unit\Player\fartGame\playerSquished	
+	562081045	playerRolling			\Default Work Unit\Player\spinGame\playerRolling	
 	672392345	playerKickNormal			\Default Work Unit\Player\spinGame\playerKickNormal	
 	684664796	timeOver			\Default Work Unit\UI\timerStuff\timeOver	
 	785996010	fartAlert			\Default Work Unit\NPCs\fartGame\fartAlert	
