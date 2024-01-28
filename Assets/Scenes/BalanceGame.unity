@@ -1093,7 +1093,13 @@ MonoBehaviour:
   player1Height: {fileID: 410309332}
   player2Height: {fileID: 1151982354}
   avaliablePieces:
-  - {fileID: 2457225356816484089, guid: 6fff9623ad83c594a9bcc3e93fb8cc41, type: 3}
+  - {fileID: 4413886931031587797, guid: 5f9dd98d3c564e14cbacc9a9903e4017, type: 3}
+  - {fileID: 6897802039729564875, guid: 5ec8567b25e320849bf7299b77617cc1, type: 3}
+  - {fileID: 7459918311830443948, guid: 9b99e2db78fd2a84387e238d2e69034b, type: 3}
+  - {fileID: 5020838841729695059, guid: 978c5b3ff4e127d4592ecc72066be218, type: 3}
+  - {fileID: 594109453080681840, guid: f11e4c9fb0d6f74428df66bc1044aee6, type: 3}
+  - {fileID: 7743510106758793406, guid: cf14ea4318041684bafdd0459d17c8e3, type: 3}
+  - {fileID: 6256189946492476257, guid: 8d035c488c7850147b0fe7352b1e4eab, type: 3}
 --- !u!4 &1202644897
 Transform:
   m_ObjectHideFlags: 0
