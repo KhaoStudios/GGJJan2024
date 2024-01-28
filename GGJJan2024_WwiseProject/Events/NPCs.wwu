@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" SchemaVersion="119" RootDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" ParentDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}">
 	<Events>
-		<WorkUnit Name="NPCs" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested"/>
+		<WorkUnit Name="NPCs" ID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="carHonk" ID="{8B69F56E-62C5-4B5B-B9D1-220154DEF3CB}">
+					<ChildrenList>
+						<Action Name="" ID="{BB464A15-3757-4518-A653-D821821E93BF}" ShortID="61095354">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="carHonk" ID="{46497AC1-7FBF-4442-94F2-53563E08F6BA}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="carDriving" ID="{3038FF48-15FB-4AF4-9074-B339664432E9}">
+					<ChildrenList>
+						<Action Name="" ID="{48CF2F1F-1236-4E2B-8636-4F374C5F8AA2}" ShortID="1050535817">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wackyCar" ID="{002922CA-0666-42DB-8E73-37881C7626D4}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="carGone" ID="{67D623D2-DCB8-4AD8-927E-19E4537110EB}">
+					<ChildrenList>
+						<Action Name="" ID="{2605B3C4-45EF-4841-8514-7E4310C3B1D7}" ShortID="666311591">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wackyCar" ID="{002922CA-0666-42DB-8E73-37881C7626D4}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fartAlert" ID="{F21B2AFA-E1A0-4090-A8E2-7FA6F2102D98}">
+					<ChildrenList>
+						<Action Name="" ID="{A7F806CC-B312-4043-947B-EFDE64E0C1FE}" ShortID="331027444">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alerted" ID="{560D43A8-7565-495B-B5D6-F18CDCF9D9EA}" WorkUnitID="{74C66270-ABF1-4A2D-BC6C-C75823568E1A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

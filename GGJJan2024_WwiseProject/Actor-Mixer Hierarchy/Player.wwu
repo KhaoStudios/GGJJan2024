@@ -4,14 +4,566 @@
 		<WorkUnit Name="Player" ID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}" OwnerID="{CCB9DF64-0528-4BAE-81A7-D1AA991393CF}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="Player" ID="{AE496AD7-0395-42C9-9FA2-7161BABE7927}" ShortID="410880027">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+							<ObjectRef Name="Player" ID="{72649B57-F12D-4D7E-BE1C-AED70828B682}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="toots" ID="{81A62D18-A4AD-4DA5-AE52-8C567494A329}" ShortID="555035609">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="slips" ID="{AAD26408-5750-43A1-961E-FE24C4F5FBD1}" ShortID="242796002">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sirenSlip" ID="{A894A25B-3ECF-45A7-9D2A-94871A1AD724}" ShortID="39034393">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-150</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{49C47998-DEB3-452A-9769-5A247FDA05FB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="331610__applauseav__acme-siren" ID="{281CFB31-A686-415D-973B-BB56C465C110}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.473768444794695"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.139186209770193"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.760170837975671"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>331610__applauseav__acme-siren.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="54295250"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="331610__applauseav__acme-siren" ID="{281CFB31-A686-415D-973B-BB56C465C110}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<RandomSequenceContainer Name="rotateClicks" ID="{F35BAACD-2F43-4681-9CBE-0AC72477123B}" ShortID="812982404">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.15"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="rotateClicks-001" ID="{7AB725D2-C798-4FC3-A877-03F7A9443D99}" ShortID="685134993">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-001" ID="{671F3BFF-B8AE-4564-921F-AADE1B7221A1}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="992572342"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-001" ID="{671F3BFF-B8AE-4564-921F-AADE1B7221A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-002" ID="{AE8E61F2-3A58-422B-B863-3487EBB2BE57}" ShortID="400636610">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-002" ID="{B15D5111-B061-4984-AC89-014A45B02A9E}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="539289836"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-002" ID="{B15D5111-B061-4984-AC89-014A45B02A9E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-003" ID="{DF00ADF9-2291-4235-B18E-EAB6354B4F5F}" ShortID="37722585">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-003" ID="{95F29900-E177-4FC1-B338-02DF4D22ED95}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="35538467"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-003" ID="{95F29900-E177-4FC1-B338-02DF4D22ED95}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-004" ID="{936767F6-53A9-4A59-93E9-2194B98121EB}" ShortID="382003878">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-004" ID="{9CC7BD26-8035-4A1A-A93A-F8D5B6584CFE}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="780191265"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-004" ID="{9CC7BD26-8035-4A1A-A93A-F8D5B6584CFE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-005" ID="{F85C4EE5-10B8-4709-A2F2-73A9697AD5D9}" ShortID="575216013">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-005" ID="{340ABCAD-32AA-4AB3-ABCE-DB5213749568}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="482988777"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-005" ID="{340ABCAD-32AA-4AB3-ABCE-DB5213749568}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-006" ID="{4645AF0F-1B70-44D1-869C-CF58C74B8762}" ShortID="660691360">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-006" ID="{481D371F-5687-4ADE-96D6-0B97D261BB87}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-006.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="886132094"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-006" ID="{481D371F-5687-4ADE-96D6-0B97D261BB87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-007" ID="{D8347A94-B4E8-49E9-AD67-DDD58989C35C}" ShortID="619834501">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-007" ID="{C6D734F3-8817-4F88-8C6A-D35D83B7DC34}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-007.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="206639946"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-007" ID="{C6D734F3-8817-4F88-8C6A-D35D83B7DC34}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-008" ID="{3D0EDBEA-3E09-437B-AB5D-6CBA7F577A52}" ShortID="690264161">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-008" ID="{9DCFEB28-19F3-430A-9A00-A6596DF809F1}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-008.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="425738417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-008" ID="{9DCFEB28-19F3-430A-9A00-A6596DF809F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-009" ID="{4E184FD8-F8B3-45FB-88B7-38CA3BFC1842}" ShortID="720265305">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-009" ID="{A21FB44C-99F7-425D-9C07-6BF1D189A0CB}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-009.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="429584414"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-009" ID="{A21FB44C-99F7-425D-9C07-6BF1D189A0CB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-010" ID="{270635F3-75D9-4EA5-AE4F-CAFADDF01990}" ShortID="602523026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-010" ID="{2BBB6BC4-1AB9-482D-B5A2-06D1DCE4B447}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-010.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="957817922"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-010" ID="{2BBB6BC4-1AB9-482D-B5A2-06D1DCE4B447}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-011" ID="{9824A387-519F-4C6C-BAD2-8F9A86B0D917}" ShortID="520726574">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-011" ID="{009C86E9-EF9D-4128-9CEA-39BFA5D3847A}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-011.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="172104628"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-011" ID="{009C86E9-EF9D-4128-9CEA-39BFA5D3847A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-012" ID="{B2D31896-ECD5-434B-B620-80EA62C132DA}" ShortID="583227120">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-012" ID="{2C93118D-A2EA-4BD5-B421-5E77265D5AA0}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-012.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="373450163"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-012" ID="{2C93118D-A2EA-4BD5-B421-5E77265D5AA0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-013" ID="{DBB35C75-5609-4440-A51E-30A61F36EA82}" ShortID="661187866">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-013" ID="{E3CD6EF5-BFCA-45D8-B1CA-A4665DE51305}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-013.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="562835952"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-013" ID="{E3CD6EF5-BFCA-45D8-B1CA-A4665DE51305}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-014" ID="{55EC6D5E-8510-4C9F-88F1-F7ECCF7C54D4}" ShortID="144606036">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-014" ID="{70829B8F-E04D-470F-BE82-F283EAD9652C}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-014.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="163174107"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-014" ID="{70829B8F-E04D-470F-BE82-F283EAD9652C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-015" ID="{0F9BC72C-4337-46CE-B80F-D17D9602F177}" ShortID="496276443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-015" ID="{B8C14418-07CB-4551-9B22-1A23C12F9341}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-015.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="173635344"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-015" ID="{B8C14418-07CB-4551-9B22-1A23C12F9341}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="rotateClicks-016" ID="{27AA2C55-6A38-44B6-A7DD-36302E9C7011}" ShortID="577670827">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="rotateClicks-016" ID="{6A243408-F9B1-4E5E-BA15-C79D052432F3}">
+											<Language>SFX</Language>
+											<AudioFile>rotateClicks-016.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="180050267"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="rotateClicks-016" ID="{6A243408-F9B1-4E5E-BA15-C79D052432F3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<ActorMixer Name="playerSquished" ID="{3B005968-0485-46F1-9FFB-92FEB46108C0}" ShortID="470241278">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" ShortID="276530495">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{03729F7B-32D0-4800-8B36-FC9E7E35C1FA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="squishSqueak" ID="{46DF52DF-F42E-478A-9D7E-09F107E3361C}">
+											<Language>SFX</Language>
+											<AudioFile>squishSqueak.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="256798514"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="squishSqueak" ID="{46DF52DF-F42E-478A-9D7E-09F107E3361C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<Sound Name="hammerBonk" ID="{B8977037-A1E1-4DDE-800F-DACDF9AF8C10}" ShortID="356612313">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1D78F0FF-13AD-478B-A649-C26F9C02D10D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="hammerBonk" ID="{09A2B2AE-980D-4F9A-9980-197ACFB9B8CA}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0698047603195737"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.41813881491345"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>hammerBonk.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="770228991"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="hammerBonk" ID="{09A2B2AE-980D-4F9A-9980-197ACFB9B8CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

@@ -4,14 +4,29 @@
 		<WorkUnit Name="Objects" ID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}" OwnerID="{CCB9DF64-0528-4BAE-81A7-D1AA991393CF}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="Objects" ID="{B6729487-E81A-4C36-8D47-95BDFBFF288C}" ShortID="7418384">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+							<ObjectRef Name="Objects" ID="{655E2DA1-9B5E-446B-9359-B871D46787AB}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="collisions" ID="{F24D3833-7EA1-4336-B1BA-2FF1674AFBA7}" ShortID="49831973">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

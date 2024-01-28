@@ -13,10 +13,60 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENCESTART = 1720073155U;
+        static const AkUniqueID CARDRIVING = 4174385922U;
+        static const AkUniqueID CARGONE = 411168428U;
+        static const AkUniqueID CARHONK = 2009521539U;
+        static const AkUniqueID FAILUREDING = 3649084381U;
+        static const AkUniqueID FARTALERT = 785996010U;
+        static const AkUniqueID MENUBACK = 2634859593U;
+        static const AkUniqueID MENUHOVER = 303266102U;
+        static const AkUniqueID MENUNEXT = 2944776955U;
+        static const AkUniqueID MENUPLAYERJOIN = 3374714595U;
+        static const AkUniqueID MENUSTART = 1447920996U;
+        static const AkUniqueID MUSICSTART = 1122283870U;
+        static const AkUniqueID MUSICSTATEFART = 3547976248U;
+        static const AkUniqueID MUSICSTATEMENU = 2633181064U;
+        static const AkUniqueID MUSICSTATERACE = 1317058574U;
+        static const AkUniqueID MUSICSTATESPIN = 3717746713U;
+        static const AkUniqueID MUSICSTATESTACK = 1089682851U;
+        static const AkUniqueID PLAYERHAMMER = 268427392U;
+        static const AkUniqueID PLAYERROTATESTART = 1933175613U;
+        static const AkUniqueID PLAYERROTATESTOP = 2651639743U;
+        static const AkUniqueID PLAYERSLIP = 3973166888U;
+        static const AkUniqueID PLAYERSQUISHED = 554093570U;
+        static const AkUniqueID SUCCESSDING = 2891550330U;
         static const AkUniqueID TESTBOOP = 2770287305U;
         static const AkUniqueID TESTCLICK = 2444254063U;
         static const AkUniqueID TESTDING = 1336322353U;
+        static const AkUniqueID TIMEUP = 796366129U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMELEVEL
+        {
+            static const AkUniqueID GROUP = 1091790943U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BANANALEVEL = 2489058252U;
+                static const AkUniqueID FARTLEVEL = 489941698U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SPINLEVEL = 1034249585U;
+                static const AkUniqueID STACKLEVEL = 4092420579U;
+            } // namespace STATE
+        } // namespace GAMELEVEL
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
