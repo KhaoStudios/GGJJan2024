@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public GameObject character; // The nps on the map
-    public GameObject player;    // The character being controlled
+    public GameObject CharacterPrefab; // The npcs on the map
+    public GameObject PlayerCharacter;    // The character being controlled
     public int number;           // number of npcs spawned
+
+    public List<GameObject> PlayerPegModels = new List<GameObject>();
 
     // Minimum and maximum positions on map
     public float minimumX = -10.0f;
@@ -24,18 +26,30 @@ public class CharacterManager : MonoBehaviour
             // Find new random position
             Vector3 newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
             // Instantiate it
-            GameObject gam = Instantiate(character, newPos, Quaternion.Euler(30, 0, 0));
+            GameObject gam = Instantiate(CharacterPrefab, newPos, Quaternion.Euler(30, 0, 0));
             // Give it a distinct name for debug purposes and change its color
             gam.name = "FartCharacter" + i.ToString();
-            GameObject.Find("FartCharacter" + i.ToString()).GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            FartCharacter fartChar = gam.GetComponent<FartCharacter>();
+            fartChar.ReplaceModel(GetRandomPlayerModel());
+
+            //GameObject.Find("FartCharacter" + i.ToString()).GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
 
         }
 
         // Place the position of the player farter in the map and give it a color
         Vector3 newPos2 = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
-        GameObject gam2 = Instantiate(player, newPos2, Quaternion.Euler(30, 0, 0));
-        gam2.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
 
+        PlayerCharacter.transform.position = newPos2;
+        PlayerCharacter.transform.rotation = Quaternion.Euler(30, 0, 0);
+        PlayerCharacter.GetComponent<FartPlayer>().ReplaceModel(GetRandomPlayerModel());
+        
+        //PlayerCharacter.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+
+    }
+
+    public GameObject GetRandomPlayerModel()
+    {
+        return PlayerPegModels[Random.Range(0, PlayerPegModels.Count)];
     }
 
     // Update is called once per frame

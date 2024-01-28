@@ -120,5 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnLocation: {fileID: 614700700327855949}
   CarPrefab: {fileID: 8850359434494632405, guid: b86a6494020b7d54da00d9fe205c84d9, type: 3}
-  CarSpawnRate: 4
+  CarSpawnRate: 2
   CarLifeTime: 6
