@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WriteHeight : MonoBehaviour
+public class DisplayTimer : MonoBehaviour
 {
     public string inputString;
-    public HeightTracker heightTracker;
+    public PieceManager pieceManager;
     public TMP_Text textMesh;
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = heightTracker.GetHeight().ToString("0.0") + " M";
+        textMesh.text = pieceManager.GetTime().ToString("0");
     }
 }
