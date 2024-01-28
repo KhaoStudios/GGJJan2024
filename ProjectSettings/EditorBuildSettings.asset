@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SceneLoader.unity
+    path: Assets/Prefabs/Scenes/SceneLoader.unity
     guid: 4bf94fef85898094faf4a6a211d8ebf0
   - enabled: 1
-    path: Assets/Scenes/BalanceGame.unity
+    path: Assets/Prefabs/Scenes/BalanceGame.unity
     guid: ed434aa8b2df2fa40a40c071eb7aa810
   - enabled: 1
-    path: Assets/Scenes/FartGame.unity
+    path: Assets/Prefabs/Scenes/FartGame.unity
     guid: 5ddca479a732e894996751b1e29f5ec3
   - enabled: 1
-    path: Assets/Scenes/BananaGame.unity
+    path: Assets/Prefabs/Scenes/BananaGame.unity
     guid: d99ebdbdfdf8ee44db3d67ffa4e225f9
   - enabled: 1
-    path: Assets/Scenes/ChairGame.unity
+    path: Assets/Prefabs/Scenes/ChairGame.unity
     guid: ed0e8f29ffb129f4897ffdc9965c39cd
   - enabled: 1
-    path: Assets/Scenes/VictoryScreen.unity
+    path: Assets/Prefabs/Scenes/VictoryScreen.unity
     guid: 214a1c29355888b4481aa46dbce14aa6
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 9909739a708ce5b4ea1f16ac848604f2, type: 2}

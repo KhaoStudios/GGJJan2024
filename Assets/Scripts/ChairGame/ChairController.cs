@@ -23,7 +23,6 @@ namespace ChairGame
         public float SpinBoostDecay;
         private float spinSpeed;
         private bool spinDir;
-        private bool spinBoost;
 
         public float KickForce;
         public float KickCooldown;
@@ -73,7 +72,7 @@ namespace ChairGame
         private void BoostSpin()
         {
             spinDir = !spinDir;
-            spinSpeed *= SpinBoostMultiplier;
+            spinSpeed += StartingSpinSpeed * SpinBoostMultiplier;
         }
         
         private void DecaySpin()
@@ -111,6 +110,10 @@ namespace ChairGame
             myRB.AddForce(kickDir * force);
             kickTimer = KickCooldown;
 
+            if (boost || otherRB)
+                AkSoundEngine.PostEvent("playerKickStrong", gameObject);
+            else
+                AkSoundEngine.PostEvent("playerKickNormal", gameObject);
             
             
             Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
@@ -140,9 +143,10 @@ namespace ChairGame
             {
                 kickReady = false;
             }
-
-            kickReady = true;
-            spinBoost = false;
+            else
+            {
+                kickReady = true;
+            }
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -151,6 +155,12 @@ namespace ChairGame
             {
                 Vector3 reflection = Vector3.Reflect(oldVelocity, collision.contacts[0].normal);
                 myRB.velocity = reflection * BounceMultiplier ;
+                AkSoundEngine.PostEvent("chairCollide", gameObject);
+            }
+            
+            else if (collision.collider.CompareTag("Player"))
+            {
+                AkSoundEngine.PostEvent("chairCollide", gameObject);
             }
         }
     }
