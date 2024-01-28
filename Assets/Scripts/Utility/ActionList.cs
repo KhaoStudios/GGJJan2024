@@ -106,5 +106,16 @@ public class ActionList
         // Remove all of the actions
         list.Clear();
     }
-
+    // Return if it is an empty list or not
+    public bool Empty()
+    {
+        if(list.Count>0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Act
 {
     public abstract class Action
     {
+        
         /// <summary>
         /// How long this action goes on
         /// </summary>
@@ -68,7 +70,8 @@ namespace Act
 
             SquareRoot,
 
-            AnimationCurve
+            AnimationCurve,
+            EaseOutBounce,
 
         }
 
@@ -134,7 +137,7 @@ namespace Act
         /// <param name="delay"></param>
         /// <param name="blocking"></param>
         /// <param name="group"></param>
-        public Action(float dur,  float delay, bool blocking, Group group, EaseType ease)
+        public Action(float dur = 0, float delay = 0, bool blocking = false, Group group = Group.None, EaseType ease = EaseType.Linear)
         {
             // Initialize the actions
             duration = dur;
@@ -291,6 +294,22 @@ namespace Act
                     {
                         return curve.Evaluate(value);
                     }
+                case EaseType.EaseOutBounce:
+                {
+                    float n1 = 7.5625f;
+                    float d1 = 2.75f;
+                    float x = value;
+                    
+                    if (x < 1 / d1) {
+                        return n1 * x * x;
+                    } else if (x < 2 / d1) {
+                        return n1 * (x -= 1.5f / d1) * x + 0.75f;
+                    } else if (x < 2.5 / d1) {
+                        return n1 * (x -= 2.25f / d1) * x + 0.9375f;
+                    } else {
+                        return n1 * (x -= 2.625f / d1) * x + 0.984375f;
+                    }
+                }
             }
 
             // Return the default value
@@ -395,6 +414,106 @@ namespace Act
 
             /// throw new System.NotImplementedException();
             /// 
+
+            return IsDone;
+        }
+
+    }
+    
+    public class UIMove: Action
+    {
+
+        /// <summary>
+        /// The object being moved by the action
+        /// </summary>
+        GameObject objToMove;
+
+        /// <summary>
+        /// The start position of the object
+        /// </summary>
+        Vector3 startPos;
+
+        /// <summary>
+        /// The end position of the object
+        /// </summary>
+        Vector3 endPos;
+
+        /// <summary>
+        /// Should this action use the object's current start position
+        /// </summary>
+        bool useCurrent;
+
+        public UIMove(Vector3 targetPos,GameObject objToMove, float duration, float delay =0, bool blocking = false, Group group= Group.None, EaseType et = EaseType.Linear)
+            : base(duration,delay,blocking,group, et) 
+        {
+            this.objToMove = objToMove;
+            useCurrent = true;
+
+            endPos = targetPos;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            
+            // If using the current position
+            if (useCurrent)
+            {
+                // Set the start pos
+                startPos = objToMove.GetComponent<RectTransform>().position;
+            }
+        }
+
+
+        public override bool Execute(float deltaTime)
+        {
+
+            objToMove.transform.position = Vector3.Lerp(startPos, endPos, PercentDone);
+
+            /// throw new System.NotImplementedException();
+            /// 
+
+            return IsDone;
+        }
+
+    }
+    
+    public class LoadSceneAction : Action
+    {
+
+        /// <summary>
+        /// The object being moved by the action
+        /// </summary>
+        private int i;
+
+        /// <summary>
+        /// The end position of the object
+        /// </summary>
+        Vector3 endPos;
+
+        /// <summary>
+        /// Should this action use the object's current start position
+        /// </summary>
+        bool useCurrent;
+
+        public LoadSceneAction(int sceneIndex, float duration, float delay =0, bool blocking = false, Group group= Group.None): base(duration,delay,blocking,group)
+        {
+            i = sceneIndex;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+        }
+
+
+        public override bool Execute(float deltaTime)
+        {
+
+            if (IsDone)
+            {
+                SceneManager.LoadScene(i);
+            }
 
             return IsDone;
         }
