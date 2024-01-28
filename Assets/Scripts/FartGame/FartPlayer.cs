@@ -5,13 +5,25 @@ using UnityEngine;
 
 public class FartPlayer : PlayerController
 {
+    FartManager fartManager;
     public int speed;             // speed
     private bool active;          // if it is active or not
 
     // Start is called before the first frame update
     void Start()
     {
+        fartManager = GameObject.FindObjectOfType<FartManager>();
+        if (fartManager == null)
+        {
+            Debug.LogError("NO FART MANAGER!!");
+            return;
+        }
         active = true;
+    }
+
+    public override void OnPrimaryButtonPressed()
+    {
+        fartManager.Fart();
     }
 
     // Update is called once per frame
