@@ -5,7 +5,31 @@
 			<ChildrenList>
 				<Event Name="musicStart" ID="{C0E443FE-EBC7-49D9-9AF2-13F64716D6B9}">
 					<ChildrenList>
+						<Action Name="" ID="{1F99C3A3-90B2-40DE-8DA0-95AFA49F7834}" ShortID="468950260">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gameplayMusicSwitch" ID="{24E8C158-DB5A-40C3-987F-67747683B0BF}" WorkUnitID="{03151708-0007-4A75-9E43-567B939382D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0CE82A51-D16B-4AE3-9C8F-2D3B85E36B01}" ShortID="427496229">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{51FCCB88-69E6-4069-9307-5ACA52DE1FFD}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{E0CD7105-7028-4F07-9F42-9454BEE7DDBD}" ShortID="966699009">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="gameplayMusicSwitch" ID="{24E8C158-DB5A-40C3-987F-67747683B0BF}" WorkUnitID="{03151708-0007-4A75-9E43-567B939382D7}"/>
@@ -81,6 +105,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fartIntro" ID="{E314F4DD-127D-4ACB-BBD1-7FA40F6B8FE7}">
+							<ChildrenList>
+								<Action Name="" ID="{F8D820E8-4719-4C38-A898-629A78679EC2}" ShortID="172703045">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fartIntro" ID="{1CE04117-D38D-4C8B-81A5-901064AAE8B1}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

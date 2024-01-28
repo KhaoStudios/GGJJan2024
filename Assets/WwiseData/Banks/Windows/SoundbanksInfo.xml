@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1E250405-E89E-69F9-FF81-2D8E11768AB7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{82E5FCD5-2971-528E-2364-782957F48050}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -30,7 +30,9 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="782298490" Name="spinSpeed"/>
 				<GameParameter Id="988953028" Name="sfxVolume"/>
+				<GameParameter Id="2176988521" Name="chairSpeed"/>
 				<GameParameter Id="2346531308" Name="musicVolume"/>
 				<GameParameter Id="2918011349" Name="masterVolume"/>
 			</GameParameters>
@@ -47,25 +49,45 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{2130D9EA-F3AD-F59B-0D77-6BD2442C00EB}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{D676685C-C168-C716-BCC5-92932B82D8B4}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
+				<File Id="3417086" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>balance-game.wav</ShortName>
+					<CachePath>SFX/balance-game_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="35538467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-003.wav</ShortName>
 					<CachePath>SFX/rotateClicks-003_8E324C96.wem</CachePath>
 				</File>
 				<File Id="54295250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>331610__applauseav__acme-siren.wav</ShortName>
-					<CachePath>SFX/331610__applauseav__acme-siren_CE7C8E8C.wem</CachePath>
+					<CachePath>SFX/331610__applauseav__acme-siren_3306B3BF.wem</CachePath>
+				</File>
+				<File Id="56784899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-005.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-005_8E324C96.wem</CachePath>
+				</File>
+				<File Id="68312502" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>bigToot.wav</ShortName>
+					<CachePath>SFX/bigToot_51A783F6.wem</CachePath>
 				</File>
 				<File Id="77529459" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CrowdNoise.wav</ShortName>
-					<CachePath>SFX/CrowdNoise_65B19874.wem</CachePath>
+					<CachePath>SFX/CrowdNoise_87FABF81.wem</CachePath>
+				</File>
+				<File Id="83768231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-002.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="84886037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-012.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-012_8E324C96.wem</CachePath>
 				</File>
 				<File Id="155027772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion.wav</ShortName>
-					<CachePath>SFX/Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_24E8F801.wem</CachePath>
+					<CachePath>SFX/Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_17BED8E3.wem</CachePath>
 				</File>
 				<File Id="159714313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mailReady.wav</ShortName>
@@ -91,21 +113,53 @@
 					<ShortName>rotateClicks-007.wav</ShortName>
 					<CachePath>SFX/rotateClicks-007_8E324C96.wem</CachePath>
 				</File>
+				<File Id="220806882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-009.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="253380222" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-004.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-004_8E324C96.wem</CachePath>
+				</File>
+				<File Id="256702298" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>quietToot.wav</ShortName>
+					<CachePath>SFX/quietToot_DFF69CC7.wem</CachePath>
+				</File>
 				<File Id="256798514" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>squishSqueak.wav</ShortName>
 					<CachePath>SFX/squishSqueak_8E324C96.wem</CachePath>
+				</File>
+				<File Id="259822578" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stopScreeches-003.wav</ShortName>
+					<CachePath>SFX/stopScreeches-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="259979965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-001.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-001_8E324C96.wem</CachePath>
 				</File>
 				<File Id="261767146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>clickForward.wav</ShortName>
 					<CachePath>SFX/clickForward_8E324C96.wem</CachePath>
 				</File>
+				<File Id="271732942" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>midToot.wav</ShortName>
+					<CachePath>SFX/midToot_1528F9A1.wem</CachePath>
+				</File>
 				<File Id="275017575" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>parkAmbience.wav</ShortName>
-					<CachePath>SFX/parkAmbience_9006CF3D.wem</CachePath>
+					<CachePath>SFX/parkAmbience_8A3A44F4.wem</CachePath>
 				</File>
 				<File Id="373450163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-012.wav</ShortName>
 					<CachePath>SFX/rotateClicks-012_8E324C96.wem</CachePath>
+				</File>
+				<File Id="388029286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-006.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-006_8E324C96.wem</CachePath>
+				</File>
+				<File Id="388535887" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>voiceStack.wav</ShortName>
+					<CachePath>SFX/voiceStack_E07FE593.wem</CachePath>
 				</File>
 				<File Id="425738417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-008.wav</ShortName>
@@ -123,9 +177,17 @@
 					<ShortName>rotateClicks-005.wav</ShortName>
 					<CachePath>SFX/rotateClicks-005_8E324C96.wem</CachePath>
 				</File>
+				<File Id="503819537" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DEEPToot.wav</ShortName>
+					<CachePath>SFX/DEEPToot_8E324C96.wem</CachePath>
+				</File>
 				<File Id="517821936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>carHonk.wav</ShortName>
-					<CachePath>SFX/carHonk_915F50B6.wem</CachePath>
+					<CachePath>SFX/carHonk_D6144F38.wem</CachePath>
+				</File>
+				<File Id="532530202" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>voiceRace.wav</ShortName>
+					<CachePath>SFX/voiceRace_A0694F73.wem</CachePath>
 				</File>
 				<File Id="539289836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-002.wav</ShortName>
@@ -133,27 +195,63 @@
 				</File>
 				<File Id="547250997" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>officeAmbience.wav</ShortName>
-					<CachePath>SFX/officeAmbience_DB484526.wem</CachePath>
+					<CachePath>SFX/officeAmbience_3D9D2B8F.wem</CachePath>
 				</File>
 				<File Id="562835952" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-013.wav</ShortName>
 					<CachePath>SFX/rotateClicks-013_8E324C96.wem</CachePath>
 				</File>
+				<File Id="564682276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stopScreeches-002.wav</ShortName>
+					<CachePath>SFX/stopScreeches-002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="584136267" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stopScreeches-001.wav</ShortName>
+					<CachePath>SFX/stopScreeches-001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="594087508" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-011.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-011_8E324C96.wem</CachePath>
+				</File>
+				<File Id="651480257" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-003.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="658984190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>weakKick.wav</ShortName>
+					<CachePath>SFX/weakKick_E746A9B5.wem</CachePath>
+				</File>
+				<File Id="677695302" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>voiceKick.wav</ShortName>
+					<CachePath>SFX/voiceKick_594460DE.wem</CachePath>
+				</File>
+				<File Id="703624119" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>gore - wood beating flesh wet blood splat - medium - 11.wav</ShortName>
+					<CachePath>SFX/gore - wood beating flesh wet blood splat - medium - 11_9FA512F7.wem</CachePath>
+				</File>
 				<File Id="723360948" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>timeUp.wav</ShortName>
-					<CachePath>SFX/timeUp_FE4A95B8.wem</CachePath>
+					<CachePath>SFX/timeUp_904AED52.wem</CachePath>
 				</File>
 				<File Id="737435134" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dripHover.wav</ShortName>
-					<CachePath>SFX/dripHover_98B9F1B5.wem</CachePath>
+					<CachePath>SFX/dripHover_487DC610.wem</CachePath>
+				</File>
+				<File Id="759086605" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>voiceHide.wav</ShortName>
+					<CachePath>SFX/voiceHide_86270F00.wem</CachePath>
 				</File>
 				<File Id="763554135" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>scoreDown.wav</ShortName>
-					<CachePath>SFX/scoreDown_96561695.wem</CachePath>
+					<CachePath>SFX/scoreDown_031F6344.wem</CachePath>
+				</File>
+				<File Id="764381067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerRolling.wav</ShortName>
+					<CachePath>SFX/playerRolling_B4CC4A95.wem</CachePath>
 				</File>
 				<File Id="770228991" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>hammerBonk.wav</ShortName>
-					<CachePath>SFX/hammerBonk_6BD71C8B.wem</CachePath>
+					<CachePath>SFX/hammerBonk_9F4C07F0.wem</CachePath>
 				</File>
 				<File Id="780191265" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-004.wav</ShortName>
@@ -161,7 +259,15 @@
 				</File>
 				<File Id="810188556" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>scoreUp.wav</ShortName>
-					<CachePath>SFX/scoreUp_AB9B951B.wem</CachePath>
+					<CachePath>SFX/scoreUp_B5F21F75.wem</CachePath>
+				</File>
+				<File Id="814688312" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fart-game-intro.wav</ShortName>
+					<CachePath>SFX/fart-game-intro_8E324C96.wem</CachePath>
+				</File>
+				<File Id="884571146" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-008.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-008_8E324C96.wem</CachePath>
 				</File>
 				<File Id="886132094" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-006.wav</ShortName>
@@ -175,25 +281,57 @@
 					<ShortName>buttonClick.wav</ShortName>
 					<CachePath>SFX/buttonClick_8E324C96.wem</CachePath>
 				</File>
+				<File Id="919671228" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-007.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-007_8E324C96.wem</CachePath>
+				</File>
+				<File Id="925689844" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_UI_Slider_Start.wav</ShortName>
+					<CachePath>SFX/SFX_UI_Slider_Start_BF41D629.wem</CachePath>
+				</File>
 				<File Id="953599475" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>playerJoin.wav</ShortName>
-					<CachePath>SFX/playerJoin_CF0E05E4.wem</CachePath>
+					<CachePath>SFX/playerJoin_0128E7E5.wem</CachePath>
 				</File>
 				<File Id="957817922" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-010.wav</ShortName>
 					<CachePath>SFX/rotateClicks-010_8E324C96.wem</CachePath>
 				</File>
+				<File Id="971614616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>concreteFootsteps-010.wav</ShortName>
+					<CachePath>SFX/concreteFootsteps-010_8E324C96.wem</CachePath>
+				</File>
 				<File Id="990638647" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alerted.wav</ShortName>
-					<CachePath>SFX/Alerted_50EAFD26.wem</CachePath>
+					<CachePath>SFX/Alerted_EEC61346.wem</CachePath>
 				</File>
 				<File Id="992572342" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-001.wav</ShortName>
 					<CachePath>SFX/rotateClicks-001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="1010716763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_UI_Slider_End.wav</ShortName>
+					<CachePath>SFX/SFX_UI_Slider_End_A52D81C2.wem</CachePath>
+				</File>
+				<File Id="1016520404" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>strongKick.wav</ShortName>
+					<CachePath>SFX/strongKick_117544F9.wem</CachePath>
+				</File>
+				<File Id="1026322219" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>banana-game.wav</ShortName>
+					<CachePath>SFX/banana-game_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="1044091603" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>fart-game.wav</ShortName>
+					<CachePath>SFX/fart-game_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="1067166882" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>toyBoxAmbience.wav</ShortName>
-					<CachePath>SFX/toyBoxAmbience_3A4CDB3A.wem</CachePath>
+					<CachePath>SFX/toyBoxAmbience_AC47A199.wem</CachePath>
+				</File>
+				<File Id="1067828492" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>672965__walliumva__slide-whistle.wav</ShortName>
+					<CachePath>SFX/672965__walliumva__slide-whistle_EA9A050C.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -225,17 +363,34 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="3057288620" Name="bananaStep" DurationType="OneShot" DurationMin="0.21947072" DurationMax="0.3999133">
+					<MediaRefs>
+						<MediaRef Id="56784899"/>
+						<MediaRef Id="83768231"/>
+						<MediaRef Id="84886037"/>
+						<MediaRef Id="220806882"/>
+						<MediaRef Id="253380222"/>
+						<MediaRef Id="259979965"/>
+						<MediaRef Id="388029286"/>
+						<MediaRef Id="594087508"/>
+						<MediaRef Id="651480257"/>
+						<MediaRef Id="884571146"/>
+						<MediaRef Id="919671228"/>
+						<MediaRef Id="971614616"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4174385922" Name="carDriving" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="155027772"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="411168428" Name="carGone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="1.3644501" DurationMax="1.3644501">
+				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="0.6142673" DurationMax="0.6698631">
 					<MediaRefs>
 						<MediaRef Id="517821936"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2107827546" Name="chairCollide" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3649084381" Name="failureDing" DurationType="OneShot" DurationMin="0.7422686" DurationMax="0.7422686">
 					<MediaRefs>
 						<MediaRef Id="763554135"/>
@@ -244,6 +399,51 @@
 				<Event Id="785996010" Name="fartAlert" DurationType="OneShot" DurationMin="0.4228926" DurationMax="0.4228926">
 					<MediaRefs>
 						<MediaRef Id="990638647"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3936762106" Name="fartBig" DurationType="OneShot" DurationMin="1.4867988" DurationMax="2.102651">
+					<MediaRefs>
+						<MediaRef Id="68312502"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="261259542" Name="fartIntro" DurationType="OneShot" DurationMin="4.8" DurationMax="4.8">
+					<MediaRefs>
+						<MediaRef Id="814688312"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3500500370" Name="fartMassive" DurationType="OneShot" DurationMin="2.5551164" DurationMax="3.61348">
+					<MediaRefs>
+						<MediaRef Id="503819537"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="180502814" Name="fartMid" DurationType="OneShot" DurationMin="1.0036741" DurationMax="1.4194095">
+					<MediaRefs>
+						<MediaRef Id="271732942"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1426002253" Name="fartSmall" DurationType="OneShot" DurationMin="0.9118125" DurationMax="1.2894975">
+					<MediaRefs>
+						<MediaRef Id="256702298"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2452814208" Name="levelBananaTalk" DurationType="OneShot" DurationMin="0.6817576" DurationMax="0.6817576">
+					<MediaRefs>
+						<MediaRef Id="532530202"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3139477882" Name="levelFartTalk" DurationType="OneShot" DurationMin="0.6671105" DurationMax="0.6671105">
+					<MediaRefs>
+						<MediaRef Id="759086605"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="420782237" Name="levelKickTalk" DurationType="OneShot" DurationMin="0.3915156" DurationMax="0.3915156">
+					<MediaRefs>
+						<MediaRef Id="677695302"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="34863529" Name="levelStackTalk" DurationType="OneShot" DurationMin="0.7738989" DurationMax="0.7738989">
+					<MediaRefs>
+						<MediaRef Id="388535887"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2634859593" Name="menuBack" DurationType="OneShot" DurationMin="0.3323125" DurationMax="0.3323125">
@@ -267,7 +467,31 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="1447920996" Name="menuStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1122283870" Name="musicStart" DurationType="Infinite"/>
+				<Event Id="1122283870" Name="musicStart" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="2489058252"/>
+							<MediaRefs>
+								<MediaRef Id="1026322219"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="489941698"/>
+							<MediaRefs>
+								<MediaRef Id="1044091603"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="4092420579"/>
+							<MediaRefs>
+								<MediaRef Id="3417086"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1091790943" Id="2607556080" Name="menu"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="3547976248" Name="musicStateFart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1091790943" Id="489941698" Name="fartLevel"/>
@@ -298,6 +522,30 @@
 						<MediaRef Id="770228991"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="672392345" Name="playerKickNormal" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="658984190"/>
+						<MediaRef Id="764381067"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1553801141" Name="playerKickStrong" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="764381067"/>
+						<MediaRef Id="1016520404"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3715532380" Name="playerObjectDrop" DurationType="OneShot" DurationMin="0.14494067" DurationMax="0.16269043">
+					<MediaRefs>
+						<MediaRef Id="1067828492"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1098376466" Name="playerRollEnd" DurationType="OneShot" DurationMin="0.6890282" DurationMax="1.2454652">
+					<MediaRefs>
+						<MediaRef Id="259822578"/>
+						<MediaRef Id="564682276"/>
+						<MediaRef Id="584136267"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1933175613" Name="playerRotateStart" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="35538467"/>
@@ -319,6 +567,11 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2651639743" Name="playerRotateStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4176432927" Name="playerRunOver" DurationType="OneShot" DurationMin="0.49917448" DurationMax="0.56030434">
+					<MediaRefs>
+						<MediaRef Id="703624119"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3973166888" Name="playerSlip" DurationType="OneShot" DurationMin="0.63918084" DurationMax="0.7174563">
 					<MediaRefs>
 						<MediaRef Id="54295250"/>
@@ -327,6 +580,16 @@
 				<Event Id="554093570" Name="playerSquished" DurationType="OneShot" DurationMin="0.4093277" DurationMax="0.4867754">
 					<MediaRefs>
 						<MediaRef Id="256798514"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4271478305" Name="sliderEnd" DurationType="OneShot" DurationMin="0.13981359" DurationMax="0.13981359">
+					<MediaRefs>
+						<MediaRef Id="1010716763"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2671641362" Name="sliderStart" DurationType="OneShot" DurationMin="0.20372836" DurationMax="0.20372836">
+					<MediaRefs>
+						<MediaRef Id="925689844"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2891550330" Name="successDing" DurationType="OneShot" DurationMin="0.70705724" DurationMax="0.70705724">
@@ -355,6 +618,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2176988521" Name="chairSpeed"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1091790943" Name="gameLevel">
 					<States>
@@ -369,5 +635,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0D9ECEC1-CC75-18EB-E675-E0C2A9EF86ED}</FileHash>
+	<FileHash>{B68075F8-A177-B8E1-38F0-B7922E7E2E8F}</FileHash>
 </SoundBanksInfo>

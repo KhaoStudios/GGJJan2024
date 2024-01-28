@@ -14,11 +14,22 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID AMBIENCESTART = 1720073155U;
+        static const AkUniqueID BANANASTEP = 3057288620U;
         static const AkUniqueID CARDRIVING = 4174385922U;
         static const AkUniqueID CARGONE = 411168428U;
         static const AkUniqueID CARHONK = 2009521539U;
+        static const AkUniqueID CHAIRCOLLIDE = 2107827546U;
         static const AkUniqueID FAILUREDING = 3649084381U;
         static const AkUniqueID FARTALERT = 785996010U;
+        static const AkUniqueID FARTBIG = 3936762106U;
+        static const AkUniqueID FARTINTRO = 261259542U;
+        static const AkUniqueID FARTMASSIVE = 3500500370U;
+        static const AkUniqueID FARTMID = 180502814U;
+        static const AkUniqueID FARTSMALL = 1426002253U;
+        static const AkUniqueID LEVELBANANATALK = 2452814208U;
+        static const AkUniqueID LEVELFARTTALK = 3139477882U;
+        static const AkUniqueID LEVELKICKTALK = 420782237U;
+        static const AkUniqueID LEVELSTACKTALK = 34863529U;
         static const AkUniqueID MENUBACK = 2634859593U;
         static const AkUniqueID MENUHOVER = 303266102U;
         static const AkUniqueID MENUNEXT = 2944776955U;
@@ -31,10 +42,17 @@ namespace AK
         static const AkUniqueID MUSICSTATESPIN = 3717746713U;
         static const AkUniqueID MUSICSTATESTACK = 1089682851U;
         static const AkUniqueID PLAYERHAMMER = 268427392U;
+        static const AkUniqueID PLAYERKICKNORMAL = 672392345U;
+        static const AkUniqueID PLAYERKICKSTRONG = 1553801141U;
+        static const AkUniqueID PLAYEROBJECTDROP = 3715532380U;
+        static const AkUniqueID PLAYERROLLEND = 1098376466U;
         static const AkUniqueID PLAYERROTATESTART = 1933175613U;
         static const AkUniqueID PLAYERROTATESTOP = 2651639743U;
+        static const AkUniqueID PLAYERRUNOVER = 4176432927U;
         static const AkUniqueID PLAYERSLIP = 3973166888U;
         static const AkUniqueID PLAYERSQUISHED = 554093570U;
+        static const AkUniqueID SLIDEREND = 4271478305U;
+        static const AkUniqueID SLIDERSTART = 2671641362U;
         static const AkUniqueID SUCCESSDING = 2891550330U;
         static const AkUniqueID TESTBOOP = 2770287305U;
         static const AkUniqueID TESTCLICK = 2444254063U;
@@ -63,9 +81,11 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID CHAIRSPEED = 2176988521U;
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
         static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID SPINSPEED = 782298490U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
