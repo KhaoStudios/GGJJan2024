@@ -8,7 +8,8 @@ public class PieceManager : MonoBehaviour
     public float height;
     //Not really a radius
     public float radius;
-    public float time = 30f;
+    public float time = 40f;
+    public float startTime = 30f;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -49,12 +50,18 @@ public class PieceManager : MonoBehaviour
         player1Seed = (int)System.DateTime.Now.Ticks;
         player2Seed = player1Seed;
         pieces = avaliablePieces.Count;
+        GameManager.Instance.DisplayInfo("Stack 'em Up");
     }
     // Update is called once per frame
     void Update()
     {
         
         time -= Time.deltaTime;
+        if(time > startTime)
+        {
+            AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
+            return;
+        }
         if(time <= 0)
         {
             if (player1Height.GetHeight() > player2Height.GetHeight())
@@ -228,5 +235,8 @@ public class PieceManager : MonoBehaviour
         player2HasPiece = false;
     }
 
-
+    public float GetTime()
+    {
+        return time;
+    }
 }
