@@ -72,6 +72,7 @@ namespace Act
 
             AnimationCurve,
             EaseOutBounce,
+            EaseInElastic,
 
         }
 
@@ -309,6 +310,12 @@ namespace Act
                     } else {
                         return n1 * (x -= 2.625f / d1) * x + 0.984375f;
                     }
+                }
+                case EaseType.EaseInElastic:
+                {
+                    const float c4 = (2 * Mathf.PI) / 3;
+                    float x = value;
+                    return x == 0 ? 0 : x == 1 ? 1 : Mathf.Pow(2, -10 * x) * Mathf.Sin((x * 10f - 0.75f) * c4) + 1;
                 }
             }
 
