@@ -100,12 +100,13 @@ public class GameManager : MonoBehaviour
         Vector3 topPos = new Vector3(xPos, yPos * 3, 0.0f);
 
         actionList.Add(new UIMove(buttonPos,curtain,curtainMoveValues.dur,0.0f,true,Action.Group.None,Action.EaseType.EaseOutBounce));
-        actionList.Add(new IncrementPlayerLivesAction(winner,0.1f,0.0f,true));
+        actionList.Add(new IncrementPlayerLivesAction(winner, 0.1f, 0.0f, true));
+        AkSoundEngine.PostEvent("menuNext", this.gameObject);
         if (checkForWin(winner))
         {
             //Load a the victory scene
-            AkSoundEngine.PostEvent("musicStateScore", this.gameObject);
-            actionList.Add(new LoadSceneAction(VictorySceneIndex,0.0f,0.5f,true));
+            actionList.Add(new LoadSceneAction(VictorySceneIndex, 0.0f, 0.5f, true));
+            AkSoundEngine.PostEvent("musicStateMenu", this.gameObject);
         }
         else
         {
