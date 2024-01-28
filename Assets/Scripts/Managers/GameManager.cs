@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int VictorySceneIndex;
     [SerializeField] private int MainMenuSceneIndex;
 
-    private players overallWinner;
+    public players overallWinner { get; private set; }
     
     ActionList actionList;
     
