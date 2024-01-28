@@ -113,12 +113,12 @@
 				</Folder>
 				<Folder Name="levelSounds" ID="{2539BDCA-A94F-4986-A626-7EEC529A13E5}" ShortID="335810401">
 					<ChildrenList>
-						<Event Name="timeUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}">
+						<Event Name="scoreBoardPopUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}">
 							<ChildrenList>
 								<Action Name="" ID="{D5A53609-2DCB-47C3-8617-8CEC5651A7D1}" ShortID="485667236">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="timeUp" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+											<ObjectRef Name="scoreBoard" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -185,6 +185,32 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="voiceStack" ID="{458B40A1-16AB-4CF4-A826-0542077575F0}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="timerStuff" ID="{4164FA2A-0044-4108-A5DF-3B5A66432CE9}" ShortID="616687399">
+					<ChildrenList>
+						<Event Name="eightSecondCountdown" ID="{48A205DA-B753-4B48-9D41-F336FBD0FB66}">
+							<ChildrenList>
+								<Action Name="" ID="{62CD4A86-4E03-41FE-97FB-3DE9F31B8A0F}" ShortID="990490868">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="eightSecondTimerTick" ID="{A4638272-EE87-4550-82CE-6025322E724E}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="timeOver" ID="{8A6F72F8-5760-4569-A816-1DB64242E497}">
+							<ChildrenList>
+								<Action Name="" ID="{ECA11DC0-4391-445B-8EAB-A331A0A177D5}" ShortID="671274492">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="timerOver" ID="{40B12700-17C8-4341-BD5F-CA4ACD28C2A7}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
