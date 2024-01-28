@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -19,6 +20,11 @@ public class VictoryScreenManager : PlayerController
 
         text.text += "\n Press A to Play Again";
 
+    }
+
+    private void Update()
+    {
+        text.fontSize = Mathf.Lerp(90, 150, Mathf.PingPong(Time.time, 1));
     }
 
     // Update is called once per frame
