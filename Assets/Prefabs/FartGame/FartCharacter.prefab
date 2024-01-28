@@ -152,10 +152,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PersonModelParent: {fileID: 961488064269104825}
   target: {x: 0, y: 0, z: 0}
-  waitTimer: 0
-  minimumX: -2
+  waitTimer: 0.5
+  minimumX: -3
   minimumY: -2
-  maximumX: 2
+  maximumX: 3
   maximumY: 2
   exclamationPoint: {fileID: 3646820070158197840}
 --- !u!1 &6213732563271850228
