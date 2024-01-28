@@ -9,21 +9,38 @@
 						<ObjectRef Name="musicStateRace" ID="{6BFC884D-3F53-411A-B67B-EEFAB711630C}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="successDing" ID="{7B096A76-B8B7-413E-B040-567980FC64A1}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerRotateStop" ID="{07A7C020-CB44-41D6-B1C9-D13EB9844BB8}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="fartSmall" ID="{935E352A-1C5A-420B-BF49-A5ABE865D901}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerHammer" ID="{EF6483B4-429A-4268-BD03-436E451F87A0}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sliderEnd" ID="{D67D4E5C-4159-42B3-B581-65DB90BFC798}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testBoop" ID="{7CFA9C83-78F9-42E9-81DE-0DE9B84AF62B}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuBack" ID="{261FED11-DAA1-436C-9146-0C7ACD29102A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateFart" ID="{05F4D5B7-DE03-4380-B79B-F55A5D8785A1}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ambienceStart" ID="{5536D248-BDD9-43A6-A708-0DA9FAA3EC05}" WorkUnitID="{DCD70017-EC6A-426E-BFCB-FEE98614E475}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerKickNormal" ID="{3B1243AF-CD1C-446B-B31C-242FF88D8AD7}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerKickStrong" ID="{F278487F-F086-447E-9362-BAEF83482C03}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="bananaStep" ID="{E380FFFE-7ED1-451A-9F86-EEA0BC8D4880}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testDing" ID="{56C7B9AD-BDE1-4534-AEFC-8EDDDACC7E12}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerRollEnd" ID="{096634D3-9CAF-4549-8CAC-CD3AA0532E83}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="chairCollide" ID="{85A0BA16-A458-4588-AB09-363CE430D753}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="fartMassive" ID="{9754BE29-C43F-45B8-9A27-8F38252CBE4B}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuNext" ID="{AA5E679B-B590-4602-8581-1849C82BDE70}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="failureDing" ID="{252F2CE6-3515-4608-A8A8-406B8A192D4D}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="fartMid" ID="{EFFCAEFC-99AC-4669-841E-923FF57D7E3C}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerRunOver" ID="{8E46B94C-35B5-46B6-A745-46285A016CF0}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuHover" ID="{612AF763-1492-472C-8248-C4983A8D6C3A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="levelStackTalk" ID="{D834A284-7686-4750-AED4-B8261E985B98}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="levelBananaTalk" ID="{4AC6F08D-F34A-4759-96CD-E450CBBC1F72}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sliderStart" ID="{A69BCF2C-BA3D-48BE-9C67-51FB92D0004E}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="fartBig" ID="{502C377F-24AD-491E-A8D7-5180EA963983}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStart" ID="{C0E443FE-EBC7-49D9-9AF2-13F64716D6B9}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="levelKickTalk" ID="{3DACE0DE-C24B-4A82-BFC8-3B2306AFB2D3}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="fartIntro" ID="{E314F4DD-127D-4ACB-BBD1-7FA40F6B8FE7}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="carGone" ID="{67D623D2-DCB8-4AD8-927E-19E4537110EB}" WorkUnitID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="carDriving" ID="{3038FF48-15FB-4AF4-9074-B339664432E9}" WorkUnitID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateMenu" ID="{1A089FD5-C98F-4B0D-B386-685776AD49C4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateSpin" ID="{5241EE94-9F04-4B2A-B345-AFF9CB9067D0}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="levelFartTalk" ID="{B8C570C1-EA63-4B46-BB6B-730914CBC73D}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="carHonk" ID="{8B69F56E-62C5-4B5B-B9D1-220154DEF3CB}" WorkUnitID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerRotateStart" ID="{81994DC4-3977-4C9C-A65D-9216BD5C0AC3}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuPlayerJoin" ID="{1439598D-8B54-4CDE-B0CA-69A2BE102D2A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
@@ -32,6 +49,7 @@
 						<ObjectRef Name="musicStateStack" ID="{BB9C845C-F5AB-4EE4-B587-52540320E7F4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testClick" ID="{40CEBC37-97B5-4F79-9FD2-5A2D597E6C58}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerObjectDrop" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
