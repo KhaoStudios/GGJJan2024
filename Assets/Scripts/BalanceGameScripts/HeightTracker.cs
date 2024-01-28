@@ -6,7 +6,7 @@ public class HeightTracker : MonoBehaviour
 {
     public float ascendSpeed;
     private float height;
-    private int collisionCount;
+    private bool colliding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,19 +16,20 @@ public class HeightTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (collisionCount > 0)
+        if (colliding)
         {
             transform.position += ascendSpeed * Time.deltaTime * Vector3.up;
             height += ascendSpeed * Time.deltaTime;
         }
+        colliding = false;
     }
-    private void OnTriggerEnter(Collider other)
+    //Doing on trigger stay since on trigger enter and exit do not work well with object changing from not counting to counting.
+    private void OnTriggerStay(Collider other)
     {
-        collisionCount++;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        collisionCount--;
+        if(other.gameObject.GetComponent<TrackLanded>() && other.gameObject.GetComponent<TrackLanded>().GetLanded())
+        {
+            colliding = true;
+        }
     }
 
     public float GetHeight()

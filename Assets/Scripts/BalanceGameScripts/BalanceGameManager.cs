@@ -134,8 +134,6 @@ public class PieceManager : MonoBehaviour
         translate2.y = Mathf.Clamp(translate2.y + player2Piece.transform.position.z, Player2SpawnLocation.transform.position.z - radius, Player2SpawnLocation.transform.position.z + radius);
 
         player2Piece.transform.position = new Vector3(translate2.x, player2Piece.transform.position.y, translate2.y);
-
-
     }
 
     public void SpawnPlayerPiece1()
