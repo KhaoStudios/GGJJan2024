@@ -50,7 +50,6 @@ public class InputVerifier : PlayerController
         else
         {
             joinChecker.StartGame();
-            AkSoundEngine.PostEvent("menuNext", this.gameObject);
         }
 
     }
