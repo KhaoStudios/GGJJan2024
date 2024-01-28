@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 // Verifies if both players have joined, then lets you in to the game
 public class InputVerifier : PlayerController
 {
+    public PlayerJoinChecker joinChecker;
     public GameObject PlayerJoined;
     public bool joined { get; private set; }
 
@@ -17,9 +18,18 @@ public class InputVerifier : PlayerController
 
     public override void OnJoinedButtonPressed()
     {
-        PlayerJoined?.SetActive(true);
-        joined = true;
+        if (!joined)
+        {
+            PlayerJoined?.SetActive(true);
+            joined = true;
+        } else
+        {
+            joinChecker.StartGame();
+        }
+        
     }
+
+
 
 
 }
