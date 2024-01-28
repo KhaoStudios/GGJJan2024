@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 948c2b76c7891d64fbaca33453988684, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 01e8d56fe097fd7478aa61e8a446e250, type: 2}
+      objectReference: {fileID: 2100000, guid: 4f382f6eabc5138478bc700a0b3c6e4d, type: 2}
     - target: {fileID: 919132149155446097, guid: 948c2b76c7891d64fbaca33453988684, type: 3}
       propertyPath: m_Name
       value: Peg_Dress_Short_BlackHair

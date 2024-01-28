@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	34863529	levelStackTalk			\Default Work Unit\UI\levelSounds\levelStackTalk	
 	180502814	fartMid			\Default Work Unit\Player\fartGame\fartMid	
+	238246742	teethLand			\Default Work Unit\Objects\stackGame\teethLand	
 	261259542	fartIntro			\Default Work Unit\Music\musicStateSwaps\fartIntro	
 	268427392	playerHammer			\Default Work Unit\Player\fartGame\playerHammer	
 	303266102	menuHover			\Default Work Unit\UI\menuSounds\menuHover	
@@ -8,9 +9,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	420782237	levelKickTalk			\Default Work Unit\UI\levelSounds\levelKickTalk	
 	554093570	playerSquished			\Default Work Unit\Player\fartGame\playerSquished	
 	562081045	playerRolling			\Default Work Unit\Player\spinGame\playerRolling	
+	634583257	cubeLand			\Default Work Unit\Objects\stackGame\cubeLand	
 	672392345	playerKickNormal			\Default Work Unit\Player\spinGame\playerKickNormal	
 	684664796	timeOver			\Default Work Unit\UI\timerStuff\timeOver	
 	785996010	fartAlert			\Default Work Unit\NPCs\fartGame\fartAlert	
+	1043149746	anvilLand			\Default Work Unit\Objects\stackGame\anvilLand	
 	1089682851	musicStateStack			\Default Work Unit\Music\musicStateSwaps\musicStateStack	
 	1098376466	playerRollEnd			\Default Work Unit\Player\spinGame\playerRollEnd	
 	1119290663	eightSecondCountdown			\Default Work Unit\UI\timerStuff\eightSecondCountdown	
@@ -21,9 +24,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1447920996	menuStart			\Default Work Unit\UI\menuSounds\menuStart	
 	1553801141	playerKickStrong			\Default Work Unit\Player\spinGame\playerKickStrong	
 	1720073155	ambienceStart			\Default Work Unit\Ambient\ambienceStart	
+	1805644152	frisbeeLand			\Default Work Unit\Objects\stackGame\frisbeeLand	
 	1933175613	playerRotateStart			\Default Work Unit\Objects\stackGame\playerRotateStart	
 	2009521539	carHonk			\Default Work Unit\NPCs\bananaGame\carHonk	
 	2107827546	chairCollide			\Default Work Unit\Player\spinGame\chairCollide	
+	2148016713	ballLand			\Default Work Unit\Objects\stackGame\ballLand	
 	2425254643	scoreBoardPopUp			\Default Work Unit\UI\levelSounds\scoreBoardPopUp	
 	2444254063	testClick			\Default Work Unit\UI\testSounds\testClick	
 	2452814208	levelBananaTalk			\Default Work Unit\UI\levelSounds\levelBananaTalk	
@@ -32,15 +37,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	2651639743	playerRotateStop			\Default Work Unit\Objects\stackGame\playerRotateStop	
 	2671641362	sliderStart			\Default Work Unit\UI\menuSounds\sliderStart	
 	2770287305	testBoop			\Default Work Unit\UI\testSounds\testBoop	
+	2806050493	tackLand			\Default Work Unit\Objects\stackGame\tackLand	
 	2891550330	successDing			\Default Work Unit\UI\levelSounds\successDing	
+	2920938985	blobFishLand			\Default Work Unit\Objects\stackGame\blobFishLand	
 	2944776955	menuNext			\Default Work Unit\UI\menuSounds\menuNext	
+	3006996396	playerObjectFell			\Default Work Unit\Objects\stackGame\playerObjectFell	
 	3057288620	bananaStep			\Default Work Unit\Player\bananaGame\bananaStep	
 	3139477882	levelFartTalk			\Default Work Unit\UI\levelSounds\levelFartTalk	
 	3374714595	menuPlayerJoin			\Default Work Unit\UI\menuSounds\menuPlayerJoin	
 	3500500370	fartMassive			\Default Work Unit\Player\fartGame\fartMassive	
 	3547976248	musicStateFart			\Default Work Unit\Music\musicStateSwaps\musicStateFart	
+	3572911865	duckLand			\Default Work Unit\Objects\stackGame\duckLand	
+	3636083381	partyHatLand			\Default Work Unit\Objects\stackGame\partyHatLand	
 	3649084381	failureDing			\Default Work Unit\UI\levelSounds\failureDing	
-	3715532380	playerObjectDrop			\Default Work Unit\Objects\stackGame\playerObjectDrop	
 	3717746713	musicStateSpin			\Default Work Unit\Music\musicStateSwaps\musicStateSpin	
 	3936762106	fartBig			\Default Work Unit\Player\fartGame\fartBig	
 	3973166888	playerSlip			\Default Work Unit\Player\bananaGame\playerSlip	
@@ -63,27 +72,31 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2176988521	chairSpeed			\Default Work Unit\rollGame\chairSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1044235	anvilHits-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\anvilHits-002_9106AD74.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\anvil\anvilHits-002		9553
 	3417086	balance-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\balance-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\stackGameMusic\balance-game\balance-game		430166
 	31041013	playerCollide-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-007_6C68C218.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-007		5825
 	35538467	rotateClicks-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-003		2599
 	51892871	playerCollide-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-005_E2D07B4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-005		4714
 	54295250	sirenSlip	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\331610__applauseav__acme-siren_3306B3BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\slips\sirenSlip		8866
 	56784899	concreteFootsteps-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-005_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-005		5081
+	59485821	partyHat-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\partyHat-004_5A9AC964.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\partyHat\partyHat-004		18880
 	68312502	bigToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\bigToot_51A783F6.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\bigToot		47447
 	76146995	playerCollide-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-001_0E64E8B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-001		8259
 	77529459	crowdNoise	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\CrowdNoise_87FABF81.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\crowdNoise		1060981
 	83768231	concreteFootsteps-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-002		3666
 	84886037	concreteFootsteps-012	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-012_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-012		3852
 	101045052	chair-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\chair-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\spinGameMusic\chair-game\chair-game		743816
+	144351935	partyHat-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\partyHat-002_BB73DB9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\partyHat\partyHat-002		13191
 	155027772	wackyCar	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_17BED8E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\wackyCar		60367
 	159714313	Ding	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\mailReady_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Ding		115587
 	163174107	rotateClicks-014	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-014_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-014		2572
 	172104628	rotateClicks-011	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-011_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-011		2919
 	173635344	rotateClicks-015	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-015_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-015		2247
 	180050267	rotateClicks-016	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-016_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-016		1984
-	192204945	timerOver	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timerOver_AEFEA39A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\timerOver		6769
+	192204945	timerOver	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timerOver_1401DD37.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\timerOver		6503
 	206639946	rotateClicks-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-007_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-007		2234
 	220806882	concreteFootsteps-009	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-009_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-009		5584
+	221883118	blobFish-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\blobFish-001_0837250A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\blobFish\blobFish-001		4182
 	237612579	playerCollide-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-004_83631589.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-004		5369
 	253380222	concreteFootsteps-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-004_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-004		5041
 	256702298	quietToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\quietToot_DFF69CC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\quietToot		11891
@@ -95,15 +108,19 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	275017575	parkAmbience	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\parkAmbience_8A3A44F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\parkAmbience		1024564
 	300427170	eightSecondTimerTick	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\eightSecondTimerTick_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\eightSecondTimerTick		108339
 	331391851	playerCollide-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-008_F887B0BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-008		7893
+	335729684	woodCube-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\woodCube-005_2D9A8549.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\woodCube\woodCube-005		3801
 	373450163	rotateClicks-012	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-012_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-012		1964
 	388029286	concreteFootsteps-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-006_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-006		3987
 	388535887	voiceStack	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceStack_E07FE593.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceStack		9507
+	407832367	partyHat-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\partyHat-001_81710A4B.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\partyHat\partyHat-001		16844
 	417358394	title_maybe	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\title_maybe_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\menuGameMusic\title_maybe\title_maybe		290045
 	425738417	rotateClicks-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-008_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-008		2951
 	429584414	rotateClicks-009	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-009_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-009		2688
 	434667566	clickBack	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\clickBack_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\clickBack		2487
 	482988777	rotateClicks-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-005_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-005		2990
+	495127621	anvilHits-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\anvilHits-004_FE230951.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\anvil\anvilHits-004		8468
 	503819537	DEEPToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\DEEPToot_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\DEEPToot		65323
+	505247250	rubberBall	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rubberBall_DEB8F7A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\rubberBall\rubberBall		6733
 	517821936	carHonk	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\carHonk_D6144F38.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\carHonk		5308
 	532530202	voiceRace	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceRace_A0694F73.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceRace		9560
 	539289836	rotateClicks-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-002		2390
@@ -112,16 +129,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	564682276	stopScreeches-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\stopScreeches-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerRolls\rollStops\stopScreeches-002		7328
 	584136267	stopScreeches-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\stopScreeches-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerRolls\rollStops\stopScreeches-001		8114
 	594087508	concreteFootsteps-011	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-011_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-011		3849
+	605931774	woodCube-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\woodCube-002_287B411E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\woodCube\woodCube-002		6239
+	618342093	frisbee	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\frisbee_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\frisbee\frisbee		6836
 	651480257	concreteFootsteps-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-003		4120
+	652869845	anvilHits-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\anvilHits-003_B2ACDB15.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\anvil\anvilHits-003		10072
 	658984190	playerKickNormal	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\weakKick_E746A9B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerKicks\playerKickNormal		3293
 	677695302	voiceKick	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceKick_594460DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceKick		4983
+	700017300	blobFish-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\blobFish-002_6BFE1884.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\blobFish\blobFish-002		6253
 	700515408	playerCollide-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-006_63230B92.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-006		8791
 	703624119	bananaSplat	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\gore - wood beating flesh wet blood splat - medium - 11_9FA512F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\bananaSplat		8751
 	723360948	scoreBoard	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timeUp_904AED52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\scoreBoard		4799
 	737435134	dripHover	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\dripHover_487DC610.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\dripHover		3384
 	759086605	voiceHide	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceHide_86270F00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceHide		9317
 	763554135	scoreDown	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\scoreDown_031F6344.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\scoreSystem\scoreDown		6705
-	764381067	playerRolling	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerRolling_B4CC4A95.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerRolls\playerRolling		196661
+	764381067	playerRolling	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerRolling_B4CC4A95.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerRolls\playerRolling\playerRolling		196661
 	770228991	hammerBonk	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\hammerBonk_9F4C07F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\hammerBonk		18634
 	780191265	rotateClicks-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-004_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-004		2547
 	810188556	scoreUp	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\scoreUp_B5F21F75.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\scoreSystem\scoreUp		8394
@@ -131,9 +152,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	884571146	concreteFootsteps-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-008_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-008		4138
 	886132094	rotateClicks-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-006_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-006		2247
 	887665778	Boop	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\GameStart_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Boop		9819
+	892372360	partyHat-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\partyHat-003_1ED27232.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\partyHat\partyHat-003		15560
 	892390417	Click	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\buttonClick_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Click		5578
 	919671228	concreteFootsteps-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-007_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-007		4072
 	925689844	sliderStart	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\SFX_UI_Slider_Start_BF41D629.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\sliderStart		3194
+	928147178	anvilHits-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\anvilHits-001_77AB8C62.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\anvil\anvilHits-001		9863
+	939149326	woodCube-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\woodCube-001_617A3719.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\woodCube\woodCube-001		6327
 	953599475	playerJoin	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerJoin_0128E7E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\playerJoin		20144
 	957817922	rotateClicks-010	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-010_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-010		2460
 	971614616	concreteFootsteps-010	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-010_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-010		3768
@@ -141,8 +165,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	992572342	rotateClicks-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-001		1920
 	1010716763	sliderEnd	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\SFX_UI_Slider_End_A52D81C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\sliderEnd		2747
 	1016520404	playerKickStrong	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\strongKick_117544F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerKicks\playerKickStrong		4018
+	1025097134	rubberDuck	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rubberDuck_F75FEDE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\rubberDuck\rubberDuck		14084
 	1026322219	banana-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\banana-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\bananaGameMusic\banana-game\banana-game		1117935
 	1044091603	fart-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\fart-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\fartGameMusic\fart-game\fart-game		581231
+	1058083818	woodCube-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\woodCube-004_EBBFBB8A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\woodCube\woodCube-004		5616
 	1067166882	toyBoxAmbience	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\toyBoxAmbience_AC47A199.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\toyBoxAmbience		733468
 	1067828492	objectDrop	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\672965__walliumva__slide-whistle_EA9A050C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\objectDrop		2342
+	1068249822	woodCube-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\woodCube-003_A9CB3238.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\woodCube\woodCube-003		7482
 
