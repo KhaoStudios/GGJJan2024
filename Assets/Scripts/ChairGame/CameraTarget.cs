@@ -6,7 +6,10 @@ namespace ChairGame
     public class CameraTarget : MonoBehaviour
     {
         public Camera FollowCamera;
+        public float CameraSpeed = 1;
+        
         private Transform cameraTrans;
+        
         
         
         private void Awake()
@@ -25,7 +28,7 @@ namespace ChairGame
         {
             if (cameraTrans)
             {
-                Vector3 newPos = Vector3.Lerp(cameraTrans.position, transform.position, Time.deltaTime);
+                Vector3 newPos = Vector3.Lerp(cameraTrans.position, transform.position, CameraSpeed * Time.deltaTime);
                 cameraTrans.position = newPos;
             }
         }
