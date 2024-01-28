@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3A9EB992-F63E-97A0-5679-674F2362C4FF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{237E603E-13F3-5981-9EA6-E1C8E7A887B8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -30,10 +30,10 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
-				<GameParameter Id="988953028" Name="sfxVolume"/>
+				<GameParameter Id="516124850" Name="gameMusicVolume"/>
+				<GameParameter Id="1052786170" Name="gameSFXVolume"/>
 				<GameParameter Id="2176988521" Name="chairSpeed"/>
-				<GameParameter Id="2346531308" Name="musicVolume"/>
-				<GameParameter Id="2918011349" Name="masterVolume"/>
+				<GameParameter Id="4103204207" Name="gameMasterVolume"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1091790943" Name="gameLevel">
@@ -854,5 +854,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A5F81900-B668-1FEF-E2AE-BC0A388428AF}</FileHash>
+	<FileHash>{DC70AAC3-BEA2-672A-ABA0-FE713AA8ADB4}</FileHash>
 </SoundBanksInfo>
