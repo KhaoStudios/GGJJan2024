@@ -73,17 +73,33 @@ public class FartCharacter : MonoBehaviour
         if(act.Empty())
         {
             // Get a new position and decide whether or not to wait. 
-            Vector3 newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
-            act.Add(new Act.Move(newPos, gameObject, Random.Range(1.4f, 3.3f)));
-            // 50% chance to wait
-            int rand = Random.Range(0, 2);
-            if (rand == 0)
-            {
-                waitTimer = Random.Range(0.0f, 1.5f);
-            }
+            MoveToRandomPosition();
         }
 
     }
+
+    void MoveToRandomPosition()
+    {
+        act.Clear();
+        Vector3 newPos = Vector3.zero;
+        float moveDistance = 0;
+        while (moveDistance < 1)
+        {
+            newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
+            moveDistance = Mathf.Abs(Vector3.Distance(newPos, transform.position));
+        }
+
+        float movetime = Random.Range(0.8f, 1.5f) * moveDistance;
+        act.Add(new Act.Move(newPos, gameObject, movetime));
+
+        // 50% chance to wait
+        int rand = Random.Range(0, 2);
+        if (rand == 0)
+        {
+            waitTimer = Random.Range(0.0f, 1.5f);
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // If you collide with another character
@@ -92,10 +108,7 @@ public class FartCharacter : MonoBehaviour
             // Clear list
             act.Clear();
 
-            // Choose random position and move after waiting for a bit
-            Vector3 newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
-            act.Add(new Act.Move(newPos, gameObject, Random.Range(1.4f, 3.3f)));
-            waitTimer = Random.Range(0.0f, 1.0f);
+            //MoveToRandomPosition();
 
         }
     }
