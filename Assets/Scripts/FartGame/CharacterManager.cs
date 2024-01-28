@@ -16,10 +16,12 @@ public class CharacterManager : MonoBehaviour
     public float maximumX = 10.0f;
     public float maximumY = 6.0f;
 
+    public List<GameObject> AllCharacters;
 
     // Start is called before the first frame update
     void Start()
     {
+        AllCharacters = new List<GameObject>();
         // for each npc
         for (int i = 0; i < number; i++)
         {
@@ -31,6 +33,7 @@ public class CharacterManager : MonoBehaviour
             gam.name = "FartCharacter" + i.ToString();
             FartCharacter fartChar = gam.GetComponent<FartCharacter>();
             fartChar.ReplaceModel(GetRandomPlayerModel());
+            AllCharacters.Add(gam);
 
             //GameObject.Find("FartCharacter" + i.ToString()).GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
 
@@ -42,8 +45,29 @@ public class CharacterManager : MonoBehaviour
         PlayerCharacter.transform.position = newPos2;
         PlayerCharacter.transform.rotation = Quaternion.Euler(30, 0, 0);
         PlayerCharacter.GetComponent<FartPlayer>().ReplaceModel(GetRandomPlayerModel());
+        AllCharacters.Add(PlayerCharacter);
         
         //PlayerCharacter.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+
+    }
+
+    public void DisableExclamationOnAll()
+    {
+        foreach (GameObject character in AllCharacters)
+        {
+            FartPlayer fartPlayer = character.GetComponent<FartPlayer>();
+            FartCharacter fartCharacter = character.GetComponent<FartCharacter>();
+
+            if (fartPlayer != null)
+            {
+                fartPlayer.ToggleExclamation(false);
+            }
+
+            if (fartCharacter != null)
+            {
+                fartCharacter.ToggleExclamation(false);
+            }
+        }
 
     }
 

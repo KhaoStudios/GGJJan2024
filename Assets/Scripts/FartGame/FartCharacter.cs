@@ -17,6 +17,13 @@ public class FartCharacter : MonoBehaviour
     public float maximumX = 10.0f;
     public float maximumY = 6.0f;
 
+    public GameObject exclamationPoint;
+
+
+    public void ToggleExclamation(bool enabled)
+    {
+        exclamationPoint.SetActive(enabled);
+    }
 
     public void ReplaceModel(GameObject newModel)
     {
