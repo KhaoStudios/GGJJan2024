@@ -41,6 +41,7 @@
 						<State Id="489941698" Name="fartLevel"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="1034249585" Name="spinLevel"/>
+						<State Id="2110737749" Name="scoreScreen"/>
 						<State Id="2489058252" Name="bananaLevel"/>
 						<State Id="2607556080" Name="menu"/>
 						<State Id="4092420579" Name="stackLevel"/>
@@ -48,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{DCE87BB9-DDCC-9B1A-63D5-B4F45A125724}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{33EC12BD-B9AA-111D-7147-0E5A409FDC33}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -143,6 +144,10 @@
 				<File Id="192204945" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>timerOver.wav</ShortName>
 					<CachePath>SFX/timerOver_1401DD37.wem</CachePath>
+				</File>
+				<File Id="193861915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>scoreboard.wav</ShortName>
+					<CachePath>SFX/scoreboard_56CEF360.wem</CachePath>
 				</File>
 				<File Id="206639946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-007.wav</ShortName>
@@ -656,7 +661,6 @@
 						<MediaRef Id="953599475"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1447920996" Name="menuStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1122283870" Name="musicStart" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -687,6 +691,12 @@
 							<SwitchValue GroupType="State" GroupId="1091790943" Id="1034249585"/>
 							<MediaRefs>
 								<MediaRef Id="101045052"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="2110737749"/>
+							<MediaRefs>
+								<MediaRef Id="193861915"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -860,6 +870,7 @@
 						<State Id="489941698" Name="fartLevel"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="1034249585" Name="spinLevel"/>
+						<State Id="2110737749" Name="scoreScreen"/>
 						<State Id="2489058252" Name="bananaLevel"/>
 						<State Id="2607556080" Name="menu"/>
 						<State Id="4092420579" Name="stackLevel"/>
@@ -868,5 +879,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D85C8A6C-B8C4-D92A-E8ED-AF17EE7F6A16}</FileHash>
+	<FileHash>{C2CDEA75-400E-1DAA-BFFC-4A07691E8C1E}</FileHash>
 </SoundBanksInfo>

@@ -42,7 +42,6 @@ namespace AK
         static const AkUniqueID MENUHOVER = 303266102U;
         static const AkUniqueID MENUNEXT = 2944776955U;
         static const AkUniqueID MENUPLAYERJOIN = 3374714595U;
-        static const AkUniqueID MENUSTART = 1447920996U;
         static const AkUniqueID MUSICSTART = 1122283870U;
         static const AkUniqueID MUSICSTATEFART = 3547976248U;
         static const AkUniqueID MUSICSTATEMENU = 2633181064U;
@@ -86,6 +85,7 @@ namespace AK
                 static const AkUniqueID FARTLEVEL = 489941698U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SCORESCREEN = 2110737749U;
                 static const AkUniqueID SPINLEVEL = 1034249585U;
                 static const AkUniqueID STACKLEVEL = 4092420579U;
             } // namespace STATE

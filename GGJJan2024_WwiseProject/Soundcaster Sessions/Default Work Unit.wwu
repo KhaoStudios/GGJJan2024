@@ -125,7 +125,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}"/>
+						<CurrentStateRef Name="scoreScreen" ID="{C30E3767-F5B2-42C4-A1CC-5EF5FD7AD874}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

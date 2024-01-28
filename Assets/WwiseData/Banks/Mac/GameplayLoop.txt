@@ -22,7 +22,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1317058574	musicStateRace			\Default Work Unit\Music\musicStateSwaps\musicStateRace	
 	1336322353	testDing			\Default Work Unit\UI\testSounds\testDing	
 	1426002253	fartSmall			\Default Work Unit\Player\fartGame\fartSmall	
-	1447920996	menuStart			\Default Work Unit\UI\menuSounds\menuStart	
 	1553801141	playerKickStrong			\Default Work Unit\Player\spinGame\playerKickStrong	
 	1720073155	ambienceStart			\Default Work Unit\Ambient\ambienceStart	
 	1805644152	frisbeeLand			\Default Work Unit\Objects\stackGame\frisbeeLand	
@@ -66,6 +65,7 @@ State	ID	Name	State Group			Notes
 	489941698	fartLevel	gameLevel			
 	748895195	None	gameLevel			
 	1034249585	spinLevel	gameLevel			
+	2110737749	scoreScreen	gameLevel			
 	2489058252	bananaLevel	gameLevel			
 	2607556080	menu	gameLevel			
 	4092420579	stackLevel	gameLevel			
@@ -97,6 +97,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	173635344	rotateClicks-015	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\rotateClicks-015_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-015		2247
 	180050267	rotateClicks-016	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\rotateClicks-016_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-016		1984
 	192204945	timerOver	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\timerOver_1401DD37.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\timerOver		6503
+	193861915	scoreboard	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\scoreboard_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\scoreboardMusic\scoreboard\scoreboard		150154
 	206639946	rotateClicks-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\rotateClicks-007_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-007		2234
 	220806882	concreteFootsteps-009	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\concreteFootsteps-009_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-009		5584
 	221883118	blobFish-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\blobFish-001_0837250A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\blobFish\blobFish-001		4182

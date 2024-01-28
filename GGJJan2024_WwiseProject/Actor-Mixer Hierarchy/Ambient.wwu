@@ -213,6 +213,10 @@
 										<CustomState Name="" ID="{1C80ADDF-95C8-4AA3-806A-FFB9B2009118}" ShortID="873333776"/>
 									</CustomState>
 									<CustomState>
+										<StateRef Name="scoreScreen" ID="{C30E3767-F5B2-42C4-A1CC-5EF5FD7AD874}"/>
+										<CustomState Name="" ID="{CE67F64E-AF00-4C9D-B8A7-22A5C1D1F73E}" ShortID="515998434"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="bananaLevel" ID="{12FAD24D-81F2-4396-B3D3-1A36330AE46E}"/>
 										<CustomState Name="" ID="{D4609DED-5771-4AA0-B806-DD19A2DBBC98}" ShortID="155736860"/>
 									</CustomState>
