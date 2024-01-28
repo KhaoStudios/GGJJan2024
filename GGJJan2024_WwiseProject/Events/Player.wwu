@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" SchemaVersion="119" RootDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" ParentDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}">
 	<Events>
-		<WorkUnit Name="Player" ID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested"/>
+		<WorkUnit Name="Player" ID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="playerHammer" ID="{EF6483B4-429A-4268-BD03-436E451F87A0}">
+					<ChildrenList>
+						<Action Name="" ID="{6AC04A00-9F64-4DB5-BAC4-D1C6059C830E}" ShortID="784231172">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="hammerBonk" ID="{B8977037-A1E1-4DDE-800F-DACDF9AF8C10}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}">
+					<ChildrenList>
+						<Action Name="" ID="{2CAD8A7D-0BFB-4BBB-A0FF-DD4CBF3D34E3}" ShortID="268791212">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}">
+					<ChildrenList>
+						<Action Name="" ID="{D1A82220-F0C2-4FED-A985-18276FF653A9}" ShortID="1015387621">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sirenSlip" ID="{A894A25B-3ECF-45A7-9D2A-94871A1AD724}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

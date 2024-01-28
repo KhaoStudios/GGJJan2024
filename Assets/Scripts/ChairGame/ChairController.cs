@@ -1,4 +1,6 @@
+using Act;
 using UnityEngine;
+using Action = System.Action;
 
 namespace ChairGame
 {
@@ -6,8 +8,12 @@ namespace ChairGame
     public class ChairController : PlayerController
     {
         public GameObject ChairPivot;
+        public GameObject LeftKneePivot;
+        public GameObject RightKneePivot;
+        public AnimationCurve KickCurve;
         private Transform chairTrans;
         private Rigidbody rb;
+        private ActionList actionList;
         
         public float StartingSpinSpeed;
         private bool spinDir;
@@ -27,6 +33,7 @@ namespace ChairGame
         {
             chairTrans = ChairPivot.transform;
             rb = GetComponent<Rigidbody>();
+            actionList = new ActionList(); 
         }
 
         // Update is called once per frame
@@ -34,6 +41,7 @@ namespace ChairGame
         {
             SpinChair();
             CoolDown();
+            actionList.Update(Time.deltaTime);
 
             oldVelocity = rb.velocity;
         }
@@ -57,6 +65,24 @@ namespace ChairGame
             Vector3 kickDir = -chairTrans.forward;
             rb.AddForce(kickDir * KickForce);
             kickTimer = KickCooldown;
+            
+            Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
+            Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
+            Vector3 rotOffset = new Vector3(-65f, 0f, 0f);
+
+            float kickDur = 0.33f;
+            
+            // left leg up
+            actionList.Add(new Rotate(LeftKneePivot, leftRot + rotOffset, kickDur, KickCurve));
+            // left leg down
+            actionList.Add(new Rotate(LeftKneePivot, leftRot, KickCooldown - kickDur, kickDur, false,
+                Act.Action.Group.None, Act.Action.EaseType.Cubic));
+            
+            // right leg up
+            actionList.Add(new Rotate(RightKneePivot, rightRot + rotOffset, kickDur, KickCurve));
+            // right leg down
+            actionList.Add(new Rotate(RightKneePivot, rightRot, KickCooldown - kickDur, kickDur, false,
+                Act.Action.Group.None, Act.Action.EaseType.Cubic));
         }
 
         private void CoolDown()

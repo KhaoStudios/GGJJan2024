@@ -4,14 +4,304 @@
 		<WorkUnit Name="Ambient" ID="{A5FD3104-64D3-48AE-A2C2-48B3455B5E83}" OwnerID="{CCB9DF64-0528-4BAE-81A7-D1AA991393CF}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="Ambient" ID="{F7A1FC8B-DE5F-4E59-8120-621269366A16}" ShortID="74916108">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+							<ObjectRef Name="Ambient" ID="{03A9F703-D88A-43AE-8D3D-9EA7825F1A5E}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="ambientSwitch" ID="{2894B40E-C30C-47E8-AD13-6D58BE971752}" ShortID="711014560">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="menu" ID="{51FCCB88-69E6-4069-9307-5ACA52DE1FFD}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="gameLevel" ID="{61441568-EDF7-4354-87DC-93F1474B626C}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="crowdNoise" ID="{63563F7A-0F9B-4382-AD82-FE768605EFB4}" ShortID="236853500">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>500</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CrowdNoise" ID="{B6F3DA75-48CB-4773-9A7E-808F112FBD58}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="600"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.330892143808255"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.8508655126498"/>
+												<Property Name="LoopEnd" Type="Real64" Value="69.676431424767"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CrowdNoise.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="77529459"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CrowdNoise" ID="{B6F3DA75-48CB-4773-9A7E-808F112FBD58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="parkAmbience" ID="{29AD262A-54E1-49DE-B234-861B14969D90}" ShortID="364623885">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="parkAmbience" ID="{8D1C6E11-596A-4571-91A7-2D4F2F692D4F}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="400"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.585885486018642"/>
+												<Property Name="LoopBegin" Type="Real64" Value="2.237017310253"/>
+												<Property Name="LoopEnd" Type="Real64" Value="77.0705725699068"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>parkAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="275017575"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="parkAmbience" ID="{8D1C6E11-596A-4571-91A7-2D4F2F692D4F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="toyBoxAmbience" ID="{C80A44A1-E22D-4981-A39E-0524129BF9FD}" ShortID="28213483">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>55</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="toyBoxAmbience" ID="{32432B19-9C52-40F3-B364-242E456F85D3}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="400"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.339547270306258"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.0525965379494"/>
+												<Property Name="LoopEnd" Type="Real64" Value="50.2190412782956"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>toyBoxAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1067166882"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="toyBoxAmbience" ID="{32432B19-9C52-40F3-B364-242E456F85D3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="officeAmbience" ID="{38F6CA92-A2B8-499D-8E67-2365E5B80B59}" ShortID="102843107">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="officeAmbience" ID="{D7D64896-4D93-4952-A446-320668514596}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.09978636817577"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>officeAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="547250997"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="officeAmbience" ID="{D7D64896-4D93-4952-A446-320668514596}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="gameLevel" ID="{61441568-EDF7-4354-87DC-93F1474B626C}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="menu" ID="{51FCCB88-69E6-4069-9307-5ACA52DE1FFD}"/>
+										<CustomState Name="" ID="{1C80ADDF-95C8-4AA3-806A-FFB9B2009118}" ShortID="873333776"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="bananaLevel" ID="{12FAD24D-81F2-4396-B3D3-1A36330AE46E}"/>
+										<CustomState Name="" ID="{D4609DED-5771-4AA0-B806-DD19A2DBBC98}" ShortID="155736860"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="spinLevel" ID="{4A7E665F-EF8E-43BC-B9BF-3AF842B1BEB5}"/>
+										<CustomState Name="" ID="{066447E5-EF5A-4A2C-BC8B-7700B63E3112}" ShortID="143257559"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}"/>
+										<CustomState Name="" ID="{388180A3-7114-48C2-B324-FE9068B54464}" ShortID="458842370"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}"/>
+										<CustomState Name="" ID="{92E8F678-C23F-4F3E-8FE5-58C2DC9844E3}" ShortID="882746397"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="parkAmbience" ID="{29AD262A-54E1-49DE-B234-861B14969D90}"/>
+										<PropertyList>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>1</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="crowdNoise" ID="{63563F7A-0F9B-4382-AD82-FE768605EFB4}"/>
+										<PropertyList>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>1</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="officeAmbience" ID="{38F6CA92-A2B8-499D-8E67-2365E5B80B59}"/>
+										<PropertyList>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>1</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="toyBoxAmbience" ID="{C80A44A1-E22D-4981-A39E-0524129BF9FD}"/>
+										<PropertyList>
+											<Property Name="FadeOutTime" Type="Real64">
+												<ValueList>
+													<Value>1</Value>
+												</ValueList>
+											</Property>
+										</PropertyList>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}"/>
+										<ItemList>
+											<ItemRef Name="toyBoxAmbience" ID="{C80A44A1-E22D-4981-A39E-0524129BF9FD}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="bananaLevel" ID="{12FAD24D-81F2-4396-B3D3-1A36330AE46E}"/>
+										<ItemList>
+											<ItemRef Name="parkAmbience" ID="{29AD262A-54E1-49DE-B234-861B14969D90}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="spinLevel" ID="{4A7E665F-EF8E-43BC-B9BF-3AF842B1BEB5}"/>
+										<ItemList>
+											<ItemRef Name="officeAmbience" ID="{38F6CA92-A2B8-499D-8E67-2365E5B80B59}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}"/>
+										<ItemList>
+											<ItemRef Name="crowdNoise" ID="{63563F7A-0F9B-4382-AD82-FE768605EFB4}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

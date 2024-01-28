@@ -40,6 +40,92 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="menuSounds" ID="{80FD000F-1816-469F-BAF7-300DB3593EE3}" ShortID="158654017">
+					<ChildrenList>
+						<Event Name="menuNext" ID="{AA5E679B-B590-4602-8581-1849C82BDE70}">
+							<ChildrenList>
+								<Action Name="" ID="{742BDB36-8F15-4161-9137-9FF58169CC4A}" ShortID="459215547">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="clickForward" ID="{3952C9C3-5B40-4FC1-AA7B-96CDD5A4B93F}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="menuHover" ID="{612AF763-1492-472C-8248-C4983A8D6C3A}">
+							<ChildrenList>
+								<Action Name="" ID="{B297CEEE-706B-4CDE-982F-DB6694F2ACCB}" ShortID="28301489">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="dripHover" ID="{96D92624-1132-451D-972D-81D08C08B0D8}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="menuBack" ID="{261FED11-DAA1-436C-9146-0C7ACD29102A}">
+							<ChildrenList>
+								<Action Name="" ID="{71AE804F-BD52-4189-ABE3-481970CB14B9}" ShortID="612770143">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="clickBack" ID="{878BDD16-3A23-43E8-A6C5-E33A151C7CE9}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="menuStart" ID="{12B51207-8ECE-4E0D-9E9A-40FE90B61EAF}"/>
+						<Event Name="menuPlayerJoin" ID="{1439598D-8B54-4CDE-B0CA-69A2BE102D2A}">
+							<ChildrenList>
+								<Action Name="" ID="{CA5B141A-6C0E-4BC0-82B5-BDBC3FB94600}" ShortID="159583072">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerJoin" ID="{DD1F1D1D-DF07-4059-9E95-A29C6A1894EA}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="levelSounds" ID="{2539BDCA-A94F-4986-A626-7EEC529A13E5}" ShortID="335810401">
+					<ChildrenList>
+						<Event Name="timeUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}">
+							<ChildrenList>
+								<Action Name="" ID="{D5A53609-2DCB-47C3-8617-8CEC5651A7D1}" ShortID="485667236">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="timeUp" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="successDing" ID="{7B096A76-B8B7-413E-B040-567980FC64A1}">
+							<ChildrenList>
+								<Action Name="" ID="{A67C79EF-530D-4826-A8AE-9B08FAAC1017}" ShortID="770163279">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="scoreUp" ID="{11647095-DA24-4246-A790-E1F1434802ED}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="failureDing" ID="{252F2CE6-3515-4608-A8A8-406B8A192D4D}">
+							<ChildrenList>
+								<Action Name="" ID="{08E4BB17-04EC-491D-A18B-B68905BA1D95}" ShortID="832400771">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="scoreDown" ID="{D8A8DDA7-59A4-4404-8DF7-7952F1036F55}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

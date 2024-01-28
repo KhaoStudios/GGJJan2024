@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" SchemaVersion="119" RootDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" ParentDocumentID="{E8A9E826-295F-4996-AD2E-B06011F47F20}">
 	<Events>
-		<WorkUnit Name="Music" ID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested"/>
+		<WorkUnit Name="Music" ID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="musicStart" ID="{C0E443FE-EBC7-49D9-9AF2-13F64716D6B9}">
+					<ChildrenList>
+						<Action Name="" ID="{E0CD7105-7028-4F07-9F42-9454BEE7DDBD}" ShortID="966699009">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gameplayMusicSwitch" ID="{24E8C158-DB5A-40C3-987F-67747683B0BF}" WorkUnitID="{03151708-0007-4A75-9E43-567B939382D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="musicStateSwaps" ID="{D6E35309-DC88-4EF2-AAC1-42A34F927C2D}" ShortID="837464489">
+					<ChildrenList>
+						<Event Name="musicStateMenu" ID="{1A089FD5-C98F-4B0D-B386-685776AD49C4}">
+							<ChildrenList>
+								<Action Name="" ID="{ABDBADF1-6471-4884-9A81-467C49DFD17C}" ShortID="60623177">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="menu" ID="{51FCCB88-69E6-4069-9307-5ACA52DE1FFD}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicStateRace" ID="{6BFC884D-3F53-411A-B67B-EEFAB711630C}">
+							<ChildrenList>
+								<Action Name="" ID="{1D2D0606-9E61-4D57-9D53-627B366EF601}" ShortID="116244650">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bananaLevel" ID="{12FAD24D-81F2-4396-B3D3-1A36330AE46E}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicStateStack" ID="{BB9C845C-F5AB-4EE4-B587-52540320E7F4}">
+							<ChildrenList>
+								<Action Name="" ID="{9BF964DD-E6F2-4FBE-896E-4AD7CD9441EB}" ShortID="980666813">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicStateSpin" ID="{5241EE94-9F04-4B2A-B345-AFF9CB9067D0}">
+							<ChildrenList>
+								<Action Name="" ID="{8A672C4C-2EB7-4C4A-AF9C-A42DEB3860AC}" ShortID="847723972">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="spinLevel" ID="{4A7E665F-EF8E-43BC-B9BF-3AF842B1BEB5}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="musicStateFart" ID="{05F4D5B7-DE03-4380-B79B-F55A5D8785A1}">
+							<ChildrenList>
+								<Action Name="" ID="{822C7613-855A-4CF6-9571-D0E2584318EF}" ShortID="725819291">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

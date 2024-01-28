@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class VictoryScreenManager : MonoBehaviour
+public class VictoryScreenManager : PlayerController
 {
 
     [SerializeField] private TextMeshProUGUI text;
@@ -17,16 +17,14 @@ public class VictoryScreenManager : MonoBehaviour
         if (GameManager.Instance.overallWinner == GameManager.players.Player2)
             text.text = "Player 2 Won";
 
-        text.text += "\n Press Space to Play Again";
+        text.text += "\n Press A to Play Again";
 
     }
 
     // Update is called once per frame
-    void Update()
+    public override void OnPrimaryButtonPressed()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameManager.Instance.StartGame();
-        }
+        Debug.Log("BUTTON PRESSED");
+        GameManager.Instance.StartGame();
     }
 }

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="gameLevel" ID="{61441568-EDF7-4354-87DC-93F1474B626C}">
+					<ChildrenList>
+						<State Name="None" ID="{708B2875-E26E-4D84-8B22-45D8E5F21358}"/>
+						<State Name="menu" ID="{51FCCB88-69E6-4069-9307-5ACA52DE1FFD}"/>
+						<State Name="bananaLevel" ID="{12FAD24D-81F2-4396-B3D3-1A36330AE46E}"/>
+						<State Name="spinLevel" ID="{4A7E665F-EF8E-43BC-B9BF-3AF842B1BEB5}"/>
+						<State Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}"/>
+						<State Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

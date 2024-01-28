@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5845669285026111287}
   - component: {fileID: 4631891329003697290}
   - component: {fileID: 5206796336254001523}
+  - component: {fileID: -4649310848369116639}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -116,8 +117,8 @@ Rigidbody:
   m_GameObject: {fileID: 2457225356816484089}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -144,5 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09fc08acb19a913438be748f58eceac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4649310848369116639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457225356816484089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d283f70a59f49ab449e43248357d6cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
