@@ -13,10 +13,18 @@ public class VictoryScreenManager : PlayerController
     void Start()
     {
         if (GameManager.Instance.overallWinner == GameManager.players.Player1)
+        {
             text.text = "Player 1 Won";
-        
+            text.color = Color.blue;
+        }
+
+
         if (GameManager.Instance.overallWinner == GameManager.players.Player2)
+        {
             text.text = "Player 2 Won";
+            text.color = Color.red;
+        }
+            
 
         text.text += "\n Press A to Play Again";
 

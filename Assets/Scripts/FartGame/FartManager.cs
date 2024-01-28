@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class FartManager : MonoBehaviour
 {
     public FartPlayer playerRef;
-    public TMPro.TextMeshProUGUI tm; // fart %
     public float fartStrengthTimer;              // timer that builds up percentage
     public GameObject fart;          // fart prefab
     public bool active = true;       // If this is active or not
+
+    public Image FartMeter;
+    public Color FartColorLow;
+    public Color FartColorMed;
+    public Color FartColorHigh;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +65,8 @@ public class FartManager : MonoBehaviour
             fartStrengthTimer += Time.deltaTime*4;
 
             // update the text
-            tm.text = "Fart %: "+((int)fartStrengthTimer).ToString();
+            FartMeter.fillAmount = fartStrengthTimer / 100f;
+            //tm.text = "Fart %: "+((int)fartStrengthTimer).ToString();
 
             // percentage reaches 100, forces you to fart
             if(fartStrengthTimer >= 100)
@@ -70,7 +77,8 @@ public class FartManager : MonoBehaviour
         else
         {
             // blank text;
-            tm.text = "";
+            //tm.text = "";
+            FartMeter.fillAmount = 0;
 
         }
 

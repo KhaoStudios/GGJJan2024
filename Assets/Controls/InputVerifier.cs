@@ -42,7 +42,7 @@ public class InputVerifier : PlayerController
             PlayerJoined?.SetActive(true);
             joined = true;
             al.Add(new Act.UIMove(centerPos, PlayerJoined, 0.85f, 0, false, Act.Action.Group.None,
-                Act.Action.EaseType.EaseOutBounce));
+                Act.Action.EaseType.EaseInElastic));
         } else
         {
             joinChecker.StartGame();
