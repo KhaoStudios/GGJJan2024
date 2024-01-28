@@ -75,7 +75,19 @@ MonoBehaviour:
     m_ActionId: 1fbeaad2-3f29-438b-a500-51a11ba6c391
     m_ActionName: PlayerMovement/Movement[/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8126891838594153263}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnJoinPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3f22c517-da0b-48a3-865f-967c6fd816c6
     m_ActionName: PlayerMovement/Join
   - m_PersistentCalls:
@@ -110,6 +122,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bb7db8cb-62dd-4d47-ab36-440faf85db0b
     m_ActionName: PlayerMovement/Secondary Action[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75d48fd3-383a-451c-81a0-e76ba41d9b35
+    m_ActionName: PlayerMovement/Secondary Joystick[/XInputControllerWindows/rightStick,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement

@@ -14,10 +14,24 @@ public class GameManager : MonoBehaviour
     private int Player1Wins;
     private int Player2Wins;
 
+    [SerializeField] private int requiredWins;
+    
+    [Space(10)]
+
     [SerializeField] private TextMeshProUGUI Player1WinsText;
     [SerializeField] private TextMeshProUGUI Player2WinsText;
+    
+    [Space(10)]
+    
     [SerializeField] private CurtainMoveValues curtainMoveValues;
     [SerializeField] private GameObject curtain;
+    
+    [Space(10)]
+    
+    [SerializeField] private int VictorySceneIndex;
+    [SerializeField] private int MainMenuSceneIndex;
+
+    private players overallWinner;
     
     ActionList actionList;
     
@@ -41,9 +55,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-
-        Player1Wins = 0;
-        Player2Wins = 0;
+        
         actionList = new ActionList();
     }
 
@@ -55,12 +67,77 @@ public class GameManager : MonoBehaviour
         actionList.Update(Time.deltaTime);
     }
 
-    public void EndMinigame(players winner)
+    public void StartGame()
     {
-        actionList.Add(new UIMove(curtainMoveValues.buttonPos,curtain,curtainMoveValues.dur,0.0f,true,Action.Group.None,Action.EaseType.EaseOutBounce));
+        Player1Wins = 0;
+        Player2Wins = 0;
+        overallWinner = players.None;
+        StartNextMinigame(players.None);
+    }
+
+    public void StartNextMinigame(players winner)
+    {
+        float xPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.x;
+        float yPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.y;
+
+        Vector3 buttonPos = new Vector3(xPos, yPos, 0.0f);
+        Vector3 topPos = new Vector3(xPos, yPos * 3, 0.0f);
+
+        actionList.Add(new UIMove(buttonPos,curtain,curtainMoveValues.dur,0.0f,true,Action.Group.None,Action.EaseType.EaseOutBounce));
         actionList.Add(new IncrementPlayerLivesAction(winner,0.1f,0.0f,true));
-        actionList.Add(new LoadSceneAction(DieRoll(2),0.0f,0.5f,true));
-        actionList.Add(new UIMove(curtainMoveValues.topPos,curtain,curtainMoveValues.dur, 2.0f));
+        if (checkForWin(winner))
+        {
+            //Load a the victory scene
+            actionList.Add(new LoadSceneAction(VictorySceneIndex,0.0f,0.5f,true));
+        }
+        else
+        {
+            //Load a random minigame
+            actionList.Add(new LoadSceneAction(DieRoll(2),0.0f,0.5f,true));
+        }
+        
+        actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f,false,Action.Group.None,Action.EaseType.Cubic));
+    }
+
+    bool checkForWin(players winner)
+    {
+        //Player 1
+        if(winner == players.Player1 || winner == players.Both)
+        {
+            if (Player1Wins + 1 >= requiredWins)
+            {
+                overallWinner = players.Player1;
+                return true;
+            }
+        }
+        else
+        {
+            if (Player1Wins >= requiredWins)
+            {
+                overallWinner = players.Player1;
+                return true;
+            }
+        }
+        
+        //Player 2
+        if(winner == players.Player2 || winner == players.Both)
+        {
+            if (Player2Wins + 1 >= requiredWins)
+            {
+                overallWinner = players.Player2;
+                return true;
+            }
+        }
+        else
+        {
+            if (Player2Wins >= requiredWins)
+            {
+                overallWinner = players.Player2;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void IncrementPlayer1Lives(int i = 1)
@@ -121,7 +198,6 @@ public class IncrementPlayerLivesAction : Action
 [Serializable]
 public class CurtainMoveValues
 {
-    public Vector3 topPos;
-    public Vector3 buttonPos;
+    public GameObject canvas;
     public float dur;
 }

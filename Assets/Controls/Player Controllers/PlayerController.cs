@@ -27,6 +27,16 @@ public class PlayerController : MonoBehaviour
         secondaryInputVector = direction;
     }
 
+    public Vector2 GetInputVector()
+    {
+        return inputVector;
+    }
+
+    public Vector2 GetSecondaryInputVector()
+    {
+         return secondaryInputVector;
+    }
+
     public virtual void OnPrimaryButtonPressed()
     {
         Debug.Log("Base - primary button pressed");
@@ -35,5 +45,10 @@ public class PlayerController : MonoBehaviour
     public virtual void OnSecondaryButtonPressed()
     {
         Debug.Log("Base - secondary button pressed");
+    }
+
+    public virtual void OnJoinedButtonPressed()
+    {
+        Debug.Log("Joined pressed");
     }
 }
