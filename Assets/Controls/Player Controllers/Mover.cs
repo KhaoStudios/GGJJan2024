@@ -28,6 +28,7 @@ public class Mover : PlayerController //for banana game
 
     void BeginTrippedState()
     {
+
         BananaUpright = false;
         TimeSinceKnocked = 0;
         RB.freezeRotation = false;
@@ -60,6 +61,8 @@ public class Mover : PlayerController //for banana game
            RB.velocity = new Vector3(Vel.x, 20, Vel.z);
            RB.AddForce(new Vector3(5f, 10f, 0));
            TimeSinceLastBounce = 0;
+           AkSoundEngine.PostEvent("bananaStep", this.gameObject);
+
         }
         else
         {
@@ -147,6 +150,12 @@ public class Mover : PlayerController //for banana game
     {
         if (other.tag.Equals("TripObject"))
         {
+            if (other.gameObject.name.Contains("Car"))
+            {
+                AkSoundEngine.PostEvent("playerRunOver", this.gameObject);
+            }
+            AkSoundEngine.PostEvent("playerSlip", this.gameObject);
+
             BeginTrippedState();
         }
     }
