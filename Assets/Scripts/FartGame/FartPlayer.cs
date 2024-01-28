@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class FartPlayer : MonoBehaviour
 {
-    public PlayerController play;
-    public int speed;
-    private bool active;
+    public PlayerController play; // controller
+    public int speed;             // speed
+    private bool active;          // if it is active or not
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +18,17 @@ public class FartPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if active
         if(active)
         {
-            Vector2 moveHorizontal = play.GetInputVector();
-            //float moveVertical = Input.GetAxis("Vertical");
+            // Get the unput vector and set it
+            Vector2 move = play.GetInputVector();
 
-            transform.position += new Vector3(moveHorizontal.x, 0, moveHorizontal.y) * Time.deltaTime * speed;
+            transform.position += new Vector3(move.x, 0, move.y) * Time.deltaTime * speed;
         }
 
     }
+    // public function to stop movement
     public void Stop()
     {
         active = false;
