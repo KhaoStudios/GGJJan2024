@@ -20,7 +20,11 @@ namespace ChairGame
         // Start is called before the first frame update
         private void Start()
         {
-            if (cameraTrans) cameraTrans.position = transform.position;
+            if (cameraTrans) 
+            {
+                cameraTrans.position = transform.position;
+                cameraTrans.localEulerAngles = transform.localEulerAngles;
+            }
         }
 
         // Update is called once per frame

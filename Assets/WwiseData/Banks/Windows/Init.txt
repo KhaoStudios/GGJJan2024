@@ -10,9 +10,9 @@ State	ID	Name	State Group			Notes
 	4092420579	stackLevel	gameLevel			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	988953028	sfxVolume			\Default Work Unit\sfxVolume	
-	2346531308	musicVolume			\Default Work Unit\musicVolume	
-	2918011349	masterVolume			\Default Work Unit\masterVolume	
+	516124850	gameMusicVolume			\Default Work Unit\gameMusicVolume	
+	1052786170	gameSFXVolume			\Default Work Unit\gameSFXVolume	
+	4103204207	gameMasterVolume			\Default Work Unit\gameMasterVolume	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	Ambient			\Default Work Unit\Master Audio Bus\World\Ambient	

@@ -94,9 +94,9 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CHAIRSPEED = 2176988521U;
-        static const AkUniqueID MASTERVOLUME = 2918011349U;
-        static const AkUniqueID MUSICVOLUME = 2346531308U;
-        static const AkUniqueID SFXVOLUME = 988953028U;
+        static const AkUniqueID GAMEMASTERVOLUME = 4103204207U;
+        static const AkUniqueID GAMEMUSICVOLUME = 516124850U;
+        static const AkUniqueID GAMESFXVOLUME = 1052786170U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
