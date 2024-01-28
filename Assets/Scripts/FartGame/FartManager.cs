@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FartManager : MonoBehaviour
 {
+    public FartPlayer playerRef;
     public TMPro.TextMeshProUGUI tm; // fart %
     public float timer;              // timer that builds up percentage
     public GameObject fart;          // fart prefab
@@ -31,7 +32,8 @@ public class FartManager : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) || timer >= 100)
             {            
                 // Instantiate the fart
-                GameObject gam = Instantiate(fart,GameObject.Find("FartPlayer(Clone)").transform.position, Quaternion.identity);
+
+                GameObject gam = Instantiate(fart, playerRef.transform.position, Quaternion.identity);
                 // Set the scale of the fart based on the timer
                 FartEffect eff = gam.GetComponent<FartEffect>();
                 if (eff)

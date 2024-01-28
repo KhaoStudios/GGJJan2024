@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class FartPlayer : MonoBehaviour
+public class FartPlayer : PlayerController
 {
-    public PlayerController play; // controller
     public int speed;             // speed
     private bool active;          // if it is active or not
 
@@ -22,8 +21,7 @@ public class FartPlayer : MonoBehaviour
         if(active)
         {
             // Get the unput vector and set it
-            Vector2 move = play.GetInputVector();
-
+            Vector2 move = inputVector;
             transform.position += new Vector3(move.x, 0, move.y) * Time.deltaTime * speed;
         }
 
