@@ -51,13 +51,13 @@ public class FartSelector : PlayerController
         if (fartPlayer != null)
         {
             Debug.Log("Right choice");
-            GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
+            GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
             Destroy(gameObject);
         }
         else
         {
             Debug.Log("Wrong choice");
-            GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
+            GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
             Destroy(gameObject);
 
         }
