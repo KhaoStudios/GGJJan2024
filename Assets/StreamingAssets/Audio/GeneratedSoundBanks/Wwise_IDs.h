@@ -86,6 +86,7 @@ namespace AK
                 static const AkUniqueID FARTLEVEL = 489941698U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SCORESCREEN = 2110737749U;
                 static const AkUniqueID SPINLEVEL = 1034249585U;
                 static const AkUniqueID STACKLEVEL = 4092420579U;
             } // namespace STATE
