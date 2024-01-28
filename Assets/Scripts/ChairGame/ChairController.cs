@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Controls.Player_Controllers
+namespace ChairGame
 {
     [RequireComponent(typeof(Rigidbody))]
     public class ChairController : PlayerController
@@ -17,6 +16,10 @@ namespace Controls.Player_Controllers
         public float KickCooldown;
         private float kickTimer;
         private bool kickReady;
+
+        public float DeflectionScale;
+
+        private Vector3 oldVelocity;
         
     
         // Start is called before the first frame update
@@ -31,6 +34,8 @@ namespace Controls.Player_Controllers
         {
             SpinChair();
             CoolDown();
+
+            oldVelocity = rb.velocity;
         }
 
         public override void OnPrimaryButtonPressed()
@@ -58,6 +63,15 @@ namespace Controls.Player_Controllers
         {
             kickTimer -= Time.deltaTime;
             kickReady = !(kickTimer > 0.0f);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.collider.CompareTag("Wall"))
+            {
+                Vector3 reflection = Vector3.Reflect(oldVelocity, collision.contacts[0].normal);
+                rb.velocity = reflection * DeflectionScale ;
+            }
         }
     }
 }

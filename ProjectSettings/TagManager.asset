@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TripObject
   - BananaPlayer
+  - Wall
   layers:
   - Default
   - TransparentFX
