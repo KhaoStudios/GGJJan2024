@@ -40,14 +40,17 @@ public class InputVerifier : PlayerController
         if (!joined)
         {
             PlayerJoined?.SetActive(true);
+            AkSoundEngine.PostEvent("menuPlayerJoin", this.gameObject);
             joined = true;
             al.Add(new Act.UIMove(centerPos, PlayerJoined, 0.85f, 0, false, Act.Action.Group.None,
                 Act.Action.EaseType.EaseInElastic));
-        } else
+        }
+        else
         {
             joinChecker.StartGame();
+            AkSoundEngine.PostEvent("menuNext", this.gameObject);
         }
-        
+
     }
 
 

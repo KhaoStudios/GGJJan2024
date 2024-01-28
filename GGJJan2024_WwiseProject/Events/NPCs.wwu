@@ -41,6 +41,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="playerHitHonk" ID="{07A621F7-EE9B-4BFF-A422-AC4D8ECCE041}">
+							<ChildrenList>
+								<Action Name="" ID="{FCC7CF47-5D5D-4262-B186-6607548312BB}" ShortID="767625075">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="carHonk" ID="{46497AC1-7FBF-4442-94F2-53563E08F6BA}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="fartGame" ID="{E546F62F-DE91-4E69-8A06-F019A7897C1D}" ShortID="172441565">
