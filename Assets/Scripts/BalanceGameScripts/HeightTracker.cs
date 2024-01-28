@@ -26,7 +26,7 @@ public class HeightTracker : MonoBehaviour
     //Doing on trigger stay since on trigger enter and exit do not work well with object changing from not counting to counting.
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.GetComponent<TrackLanded>() && other.gameObject.GetComponent<TrackLanded>().GetLanded())
+        if(other.attachedRigidbody.GetComponent<TrackLanded>() && other.attachedRigidbody.GetComponent<TrackLanded>().GetLanded())
         {
             colliding = true;
         }
