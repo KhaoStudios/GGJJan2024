@@ -23,19 +23,18 @@ namespace ChairGame
         public float SpinBoostDecay;
         private float spinSpeed;
         private bool spinDir;
-        private bool spinBoost;
 
         public float KickForce;
         public float KickCooldown;
         private float kickTimer;
         private bool kickReady;
+        private bool rolling;
 
         public float BounceMultiplier = 0.75f;
         public float BoostMultiplier = 2;
         
         private Vector3 oldVelocity;
         
-    
         // Start is called before the first frame update
         private void Awake()
         {
@@ -47,9 +46,15 @@ namespace ChairGame
         // Update is called once per frame
         private void Update()
         {
+            float speed = myRB.velocity.magnitude;
+            
+            if (speed > 0.1f)
+                Debug.Log(speed);
+            
             SpinChair();
             DecaySpin();
             CoolDown();
+            UpdateRollSound();
             actionList.Update(Time.deltaTime);
             oldVelocity = myRB.velocity;
         }
@@ -59,36 +64,11 @@ namespace ChairGame
             if (kickReady) KickOff();
         }
         
-        private void SpinChair()
-        {
-            spinSpeed = spinDir ? spinSpeed : spinSpeed * -1f;
-            
-            Vector3 chairAngles = chairTrans.localEulerAngles;
-            chairAngles.y += spinSpeed * Time.deltaTime;
-
-            chairTrans.localEulerAngles = chairAngles;
-            spinSpeed = Mathf.Abs(spinSpeed);
-        }
-
-        private void BoostSpin()
-        {
-            spinDir = !spinDir;
-            spinSpeed *= SpinBoostMultiplier;
-        }
         
-        private void DecaySpin()
-        {
-            Debug.Log("Spin Speed: " + spinSpeed);
-            
-            if (spinSpeed > StartingSpinSpeed)
-                spinSpeed -= SpinBoostDecay * Time.deltaTime;
-
-            if (spinSpeed < StartingSpinSpeed)
-                spinSpeed = StartingSpinSpeed;
-        }
 
         private void KickOff()
         {
+            spinDir = !spinDir;
             bool boost = BoostTrigger.TouchingWall();
             Rigidbody otherRB = BoostTrigger.TouchingPlayer();
             
@@ -111,7 +91,16 @@ namespace ChairGame
             myRB.AddForce(kickDir * force);
             kickTimer = KickCooldown;
 
-            
+            if (boost || otherRB)
+                AkSoundEngine.PostEvent("playerKickStrong", gameObject);
+            else
+                AkSoundEngine.PostEvent("playerKickNormal", gameObject);
+
+            if (!rolling)
+            {
+                AkSoundEngine.PostEvent("playerRolling", gameObject);
+                rolling = true;
+            }
             
             Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
             Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
@@ -132,6 +121,49 @@ namespace ChairGame
                 Act.Action.Group.None, Act.Action.EaseType.Cubic));
         }
 
+        private void SpinChair()
+        {
+            spinSpeed = spinDir ? spinSpeed : spinSpeed * -1f;
+            
+            Vector3 chairAngles = chairTrans.localEulerAngles;
+            chairAngles.y += spinSpeed * Time.deltaTime;
+
+            chairTrans.localEulerAngles = chairAngles;
+            spinSpeed = Mathf.Abs(spinSpeed);
+        }
+
+        private void BoostSpin()
+        {
+            spinSpeed += StartingSpinSpeed * SpinBoostMultiplier;
+        }
+        
+        private void DecaySpin()
+        {
+            //Debug.Log("Spin Speed: " + spinSpeed);
+            
+            if (spinSpeed > StartingSpinSpeed)
+                spinSpeed -= SpinBoostDecay * Time.deltaTime;
+
+            if (spinSpeed < StartingSpinSpeed)
+                spinSpeed = StartingSpinSpeed;
+        }
+
+        private void UpdateRollSound()
+        {
+            if (rolling)
+            {
+                float velocity = myRB.velocity.magnitude;
+                
+                AkSoundEngine.SetRTPCValue("chairSpeed", velocity * 2f, gameObject);
+                
+                if (myRB.GetAccumulatedForce().sqrMagnitude > 0) return;
+                if (velocity > 5f) return;
+                
+                AkSoundEngine.PostEvent("playerRollEnd", gameObject);
+                rolling = false;
+            }
+        }
+        
         private void CoolDown()
         {
             kickTimer -= Time.deltaTime;
@@ -140,9 +172,10 @@ namespace ChairGame
             {
                 kickReady = false;
             }
-
-            kickReady = true;
-            spinBoost = false;
+            else
+            {
+                kickReady = true;
+            }
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -151,6 +184,12 @@ namespace ChairGame
             {
                 Vector3 reflection = Vector3.Reflect(oldVelocity, collision.contacts[0].normal);
                 myRB.velocity = reflection * BounceMultiplier ;
+                AkSoundEngine.PostEvent("chairCollide", gameObject);
+            }
+            
+            else if (collision.collider.CompareTag("Player"))
+            {
+                AkSoundEngine.PostEvent("chairCollide", gameObject);
             }
         }
     }

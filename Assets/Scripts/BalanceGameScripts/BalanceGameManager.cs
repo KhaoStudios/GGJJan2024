@@ -35,6 +35,12 @@ public class PieceManager : MonoBehaviour
     private GameObject player1Piece;
     private GameObject player2Piece;
 
+    bool wasRotatingPlayer1 = false;
+    bool wasMovingPlayer1 = false;
+
+    bool wasRotatingPlayer2 = false;
+    bool wasMovingPlayer2 = false;
+
     private int pieces;
     private void Start()
     {
@@ -47,6 +53,7 @@ public class PieceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         time -= Time.deltaTime;
         if(time <= 0)
         {
@@ -71,10 +78,21 @@ public class PieceManager : MonoBehaviour
         if(player1Piece && (player1Piece.GetComponent<PieceFinished>().getCollided() || player1Piece.transform.position.y < 0))
         {
             player1HasPiece = false;
+            if (wasRotatingPlayer1)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
+            }
+            wasRotatingPlayer1 = false;
+
         }
         if (player2Piece && (player2Piece.GetComponent<PieceFinished>().getCollided() || player2Piece.transform.position.y < 0))
         {
             player2HasPiece = false;
+            if (wasRotatingPlayer2)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player2Piece.gameObject);
+            }
+            wasRotatingPlayer2 = false;
         }
 
         actionList.Update(Time.deltaTime);
@@ -107,11 +125,40 @@ public class PieceManager : MonoBehaviour
         //Restrict Position of objects to over your island.
         //On collision New Piece
         Vector2 translate1 = player1.GetInputVector() * speed * Time.deltaTime;
-        Vector2 rotation1 = player1.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
-        if (rotation1.x != 0)
+        if(translate1.magnitude > 0)
         {
-            player1Piece.transform.Rotate(new Vector3(rotation1.x, 0, rotation1.y));
+            if(!wasMovingPlayer1)
+            {
+                //Sound
+               
+            }
+            wasMovingPlayer1 = true;
         }
+        else
+        {
+            wasMovingPlayer1 = false;
+        }
+        Vector2 rotation1 = player1.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
+        if(rotation1.magnitude > 0)
+        {
+            if(!wasRotatingPlayer1)
+            {
+                //sound
+                AkSoundEngine.PostEvent("playerRotateStart", player1Piece.gameObject);
+            }
+            wasRotatingPlayer1 = true;
+        }
+        else
+        {
+            if (wasRotatingPlayer1)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
+            }
+            wasRotatingPlayer1 = false;
+        }
+        
+        
+        player1Piece.transform.Rotate(new Vector3(rotation1.x, rotation1.y, 0));
 
         translate1.x = Mathf.Clamp(translate1.x + player1Piece.transform.position.x, Player1SpawnLocation.transform.position.x - radius, Player1SpawnLocation.transform.position.x + radius);
         translate1.y = Mathf.Clamp(translate1.y + player1Piece.transform.position.z, Player1SpawnLocation.transform.position.z - radius, Player1SpawnLocation.transform.position.z + radius);
@@ -128,7 +175,42 @@ public class PieceManager : MonoBehaviour
         Vector2 translate2 = player2.GetInputVector() * speed * Time.deltaTime;
         Vector2 rotation2 = player2.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
 
-        player1Piece.transform.Rotate(new Vector3(translate2.x, 0, 0));
+        if (translate2.magnitude > 0)
+        {
+            if (!wasMovingPlayer2)
+            {
+                //Sound
+
+            }
+            wasMovingPlayer2 = true;
+        }
+        else
+        {
+            wasMovingPlayer2 = false;
+        }
+
+        if (rotation2.magnitude > 0)
+        {
+            if (!wasRotatingPlayer2)
+            {
+                //sound
+                AkSoundEngine.PostEvent("playerRotateStart", player2Piece.gameObject);
+
+            }
+            wasRotatingPlayer2 = true;
+        }
+        else
+        {
+            if (wasRotatingPlayer2)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player2Piece.gameObject);
+            }
+
+            wasRotatingPlayer2 = false;
+        }
+
+        player2Piece.transform.Rotate(new Vector3(rotation2.x, rotation2.y, 0));
+
 
         translate2.x = Mathf.Clamp(translate2.x + player2Piece.transform.position.x, Player2SpawnLocation.transform.position.x - radius, Player2SpawnLocation.transform.position.x + radius);
         translate2.y = Mathf.Clamp(translate2.y + player2Piece.transform.position.z, Player2SpawnLocation.transform.position.z - radius, Player2SpawnLocation.transform.position.z + radius);
