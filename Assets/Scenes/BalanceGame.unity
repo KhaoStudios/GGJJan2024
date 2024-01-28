@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 0
   radius: 4
-  time: 1
+  time: 30
   player1: {fileID: 752426845}
   player2: {fileID: 1825799074}
   speed: 20

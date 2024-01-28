@@ -1501,10 +1501,18 @@ PrefabInstance:
       propertyPath: FollowCamera
       value: 
       objectReference: {fileID: 295654497}
+    - target: {fileID: 2987855452369880802, guid: cb5f38cd2aa6c1c4fb7cacde3ab2e500, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3304541948966753707, guid: cb5f38cd2aa6c1c4fb7cacde3ab2e500, type: 3}
       propertyPath: FollowCamera
       value: 
       objectReference: {fileID: 295654497}
+    - target: {fileID: 4889591643532543943, guid: cb5f38cd2aa6c1c4fb7cacde3ab2e500, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5594865443411332764, guid: cb5f38cd2aa6c1c4fb7cacde3ab2e500, type: 3}
       propertyPath: m_Drag
       value: 0.05
