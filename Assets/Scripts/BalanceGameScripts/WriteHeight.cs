@@ -11,6 +11,6 @@ public class WriteHeight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = inputString + " " + heightTracker.GetHeight().ToString("0.0") + "M";
+        textMesh.text = heightTracker.GetHeight().ToString("0.0") + " M";
     }
 }

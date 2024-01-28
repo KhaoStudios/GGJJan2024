@@ -49,6 +49,7 @@ public class PieceManager : MonoBehaviour
         player1Seed = (int)System.DateTime.Now.Ticks;
         player2Seed = player1Seed;
         pieces = avaliablePieces.Count;
+        GameManager.Instance.DisplayInfo("Stack 'em Up");
     }
     // Update is called once per frame
     void Update()
