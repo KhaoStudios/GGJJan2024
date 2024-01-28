@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BananaGame.unity
     guid: d99ebdbdfdf8ee44db3d67ffa4e225f9
   - enabled: 1
+    path: Assets/Scenes/ChairGame.unity
+    guid: ed0e8f29ffb129f4897ffdc9965c39cd
+  - enabled: 1
     path: Assets/Scenes/VictoryScreen.unity
     guid: 214a1c29355888b4481aa46dbce14aa6
   m_configObjects:
