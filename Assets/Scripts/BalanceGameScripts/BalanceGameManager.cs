@@ -59,13 +59,23 @@ public class PieceManager : MonoBehaviour
         time -= Time.deltaTime;
         if(time > startTime)
         {
-            AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
             return;
         }
         if(time <= 0)
         {
+            if (wasRotatingPlayer1)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
+                wasRotatingPlayer1 = false;
+            }
+            if (wasRotatingPlayer2)
+            {
+                AkSoundEngine.PostEvent("playerRotateStop", player2Piece.gameObject);
+                wasRotatingPlayer2 = false;
+            }
             if (player1Height.GetHeight() > player2Height.GetHeight())
             {
+                AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
                 GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
                 Debug.Log("Game Over");
             }
