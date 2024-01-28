@@ -10,10 +10,13 @@ public class FartCharacter : MonoBehaviour
     public ActionList act;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        act = new ActionList();
+    }
     void Start()
     {
         active = true;
-        act = new ActionList();
         int rand = Random.Range(0, 2);
         if(rand == 0)
         {
