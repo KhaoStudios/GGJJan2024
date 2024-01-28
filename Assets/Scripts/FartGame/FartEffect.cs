@@ -6,7 +6,7 @@ public class FartEffect : MonoBehaviour
 {
     //how fast scale increases
     public float ScaleMultipler = 1.1f;
-    //scale of the explosion hitbox (main part of the explosion)
+    //scale of how big the fart will be
     public float ScaleHitbox = 10f;
 
     // Start is called before the first frame update
@@ -18,10 +18,10 @@ public class FartEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(transform.localScale);
-        //Debug.Log(Time.deltaTime);
-        transform.localScale *= 1+ (ScaleMultipler*Time.deltaTime);
+        // Multiply localScale with time.deltatime
+        transform.localScale *= 1 + (ScaleMultipler * Time.deltaTime);
 
+        // if it is big enough, destroy it
         if (transform.localScale.x > ScaleHitbox)
         {
             Destroy(gameObject);
