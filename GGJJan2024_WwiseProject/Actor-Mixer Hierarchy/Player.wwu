@@ -604,6 +604,11 @@
 							<ChildrenList>
 								<Sound Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" ShortID="276530495">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>

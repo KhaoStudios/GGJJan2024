@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2C9A9B82-2D1F-04EC-9B53-F521960E6C06}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3A9EB992-F63E-97A0-5679-674F2362C4FF}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -30,7 +30,6 @@
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
-				<GameParameter Id="782298490" Name="spinSpeed"/>
 				<GameParameter Id="988953028" Name="sfxVolume"/>
 				<GameParameter Id="2176988521" Name="chairSpeed"/>
 				<GameParameter Id="2346531308" Name="musicVolume"/>
@@ -49,7 +48,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{D7782310-0E73-6749-DEEE-C49374A85A04}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{6E5F1F91-2EC8-0BBC-EFFE-4F84DD6590C7}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -373,6 +372,10 @@
 					<ShortName>GameStart.wav</ShortName>
 					<CachePath>SFX/GameStart_8E324C96.wem</CachePath>
 				</File>
+				<File Id="892154818" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>teethChatter.wav</ShortName>
+					<CachePath>SFX/teethChatter_8E324C96.wem</CachePath>
+				</File>
 				<File Id="892372360" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>partyHat-003.wav</ShortName>
 					<CachePath>SFX/partyHat-003_1ED27232.wem</CachePath>
@@ -408,6 +411,10 @@
 				<File Id="971614616" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>concreteFootsteps-010.wav</ShortName>
 					<CachePath>SFX/concreteFootsteps-010_8E324C96.wem</CachePath>
+				</File>
+				<File Id="988533712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>metalTack.wav</ShortName>
+					<CachePath>SFX/metalTack_8E324C96.wem</CachePath>
 				</File>
 				<File Id="990638647" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Alerted.wav</ShortName>
@@ -799,8 +806,16 @@
 						<MediaRef Id="810188556"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2806050493" Name="tackLand" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="238246742" Name="teethLand" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2806050493" Name="tackLand" DurationType="OneShot" DurationMin="0.30415875" DurationMax="0.33168742">
+					<MediaRefs>
+						<MediaRef Id="988533712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="238246742" Name="teethLand" DurationType="OneShot" DurationMin="0.5374948" DurationMax="0.5861422">
+					<MediaRefs>
+						<MediaRef Id="892154818"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2770287305" Name="testBoop" DurationType="OneShot" DurationMin="1.816" DurationMax="1.816">
 					<MediaRefs>
 						<MediaRef Id="887665778"/>
@@ -839,5 +854,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ED9FBD20-786D-489F-EF0D-F415F5506D2F}</FileHash>
+	<FileHash>{A5F81900-B668-1FEF-E2AE-BC0A388428AF}</FileHash>
 </SoundBanksInfo>

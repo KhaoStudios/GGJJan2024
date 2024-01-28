@@ -20,6 +20,7 @@ public class MainMenuScript : MonoBehaviour
 
         Vector3 centerPos = new Vector3(xPos, yPos*2.0f, 0.0f);
         
+        GameManager.Instance.DisplayInfo("Main Menu");
         hasStarted = false;
         al = new ActionList();
         al.Add(new UIMove(centerPos,title,0.9f,0.0f,false,Action.Group.None,Action.EaseType.EaseOutBounce));

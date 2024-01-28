@@ -74,7 +74,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="tackLand" ID="{7913B00D-36D6-4D07-9796-1AEF8F283AE2}"/>
+						<Event Name="tackLand" ID="{7913B00D-36D6-4D07-9796-1AEF8F283AE2}">
+							<ChildrenList>
+								<Action Name="" ID="{F88D38FB-60E3-49AE-9FCE-B8C286C675A8}" ShortID="572132052">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="metalTack" ID="{EE9F564D-6E1C-4C4B-B8CF-8D13AA0D1091}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="partyHatLand" ID="{D73A451E-8AD6-4A5F-B6CC-4502C2FF5F86}">
 							<ChildrenList>
 								<Action Name="" ID="{956A4FF8-7EAD-4076-9D04-0A742FA4712F}" ShortID="100391714">
@@ -108,7 +118,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="teethLand" ID="{310288E9-629F-438E-AEA6-7F280DAEAC65}"/>
+						<Event Name="teethLand" ID="{310288E9-629F-438E-AEA6-7F280DAEAC65}">
+							<ChildrenList>
+								<Action Name="" ID="{EC34D90F-FB15-46D2-B913-982D1B84EF07}" ShortID="10627840">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="teethChatter" ID="{FB92C8FC-D178-42B3-8097-B7625F68C2C2}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="cubeLand" ID="{FADF3020-96FD-4B37-8582-E9575ECC461A}">
 							<ChildrenList>
 								<Action Name="" ID="{970FC64C-1D69-4E4F-BAC1-203943EBF2CF}" ShortID="526106686">
