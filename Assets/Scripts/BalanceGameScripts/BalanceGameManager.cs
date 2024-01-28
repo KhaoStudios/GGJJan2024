@@ -8,7 +8,8 @@ public class PieceManager : MonoBehaviour
     public float height;
     //Not really a radius
     public float radius;
-    public float time = 30f;
+    public float time = 40f;
+    public float startTime = 30f;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -56,6 +57,10 @@ public class PieceManager : MonoBehaviour
     {
         
         time -= Time.deltaTime;
+        if(time > startTime)
+        {
+            return;
+        }
         if(time <= 0)
         {
             if (player1Height.GetHeight() > player2Height.GetHeight())
