@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID FARTMID = 180502814U;
         static const AkUniqueID FARTSMALL = 1426002253U;
         static const AkUniqueID FRISBEELAND = 1805644152U;
+        static const AkUniqueID HORNLAND = 399836117U;
         static const AkUniqueID LEVELBANANATALK = 2452814208U;
         static const AkUniqueID LEVELFARTTALK = 3139477882U;
         static const AkUniqueID LEVELKICKTALK = 420782237U;
@@ -50,6 +51,7 @@ namespace AK
         static const AkUniqueID MUSICSTATESTACK = 1089682851U;
         static const AkUniqueID PARTYHATLAND = 3636083381U;
         static const AkUniqueID PLAYERHAMMER = 268427392U;
+        static const AkUniqueID PLAYERHITHONK = 1981496715U;
         static const AkUniqueID PLAYERKICKNORMAL = 672392345U;
         static const AkUniqueID PLAYERKICKSTRONG = 1553801141U;
         static const AkUniqueID PLAYEROBJECTFELL = 3006996396U;

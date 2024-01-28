@@ -752,6 +752,33 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<Sound Name="hornDrop" ID="{2D9A00EF-8326-4955-B5A9-21242090BDF8}" ShortID="163582090">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EFX INT Clown Horn 01" ID="{6B69EBF1-ED64-4045-9004-1A0D23222C01}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.00537949400798"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.3611540168664"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>EFX INT Clown Horn 01 .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="123024092"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EFX INT Clown Horn 01" ID="{6B69EBF1-ED64-4045-9004-1A0D23222C01}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
