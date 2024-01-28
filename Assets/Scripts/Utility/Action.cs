@@ -580,6 +580,16 @@ namespace Act
             // Set the current
             useCurrent = true;
         }
+        
+        public Rotate(GameObject objToMove, Vector3 endRot, float duration, AnimationCurve curve, float delay = 0, bool blocking = false, Group group = Group.None)
+            : base(duration, delay, blocking, group, curve)
+        {
+            this.objToMove = objToMove;
+            this.endRot = endRot;
+
+            // Set the current
+            useCurrent = true;
+        }
 
         public override void Start()
         {
@@ -587,14 +597,15 @@ namespace Act
             // If using current position...
             if(useCurrent)
             {
-                startRot = objToMove.transform.rotation.eulerAngles;
+                startRot = objToMove.transform.localEulerAngles;
             }
         }
 
         public override bool Execute(float deltaTime)
         {
 
-            objToMove.transform.rotation = Quaternion.Euler(Vector3.Lerp(startRot, endRot, PercentDone));
+            objToMove.transform.localEulerAngles = startRot + (endRot - startRot) * PercentDone;
+            //objToMove.transform.rotation = Quaternion.Euler(Vector3.Lerp(startRot, endRot, PercentDone));
 
             // Return whether the action is complete
             return IsDone;
