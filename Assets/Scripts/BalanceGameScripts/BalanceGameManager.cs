@@ -82,12 +82,18 @@ public class PieceManager : MonoBehaviour
         //On collision New Piece
         Vector2 translate1 = player1.GetInputVector() * speed * Time.deltaTime;
         Vector2 rotation1 = player1.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
+        if (rotation1.x != 0)
+        {
+            player1Piece.transform.Rotate(new Vector3(rotation1.x, 0, 0));
+        }
 
         translate1.x = Mathf.Clamp(translate1.x + player1Piece.transform.position.x, Player1SpawnLocation.transform.position.x - radius, Player1SpawnLocation.transform.position.x + radius);
         translate1.y = Mathf.Clamp(translate1.y + player1Piece.transform.position.z, Player1SpawnLocation.transform.position.z - radius, Player1SpawnLocation.transform.position.z + radius);
 
-
         player1Piece.transform.position = new  Vector3(translate1.x, player1Piece.transform.position.y, translate1.y);
+
+        //player1.transform.eulerAngles = (player1.transform.localRotation.eulerAngles + new Vector3(rotation1.x, 0, rotation1.y));
+
         //Player 2
         //Rotate Object based on joystick
         //Translate Object based on joystick 2
@@ -96,10 +102,13 @@ public class PieceManager : MonoBehaviour
         Vector2 translate2 = player2.GetInputVector() * speed * Time.deltaTime;
         Vector2 rotation2 = player2.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
 
+        player1Piece.transform.Rotate(new Vector3(translate2.x, 0, 0));
+
         translate2.x = Mathf.Clamp(translate2.x + player2Piece.transform.position.x, Player2SpawnLocation.transform.position.x - radius, Player2SpawnLocation.transform.position.x + radius);
         translate2.y = Mathf.Clamp(translate2.y + player2Piece.transform.position.z, Player2SpawnLocation.transform.position.z - radius, Player2SpawnLocation.transform.position.z + radius);
 
         player2Piece.transform.position = new Vector3(translate2.x, player2Piece.transform.position.y, translate2.y);
+
 
     }
 
