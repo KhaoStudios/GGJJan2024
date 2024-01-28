@@ -49,13 +49,13 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{D676685C-C168-C716-BCC5-92932B82D8B4}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{93574ABE-30B7-29A2-8A8A-312EE8FEC914}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
 				<File Id="3417086" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>balance-game.wav</ShortName>
-					<CachePath>SFX/balance-game_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/balance-game_56CEF360.wem</CachePath>
 				</File>
 				<File Id="35538467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-003.wav</ShortName>
@@ -319,11 +319,11 @@
 				</File>
 				<File Id="1026322219" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>banana-game.wav</ShortName>
-					<CachePath>SFX/banana-game_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/banana-game_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1044091603" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fart-game.wav</ShortName>
-					<CachePath>SFX/fart-game_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/fart-game_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1067166882" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>toyBoxAmbience.wav</ShortName>
@@ -635,5 +635,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B68075F8-A177-B8E1-38F0-B7922E7E2E8F}</FileHash>
+	<FileHash>{49A13B03-7B49-C934-BFF4-823BB60A24BA}</FileHash>
 </SoundBanksInfo>

@@ -8,7 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	420782237	levelKickTalk			\Default Work Unit\UI\levelSounds\levelKickTalk	
 	554093570	playerSquished			\Default Work Unit\Player\bananaGame\playerSquished	
 	672392345	playerKickNormal			\Default Work Unit\Player\spinGame\playerKickNormal	
-	785996010	fartAlert			\Default Work Unit\NPCs\fartAlert	
+	785996010	fartAlert			\Default Work Unit\NPCs\fartGame\fartAlert	
 	796366129	timeUp			\Default Work Unit\UI\levelSounds\timeUp	
 	1089682851	musicStateStack			\Default Work Unit\Music\musicStateSwaps\musicStateStack	
 	1098376466	playerRollEnd			\Default Work Unit\Player\spinGame\playerRollEnd	
@@ -60,7 +60,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2176988521	chairSpeed			\Default Work Unit\rollGame\chairSpeed	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	3417086	balance-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\balance-game_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\stackGameMusic\balance-game\balance-game		4948284
+	3417086	balance-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\balance-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\stackGameMusic\balance-game\balance-game		430166
 	35538467	rotateClicks-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\rotateClicks-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-003		2599
 	54295250	sirenSlip	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\331610__applauseav__acme-siren_3306B3BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\slips\sirenSlip		8866
 	56784899	concreteFootsteps-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\concreteFootsteps-005_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-005		5081
@@ -126,8 +126,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	992572342	rotateClicks-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\rotateClicks-001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-001		1920
 	1010716763	sliderEnd	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\SFX_UI_Slider_End_A52D81C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\sliderEnd		2747
 	1016520404	playerKickStrong	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\strongKick_117544F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerKicks\playerKickStrong		4018
-	1026322219	banana-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\banana-game_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\bananaGameMusic\banana-game\banana-game		11059296
-	1044091603	fart-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\fart-game_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\fartGameMusic\fart-game\fart-game		6144096
+	1026322219	banana-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\banana-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\bananaGameMusic\banana-game\banana-game		1117935
+	1044091603	fart-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\fart-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\fartGameMusic\fart-game\fart-game		581231
 	1067166882	toyBoxAmbience	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\toyBoxAmbience_AC47A199.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\toyBoxAmbience		733468
 	1067828492	objectDrop	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Windows\SFX\672965__walliumva__slide-whistle_EA9A050C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\objectDrop		2342
 
