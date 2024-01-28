@@ -69,5 +69,6 @@ public class InputVerifier : PlayerController
     {
         // Toggle settings
         settingsMenu.SetActive(!settingsMenu.activeInHierarchy);
+        AkSoundEngine.PostEvent("menuBack", this.gameObject);
     }
 }

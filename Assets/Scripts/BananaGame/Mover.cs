@@ -110,6 +110,7 @@ public class Mover : PlayerController //for banana game
                         BananaUpright = true;
                         Rotation.x = 0;
                         transform.eulerAngles = Rotation;
+                        AkSoundEngine.PostEvent("successDing", this.gameObject);
                     }
                     TimeInBalance += Time.deltaTime;
                 }

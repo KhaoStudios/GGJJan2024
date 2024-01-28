@@ -16,7 +16,7 @@ public class BananaGameAmbientSounds : MonoBehaviour
     {
         if (Sound == 0)
         {
-             Sound = AkSoundEngine.PostEvent("carDriving", this.gameObject);
+           Sound = AkSoundEngine.PostEvent("ambienceStart", this.gameObject);
         }
     }
 }
