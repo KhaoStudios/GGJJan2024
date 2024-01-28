@@ -121,7 +121,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}"/>
-							<Value>0</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="sfxVolume" ID="{D138DC06-75E5-4CCC-9CCA-46C489E45A92}"/>

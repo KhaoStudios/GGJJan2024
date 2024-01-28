@@ -47,6 +47,7 @@ namespace AK
         static const AkUniqueID PLAYERKICKSTRONG = 1553801141U;
         static const AkUniqueID PLAYEROBJECTDROP = 3715532380U;
         static const AkUniqueID PLAYERROLLEND = 1098376466U;
+        static const AkUniqueID PLAYERROLLING = 562081045U;
         static const AkUniqueID PLAYERROTATESTART = 1933175613U;
         static const AkUniqueID PLAYERROTATESTOP = 2651639743U;
         static const AkUniqueID PLAYERRUNOVER = 4176432927U;

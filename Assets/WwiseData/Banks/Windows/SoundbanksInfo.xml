@@ -49,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{58B35569-5A10-6140-C0AF-8F2B971CBBBF}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{E7F48BDA-EAB5-F99D-A691-8D9D9657D9F9}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -598,15 +598,13 @@
 						<MediaRef Id="770228991"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="672392345" Name="playerKickNormal" DurationType="Infinite">
+				<Event Id="672392345" Name="playerKickNormal" DurationType="OneShot" DurationMin="0.3970613" DurationMax="0.4206718">
 					<MediaRefs>
 						<MediaRef Id="658984190"/>
-						<MediaRef Id="764381067"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1553801141" Name="playerKickStrong" DurationType="Infinite">
+				<Event Id="1553801141" Name="playerKickStrong" DurationType="OneShot" DurationMin="0.49632663" DurationMax="0.52583975">
 					<MediaRefs>
-						<MediaRef Id="764381067"/>
 						<MediaRef Id="1016520404"/>
 					</MediaRefs>
 				</Event>
@@ -620,6 +618,11 @@
 						<MediaRef Id="259822578"/>
 						<MediaRef Id="564682276"/>
 						<MediaRef Id="584136267"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="562081045" Name="playerRolling" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="764381067"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1933175613" Name="playerRotateStart" DurationType="Infinite">
@@ -716,5 +719,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D89787CE-E3F4-27C1-8710-1025B3FEE478}</FileHash>
+	<FileHash>{FBCC4508-C915-E419-AB64-9C9D455D73DB}</FileHash>
 </SoundBanksInfo>
