@@ -8,6 +8,7 @@ public class PieceManager : MonoBehaviour
     public float height;
     //Not really a radius
     public float radius;
+    public float time = 30;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -21,6 +22,10 @@ public class PieceManager : MonoBehaviour
 
     public Transform Player1SpawnLocation;
     public Transform Player2SpawnLocation;
+
+    public HeightTracker player1Height;
+    public HeightTracker player2Height;
+
 
     public List<GameObject> avaliablePieces;
 
@@ -42,6 +47,27 @@ public class PieceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time -= Time.deltaTime;
+        if(time <= 0)
+        {
+            if (player1Height.GetHeight() > player2Height.GetHeight())
+            {
+                GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
+                Debug.Log("Game Over");
+            }
+            else if (player1Height.GetHeight() < player2Height.GetHeight())
+            {
+                GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
+                Debug.Log("Game Over");
+            }
+            else
+            {
+                GameManager.Instance.StartNextMinigame(GameManager.players.None);
+                Debug.Log("Game Over");
+            }
+            Destroy(gameObject);
+            return;
+        }
         if(player1Piece && (player1Piece.GetComponent<DetectCollisions>().getCollided() || player1Piece.transform.position.y < 0))
         {
             player1HasPiece = false;
