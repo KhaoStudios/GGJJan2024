@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private int VictorySceneIndex;
     [SerializeField] private int MainMenuSceneIndex;
+    [SerializeField] private List<int> ValidGameScenes;
 
     public players overallWinner { get; private set; }
     
@@ -93,7 +94,9 @@ public class GameManager : MonoBehaviour
         else
         {
             //Load a random minigame
-            actionList.Add(new LoadSceneAction(DieRoll(2),0.0f,0.5f,true));
+            int randomGameIndex = ValidGameScenes[Random.Range(0, ValidGameScenes.Count)];
+
+            actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
         }
         
         actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f,false,Action.Group.None,Action.EaseType.Cubic));

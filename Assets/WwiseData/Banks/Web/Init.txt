@@ -1,3 +1,19 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1091790943	gameLevel			\Default Work Unit\gameLevel	
+
+State	ID	Name	State Group			Notes
+	489941698	fartLevel	gameLevel			
+	748895195	None	gameLevel			
+	1034249585	spinLevel	gameLevel			
+	2489058252	bananaLevel	gameLevel			
+	2607556080	menu	gameLevel			
+	4092420579	stackLevel	gameLevel			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	sfxVolume			\Default Work Unit\sfxVolume	
+	2346531308	musicVolume			\Default Work Unit\musicVolume	
+	2918011349	masterVolume			\Default Work Unit\masterVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	Ambient			\Default Work Unit\Master Audio Bus\World\Ambient	
 	833916109	NPCs			\Default Work Unit\Master Audio Bus\World\NPCs	

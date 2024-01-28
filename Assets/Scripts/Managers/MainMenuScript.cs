@@ -25,6 +25,6 @@ public class MainMenuScript : MonoBehaviour
             }
         }
 
-        mainText.fontSize = Mathf.Lerp(50, 70, Mathf.PingPong(Time.time, 1));
+        mainText.fontSize = Mathf.Lerp(45, 50, Mathf.PingPong(Time.time, 1));
     }
 }

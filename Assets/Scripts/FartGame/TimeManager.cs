@@ -5,9 +5,10 @@ using TMPro;
 
 public class TimeManager : MonoBehaviour
 {
+    //public FartSelector selector;      // This is the player who is trying to select the farter
+
     public TMPro.TextMeshProUGUI tm; // timer text
     public float startTimer;         // The start value of the timer
-    public GameObject selector;      // The selector to be instantiated
     private float timer;             // the timer itself
     private int mode = 1;            // mode used to see if the selector is active or not
 
@@ -40,7 +41,7 @@ public class TimeManager : MonoBehaviour
             FindObjectOfType<FartManager>().active = false;
 
             // instantiate the selector and update timer
-            Instantiate(selector);
+            //Instantiate(selector);
             timer = 30;
 
         }
