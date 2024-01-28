@@ -119,6 +119,9 @@ public class GameManager : MonoBehaviour
             actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
             switch (randomGameIndex)
             {
+                case 0:
+                    AkSoundEngine.PostEvent("musicStateMenu", this.gameObject);
+                    break;
                 case 1:
                     AkSoundEngine.PostEvent("musicStateStack", this.gameObject);
                     break;
