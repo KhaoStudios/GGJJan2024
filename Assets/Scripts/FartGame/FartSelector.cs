@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FartSelector : PlayerController
 {
+    public TimeManager TimeManager;
     public PlayerController play; // Controller
     public int speed;
     public bool touching; // if it is touching something or not. 
@@ -14,6 +15,7 @@ public class FartSelector : PlayerController
     private void Start()
     {
         characterManager = FindObjectOfType<CharacterManager>();
+        TimeManager = FindObjectOfType<TimeManager>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,10 @@ public class FartSelector : PlayerController
 
     public override void OnPrimaryButtonPressed()
     {
-        SelectCurrentObject();
+        if (TimeManager.CurrentGameMode == TimeManager.FartGameMode.Selecting)
+        {
+            SelectCurrentObject();
+        }
     }
 
     void SelectCurrentObject()

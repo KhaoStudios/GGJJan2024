@@ -16,6 +16,7 @@ public class CharacterManager : MonoBehaviour
     public float maximumX = 10.0f;
     public float maximumY = 6.0f;
 
+    [HideInInspector]
     public List<GameObject> AllCharacters;
 
     // Start is called before the first frame update
