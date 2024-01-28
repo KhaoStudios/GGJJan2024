@@ -56,7 +56,6 @@
 						<ObjectRef Name="playerRotateStart" ID="{81994DC4-3977-4C9C-A65D-9216BD5C0AC3}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuPlayerJoin" ID="{1439598D-8B54-4CDE-B0CA-69A2BE102D2A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="tackLand" ID="{7913B00D-36D6-4D07-9796-1AEF8F283AE2}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="menuStart" ID="{12B51207-8ECE-4E0D-9E9A-40FE90B61EAF}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ballLand" ID="{3D100273-3386-4E4F-B257-7334D4E03E07}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="scoreBoardPopUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateStack" ID="{BB9C845C-F5AB-4EE4-B587-52540320E7F4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>

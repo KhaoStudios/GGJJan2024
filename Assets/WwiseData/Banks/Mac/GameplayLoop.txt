@@ -22,7 +22,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1317058574	musicStateRace			\Default Work Unit\Music\musicStateSwaps\musicStateRace	
 	1336322353	testDing			\Default Work Unit\UI\testSounds\testDing	
 	1426002253	fartSmall			\Default Work Unit\Player\fartGame\fartSmall	
-	1447920996	menuStart			\Default Work Unit\UI\menuSounds\menuStart	
 	1553801141	playerKickStrong			\Default Work Unit\Player\spinGame\playerKickStrong	
 	1720073155	ambienceStart			\Default Work Unit\Ambient\ambienceStart	
 	1805644152	frisbeeLand			\Default Work Unit\Objects\stackGame\frisbeeLand	
