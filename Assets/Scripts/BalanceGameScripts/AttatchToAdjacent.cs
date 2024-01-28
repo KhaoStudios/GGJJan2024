@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class AttatchToAdjacent : MonoBehaviour
 {
+    bool finished = false;
     private void OnCollisionEnter(Collision collision)
     {
+        if(finished)
+        {
+            return;
+        }
+        finished = true;
         if(gameObject.transform.parent)
         {
             return;
