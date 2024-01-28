@@ -41,6 +41,7 @@
 						<State Id="489941698" Name="fartLevel"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="1034249585" Name="spinLevel"/>
+						<State Id="2110737749" Name="scoreScreen"/>
 						<State Id="2489058252" Name="bananaLevel"/>
 						<State Id="2607556080" Name="menu"/>
 						<State Id="4092420579" Name="stackLevel"/>
@@ -48,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{DCE87BB9-DDCC-9B1A-63D5-B4F45A125724}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{3873A095-8407-1B5E-01F2-3C43390AA094}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -143,6 +144,10 @@
 				<File Id="192204945" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>timerOver.wav</ShortName>
 					<CachePath>SFX/timerOver_1401DD37.wem</CachePath>
+				</File>
+				<File Id="193861915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>scoreboard.wav</ShortName>
+					<CachePath>SFX/scoreboard_56CEF360.wem</CachePath>
 				</File>
 				<File Id="206639946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-007.wav</ShortName>
@@ -689,6 +694,12 @@
 								<MediaRef Id="101045052"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="2110737749"/>
+							<MediaRefs>
+								<MediaRef Id="193861915"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1091790943" Id="2607556080" Name="menu"/>
@@ -860,6 +871,7 @@
 						<State Id="489941698" Name="fartLevel"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="1034249585" Name="spinLevel"/>
+						<State Id="2110737749" Name="scoreScreen"/>
 						<State Id="2489058252" Name="bananaLevel"/>
 						<State Id="2607556080" Name="menu"/>
 						<State Id="4092420579" Name="stackLevel"/>
@@ -868,5 +880,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D85C8A6C-B8C4-D92A-E8ED-AF17EE7F6A16}</FileHash>
+	<FileHash>{A0F070CC-049B-D8A9-EE33-9121933E678C}</FileHash>
 </SoundBanksInfo>

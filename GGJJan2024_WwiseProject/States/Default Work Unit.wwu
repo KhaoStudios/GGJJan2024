@@ -11,6 +11,7 @@
 						<State Name="spinLevel" ID="{4A7E665F-EF8E-43BC-B9BF-3AF842B1BEB5}"/>
 						<State Name="stackLevel" ID="{A23DD132-F228-4D15-842A-8603F75BD48E}"/>
 						<State Name="fartLevel" ID="{EFC006AD-E160-4976-AF4C-283EDF5DE969}"/>
+						<State Name="scoreScreen" ID="{C30E3767-F5B2-42C4-A1CC-5EF5FD7AD874}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
