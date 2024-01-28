@@ -68,11 +68,11 @@ public class PieceManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        if(player1Piece && (player1Piece.GetComponent<DetectCollisions>().getCollided() || player1Piece.transform.position.y < 0))
+        if(player1Piece && (player1Piece.GetComponent<PieceFinished>().getCollided() || player1Piece.transform.position.y < 0))
         {
             player1HasPiece = false;
         }
-        if (player2Piece && (player2Piece.GetComponent<DetectCollisions>().getCollided() || player2Piece.transform.position.y < 0))
+        if (player2Piece && (player2Piece.GetComponent<PieceFinished>().getCollided() || player2Piece.transform.position.y < 0))
         {
             player2HasPiece = false;
         }
