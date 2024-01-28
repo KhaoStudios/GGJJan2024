@@ -18,6 +18,12 @@
 						<Property Name="InitialValue" Type="Real64" Value="80"/>
 					</PropertyList>
 				</GameParameter>
+				<Folder Name="rollGame" ID="{8D8AD25A-E9A3-499D-A263-E4C8601E48E8}" ShortID="806972481">
+					<ChildrenList>
+						<GameParameter Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}"/>
+						<GameParameter Name="spinSpeed" ID="{334F6012-B0F1-42C5-868F-0DB7E7A697D7}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FartCharacter : MonoBehaviour
 {
+    public Transform PersonModelParent;
+
     private bool active;    // if it is active
     public Vector3 target;  // the target position it is aiming towards
     public float waitTimer; // wait timer
@@ -14,6 +16,23 @@ public class FartCharacter : MonoBehaviour
     public float minimumY = -6.0f;
     public float maximumX = 10.0f;
     public float maximumY = 6.0f;
+
+    public GameObject exclamationPoint;
+
+
+    public void ToggleExclamation(bool enabled)
+    {
+        exclamationPoint.SetActive(enabled);
+    }
+
+    public void ReplaceModel(GameObject newModel)
+    {
+        foreach (Transform child in PersonModelParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Instantiate(newModel, PersonModelParent);
+    }
 
     // Start is called before the first frame update
     private void Awake()

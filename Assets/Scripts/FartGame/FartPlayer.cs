@@ -5,9 +5,19 @@ using UnityEngine;
 
 public class FartPlayer : PlayerController
 {
+    public Transform PersonModelParent;
+
     FartManager fartManager;
     public int speed;             // speed
     private bool active;          // if it is active or not
+
+    public GameObject exclamationPoint;
+
+
+    public void ToggleExclamation(bool enabled)
+    {
+        exclamationPoint.SetActive(enabled);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +29,15 @@ public class FartPlayer : PlayerController
             return;
         }
         active = true;
+    }
+
+    public void ReplaceModel(GameObject newModel)
+    {
+        foreach (Transform child in PersonModelParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Instantiate(newModel, PersonModelParent);
     }
 
     public override void OnPrimaryButtonPressed()
@@ -34,7 +53,8 @@ public class FartPlayer : PlayerController
         {
             // Get the unput vector and set it
             Vector2 move = inputVector;
-            transform.position += new Vector3(move.x, 0, move.y) * Time.deltaTime * speed;
+            //transform.position += new Vector3(move.x, 0, move.y) * Time.deltaTime * speed;
+            GetComponent<Rigidbody>().velocity = new Vector3(move.x, 0, move.y) * speed;
         }
 
     }

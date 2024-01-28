@@ -87,16 +87,38 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="sliderStart" ID="{A69BCF2C-BA3D-48BE-9C67-51FB92D0004E}">
+							<ChildrenList>
+								<Action Name="" ID="{D0309430-C9A5-424C-8BBB-98E10FE57E60}" ShortID="915833529">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sliderStart" ID="{F0BBDF8F-4A85-43D2-98A2-C894373F08C8}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="sliderEnd" ID="{D67D4E5C-4159-42B3-B581-65DB90BFC798}">
+							<ChildrenList>
+								<Action Name="" ID="{C5388CF5-A312-4AE1-90DF-3A8C01CF958D}" ShortID="1046431163">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sliderEnd" ID="{BB9DCECB-B04B-4E7B-B650-BB7EC480B30E}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="levelSounds" ID="{2539BDCA-A94F-4986-A626-7EEC529A13E5}" ShortID="335810401">
 					<ChildrenList>
-						<Event Name="timeUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}">
+						<Event Name="scoreBoardPopUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}">
 							<ChildrenList>
 								<Action Name="" ID="{D5A53609-2DCB-47C3-8617-8CEC5651A7D1}" ShortID="485667236">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="timeUp" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+											<ObjectRef Name="scoreBoard" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -119,6 +141,76 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="scoreDown" ID="{D8A8DDA7-59A4-4404-8DF7-7952F1036F55}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="levelFartTalk" ID="{B8C570C1-EA63-4B46-BB6B-730914CBC73D}">
+							<ChildrenList>
+								<Action Name="" ID="{9483634A-4641-43A4-B0DB-4FCC66C3415C}" ShortID="698232733">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="voiceHide" ID="{50C60BF4-8C4D-48B9-8A8A-C53F002D289C}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="levelKickTalk" ID="{3DACE0DE-C24B-4A82-BFC8-3B2306AFB2D3}">
+							<ChildrenList>
+								<Action Name="" ID="{B8D6BF66-5FC1-43DA-A514-452E7BE63555}" ShortID="219170512">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="voiceKick" ID="{018AD547-E59E-4A2E-87F4-8B9E0C97B8C5}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="levelBananaTalk" ID="{4AC6F08D-F34A-4759-96CD-E450CBBC1F72}">
+							<ChildrenList>
+								<Action Name="" ID="{81C51408-6A7E-4AEF-A8AC-CBFD13AB906F}" ShortID="371817099">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="voiceRace" ID="{B33799D7-23D8-4ADD-811C-113C5378661C}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="levelStackTalk" ID="{D834A284-7686-4750-AED4-B8261E985B98}">
+							<ChildrenList>
+								<Action Name="" ID="{BD392CF3-C2B8-4954-ABF8-C21711BC6317}" ShortID="1068733072">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="voiceStack" ID="{458B40A1-16AB-4CF4-A826-0542077575F0}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="timerStuff" ID="{4164FA2A-0044-4108-A5DF-3B5A66432CE9}" ShortID="616687399">
+					<ChildrenList>
+						<Event Name="eightSecondCountdown" ID="{48A205DA-B753-4B48-9D41-F336FBD0FB66}">
+							<ChildrenList>
+								<Action Name="" ID="{62CD4A86-4E03-41FE-97FB-3DE9F31B8A0F}" ShortID="990490868">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="eightSecondTimerTick" ID="{A4638272-EE87-4550-82CE-6025322E724E}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="timeOver" ID="{8A6F72F8-5760-4569-A816-1DB64242E497}">
+							<ChildrenList>
+								<Action Name="" ID="{ECA11DC0-4391-445B-8EAB-A331A0A177D5}" ShortID="671274492">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="timerOver" ID="{40B12700-17C8-4341-BD5F-CA4ACD28C2A7}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

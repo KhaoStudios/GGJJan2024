@@ -3,31 +3,46 @@
 	<Events>
 		<WorkUnit Name="Objects" ID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="playerRotateStart" ID="{81994DC4-3977-4C9C-A65D-9216BD5C0AC3}">
+				<Folder Name="stackGame" ID="{B4E780DC-0AD3-454E-9279-4063FC076123}" ShortID="19622894">
 					<ChildrenList>
-						<Action Name="" ID="{FBDA25BA-39F3-4D37-B881-3975D42D9CB4}" ShortID="347906772">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="rotateClicks" ID="{F35BAACD-2F43-4681-9CBE-0AC72477123B}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="playerRotateStart" ID="{81994DC4-3977-4C9C-A65D-9216BD5C0AC3}">
+							<ChildrenList>
+								<Action Name="" ID="{FBDA25BA-39F3-4D37-B881-3975D42D9CB4}" ShortID="347906772">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rotateClicks" ID="{F35BAACD-2F43-4681-9CBE-0AC72477123B}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerRotateStop" ID="{07A7C020-CB44-41D6-B1C9-D13EB9844BB8}">
+							<ChildrenList>
+								<Action Name="" ID="{92A244B7-BE93-4337-A13B-1FD8BD6DEE72}" ShortID="758293143">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rotateClicks" ID="{F35BAACD-2F43-4681-9CBE-0AC72477123B}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerObjectDrop" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}">
+							<ChildrenList>
+								<Action Name="" ID="{A8BAB3B8-69AC-4C44-B7D9-3970D0E4105F}" ShortID="1055337973">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="objectDrop" ID="{C046F35B-F34A-488A-95B0-B245C5EFB0DC}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="playerRotateStop" ID="{07A7C020-CB44-41D6-B1C9-D13EB9844BB8}">
-					<ChildrenList>
-						<Action Name="" ID="{92A244B7-BE93-4337-A13B-1FD8BD6DEE72}" ShortID="758293143">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="rotateClicks" ID="{F35BAACD-2F43-4681-9CBE-0AC72477123B}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

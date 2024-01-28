@@ -8,7 +8,7 @@ public class PieceManager : MonoBehaviour
     public float height;
     //Not really a radius
     public float radius;
-    public float time = 30;
+    public float time = 30f;
 
     public PlayerController player1;
     public PlayerController player2;

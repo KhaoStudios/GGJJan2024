@@ -6,7 +6,7 @@ public class FartManager : MonoBehaviour
 {
     public FartPlayer playerRef;
     public TMPro.TextMeshProUGUI tm; // fart %
-    public float timer;              // timer that builds up percentage
+    public float fartStrengthTimer;              // timer that builds up percentage
     public GameObject fart;          // fart prefab
     public bool active = true;       // If this is active or not
 
@@ -18,6 +18,7 @@ public class FartManager : MonoBehaviour
 
     public void Fart()
     {
+        if (fartStrengthTimer < 10) return;
         // Instantiate the fart
 
         GameObject gam = Instantiate(fart, playerRef.transform.position, Quaternion.identity);
@@ -25,10 +26,27 @@ public class FartManager : MonoBehaviour
         FartEffect eff = gam.GetComponent<FartEffect>();
         if (eff)
         {
-            eff.ScaleHitbox = 10 * (timer / 100);
+            eff.ScaleHitbox = 10 * (fartStrengthTimer / 100);
         }
+
+        if (fartStrengthTimer >= 10 && fartStrengthTimer < 33)
+        {
+            AkSoundEngine.PostEvent("fartSmall", this.gameObject);
+        } else if (fartStrengthTimer >= 33 && fartStrengthTimer < 66)
+        {
+            AkSoundEngine.PostEvent("fartMid", this.gameObject);
+        }
+        else if (fartStrengthTimer >= 66 && fartStrengthTimer < 99)
+        {
+            AkSoundEngine.PostEvent("fartBig", this.gameObject);
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("fartMassive", this.gameObject);
+        }
+
         // set timer to 0
-        timer = 0;
+        fartStrengthTimer = 0;
     }
 
     // Update is called once per frame
@@ -38,13 +56,13 @@ public class FartManager : MonoBehaviour
         if(active)
         {
             // increase the timer by more than just the deltatime
-            timer += Time.deltaTime*4;
+            fartStrengthTimer += Time.deltaTime*4;
 
             // update the text
-            tm.text = "Fart %: "+((int)timer).ToString();
+            tm.text = "Fart %: "+((int)fartStrengthTimer).ToString();
 
             // percentage reaches 100, forces you to fart
-            if(timer >= 100)
+            if(fartStrengthTimer >= 100)
             {
                 Fart();
             }

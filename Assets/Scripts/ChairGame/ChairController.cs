@@ -1,5 +1,6 @@
 using Act;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Action = System.Action;
 
 namespace ChairGame
@@ -7,24 +8,31 @@ namespace ChairGame
     [RequireComponent(typeof(Rigidbody))]
     public class ChairController : PlayerController
     {
+        public BoostDetector BoostTrigger;
         public GameObject ChairPivot;
         public GameObject LeftKneePivot;
         public GameObject RightKneePivot;
         public AnimationCurve KickCurve;
+        
         private Transform chairTrans;
-        private Rigidbody rb;
+        private Rigidbody myRB;
         private ActionList actionList;
         
         public float StartingSpinSpeed;
+        public float SpinBoostMultiplier;
+        public float SpinBoostDecay;
+        private float spinSpeed;
         private bool spinDir;
+        private bool spinBoost;
 
         public float KickForce;
         public float KickCooldown;
         private float kickTimer;
         private bool kickReady;
 
-        public float DeflectionScale;
-
+        public float BounceMultiplier = 0.75f;
+        public float BoostMultiplier = 2;
+        
         private Vector3 oldVelocity;
         
     
@@ -32,7 +40,7 @@ namespace ChairGame
         private void Awake()
         {
             chairTrans = ChairPivot.transform;
-            rb = GetComponent<Rigidbody>();
+            myRB = GetComponent<Rigidbody>();
             actionList = new ActionList(); 
         }
 
@@ -40,10 +48,10 @@ namespace ChairGame
         private void Update()
         {
             SpinChair();
+            DecaySpin();
             CoolDown();
             actionList.Update(Time.deltaTime);
-
-            oldVelocity = rb.velocity;
+            oldVelocity = myRB.velocity;
         }
 
         public override void OnPrimaryButtonPressed()
@@ -53,18 +61,57 @@ namespace ChairGame
         
         private void SpinChair()
         {
-            float spinSpeed = spinDir ? StartingSpinSpeed : StartingSpinSpeed * -1f;
+            spinSpeed = spinDir ? spinSpeed : spinSpeed * -1f;
+            
             Vector3 chairAngles = chairTrans.localEulerAngles;
             chairAngles.y += spinSpeed * Time.deltaTime;
 
             chairTrans.localEulerAngles = chairAngles;
+            spinSpeed = Mathf.Abs(spinSpeed);
+        }
+
+        private void BoostSpin()
+        {
+            spinDir = !spinDir;
+            spinSpeed *= SpinBoostMultiplier;
+        }
+        
+        private void DecaySpin()
+        {
+            Debug.Log("Spin Speed: " + spinSpeed);
+            
+            if (spinSpeed > StartingSpinSpeed)
+                spinSpeed -= SpinBoostDecay * Time.deltaTime;
+
+            if (spinSpeed < StartingSpinSpeed)
+                spinSpeed = StartingSpinSpeed;
         }
 
         private void KickOff()
         {
+            bool boost = BoostTrigger.TouchingWall();
+            Rigidbody otherRB = BoostTrigger.TouchingPlayer();
+            
             Vector3 kickDir = -chairTrans.forward;
-            rb.AddForce(kickDir * KickForce);
+
+            float force = KickForce;
+
+            if (boost)
+            {
+                force *= BoostMultiplier;
+                BoostSpin();
+            }
+            
+            if (otherRB)
+            {
+                otherRB.AddForce(-kickDir * force);
+                BoostSpin();
+            }
+            
+            myRB.AddForce(kickDir * force);
             kickTimer = KickCooldown;
+
+            
             
             Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
             Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
@@ -88,7 +135,14 @@ namespace ChairGame
         private void CoolDown()
         {
             kickTimer -= Time.deltaTime;
-            kickReady = !(kickTimer > 0.0f);
+            
+            if (kickTimer > 0.0f)
+            {
+                kickReady = false;
+            }
+
+            kickReady = true;
+            spinBoost = false;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -96,7 +150,7 @@ namespace ChairGame
             if (collision.collider.CompareTag("Wall"))
             {
                 Vector3 reflection = Vector3.Reflect(oldVelocity, collision.contacts[0].normal);
-                rb.velocity = reflection * DeflectionScale ;
+                myRB.velocity = reflection * BounceMultiplier ;
             }
         }
     }

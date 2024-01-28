@@ -3,39 +3,186 @@
 	<Events>
 		<WorkUnit Name="Player" ID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" OwnerID="{E8A9E826-295F-4996-AD2E-B06011F47F20}" PersistMode="Nested">
 			<ChildrenList>
-				<Event Name="playerHammer" ID="{EF6483B4-429A-4268-BD03-436E451F87A0}">
+				<Folder Name="fartGame" ID="{C777DF43-F2AA-45B3-8847-B74ED38DF001}" ShortID="749917583">
 					<ChildrenList>
-						<Action Name="" ID="{6AC04A00-9F64-4DB5-BAC4-D1C6059C830E}" ShortID="784231172">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="hammerBonk" ID="{B8977037-A1E1-4DDE-800F-DACDF9AF8C10}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="fartMassive" ID="{9754BE29-C43F-45B8-9A27-8F38252CBE4B}">
+							<ChildrenList>
+								<Action Name="" ID="{419521AB-89DC-4AE9-908E-27BF8FBE4A4F}" ShortID="442909670">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DEEPToot" ID="{B01181D0-3F5F-46C8-917C-FFBCDBC2D5DC}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fartMid" ID="{EFFCAEFC-99AC-4669-841E-923FF57D7E3C}">
+							<ChildrenList>
+								<Action Name="" ID="{13A891A0-218A-49A0-A1A6-F939454607F9}" ShortID="893266713">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="midToot" ID="{C55DCE7D-22B0-48D7-AFE6-02395D947FC9}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fartBig" ID="{502C377F-24AD-491E-A8D7-5180EA963983}">
+							<ChildrenList>
+								<Action Name="" ID="{C0544FD1-E1AB-4355-9C99-479AC3CCA15D}" ShortID="285542936">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bigToot" ID="{7C5A02BB-1AE3-4F00-87C4-EFAD856CF845}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fartSmall" ID="{935E352A-1C5A-420B-BF49-A5ABE865D901}">
+							<ChildrenList>
+								<Action Name="" ID="{A0316773-68AE-4DDA-8A70-3CFE363C6FFC}" ShortID="48537990">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="quietToot" ID="{B201DBFC-260D-4ADE-B8EA-AEDA49B8FAE3}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerHammer" ID="{EF6483B4-429A-4268-BD03-436E451F87A0}">
+							<ChildrenList>
+								<Action Name="" ID="{6AC04A00-9F64-4DB5-BAC4-D1C6059C830E}" ShortID="784231172">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hammerBonk" ID="{B8977037-A1E1-4DDE-800F-DACDF9AF8C10}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}">
+							<ChildrenList>
+								<Action Name="" ID="{2CAD8A7D-0BFB-4BBB-A0FF-DD4CBF3D34E3}" ShortID="268791212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}">
+				</Folder>
+				<Folder Name="spinGame" ID="{1D6F6A92-0E45-4363-B4A2-172A2F8899EF}" ShortID="793782440">
 					<ChildrenList>
-						<Action Name="" ID="{2CAD8A7D-0BFB-4BBB-A0FF-DD4CBF3D34E3}" ShortID="268791212">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="playerKickStrong" ID="{F278487F-F086-447E-9362-BAEF83482C03}">
+							<ChildrenList>
+								<Action Name="" ID="{9966365A-0CB2-464C-AB67-93A6548DDD8B}" ShortID="673786915">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerKickStrong" ID="{70225B58-61DC-4782-9F8D-CCCAA9C4128A}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{ECDF21D3-A155-4EFC-8219-4B9C1EC4055C}" ShortID="883183562">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerKickNormal" ID="{3B1243AF-CD1C-446B-B31C-242FF88D8AD7}">
+							<ChildrenList>
+								<Action Name="" ID="{D31210C0-786A-406C-BFB8-FEF6C0459FAF}" ShortID="776037119">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerKickNormal" ID="{17EFBB64-5755-46A4-A34F-9E52EB239835}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F69C6A19-EDA7-4784-8BAC-097C5FEF9B40}" ShortID="746453416">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerRollEnd" ID="{096634D3-9CAF-4549-8CAC-CD3AA0532E83}">
+							<ChildrenList>
+								<Action Name="" ID="{3BFC5E80-2F22-4E95-930A-C0D4925E77C8}" ShortID="513244608">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{523C86DD-897D-49EC-80CA-5EDF12FC99BF}" ShortID="884689061">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rollStops" ID="{4FE4F8EA-3DCB-462C-9183-08486D7C2A09}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="chairCollide" ID="{85A0BA16-A458-4588-AB09-363CE430D753}">
+							<ChildrenList>
+								<Action Name="" ID="{FDE4629D-2A06-49E5-AA26-A3368C22757D}" ShortID="7622309">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="pinballCollides" ID="{97137C06-ED3A-4C28-A305-0438EACA00D8}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}">
+				</Folder>
+				<Folder Name="bananaGame" ID="{19D0FA57-9480-43C2-9DFC-D6B0DB224305}" ShortID="400492108">
 					<ChildrenList>
-						<Action Name="" ID="{D1A82220-F0C2-4FED-A985-18276FF653A9}" ShortID="1015387621">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sirenSlip" ID="{A894A25B-3ECF-45A7-9D2A-94871A1AD724}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}">
+							<ChildrenList>
+								<Action Name="" ID="{D1A82220-F0C2-4FED-A985-18276FF653A9}" ShortID="1015387621">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sirenSlip" ID="{A894A25B-3ECF-45A7-9D2A-94871A1AD724}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerRunOver" ID="{8E46B94C-35B5-46B6-A745-46285A016CF0}">
+							<ChildrenList>
+								<Action Name="" ID="{49104E8A-BF35-4285-8FB9-2CB28D44467D}" ShortID="842820992">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bananaSplat" ID="{46C1E17C-CE7A-4967-92FF-909A569E65C7}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="bananaStep" ID="{E380FFFE-7ED1-451A-9F86-EEA0BC8D4880}">
+							<ChildrenList>
+								<Action Name="" ID="{CE9A74CE-F6F3-44EB-B5A8-57BB580F7F34}" ShortID="877330893">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bananaStep" ID="{65C2CC7C-0F82-49F0-9C90-052010FEF653}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
