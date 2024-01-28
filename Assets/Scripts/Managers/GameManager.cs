@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Act;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Action = Act.Action;
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int VictorySceneIndex;
     [SerializeField] private int MainMenuSceneIndex;
     [SerializeField] private List<int> ValidGameScenes;
+    private List<int> ValidGameScenesCurrentDeck; //<- used for randomization
 
     [SerializeField] private GameObject TitleGameObject;
     [SerializeField] private TextMeshProUGUI titleText;
@@ -45,6 +47,14 @@ public class GameManager : MonoBehaviour
         Player2,
         Both,
         None
+    }
+
+    private void Repopulatedeck()
+    {
+        for (int i = 0; i < ValidGameScenes.Count; i++)
+        {
+            ValidGameScenesCurrentDeck.Add(ValidGameScenes[i]);
+        }
     }
     private void Awake() 
     { 
@@ -61,6 +71,8 @@ public class GameManager : MonoBehaviour
         }
         
         actionList = new ActionList();
+        ValidGameScenesCurrentDeck = new List<int>();
+        Repopulatedeck();
     }
 
     // Update is called once per frame
@@ -97,9 +109,13 @@ public class GameManager : MonoBehaviour
         else
         {
             //Load a random minigame
-            int randomGameIndex = ValidGameScenes[Random.Range(0, ValidGameScenes.Count)];
-
+            if (ValidGameScenesCurrentDeck.Count == 0)
+            {
+                Repopulatedeck();
+            }
+            int randomGameIndex = ValidGameScenesCurrentDeck[Random.Range(0, ValidGameScenesCurrentDeck.Count)];
             actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
+            ValidGameScenesCurrentDeck.Remove(randomGameIndex);
         }
         
         actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f,false,Action.Group.None,Action.EaseType.Cubic));
