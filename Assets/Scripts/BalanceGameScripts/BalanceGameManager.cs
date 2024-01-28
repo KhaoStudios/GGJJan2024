@@ -61,7 +61,7 @@ public class PieceManager : MonoBehaviour
         //Translate Object based on joystick 2
         //Restrict Position of objects to over your island.
         //On collision New Piece
-        player1.getInputVector();
+        player1.GetInputVector();
         //Player 2
         //Rotate Object based on joystick
         //Translate Object based on joystick 2
