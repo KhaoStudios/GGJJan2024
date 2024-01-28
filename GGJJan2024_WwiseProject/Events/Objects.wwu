@@ -30,12 +30,91 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="playerObjectDrop" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}">
+						<Event Name="playerObjectFell" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}">
 							<ChildrenList>
 								<Action Name="" ID="{A8BAB3B8-69AC-4C44-B7D9-3970D0E4105F}" ShortID="1055337973">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="objectDrop" ID="{C046F35B-F34A-488A-95B0-B245C5EFB0DC}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="anvilLand" ID="{05822AFC-9C4F-4F20-8CD5-C268E121A619}">
+							<ChildrenList>
+								<Action Name="" ID="{C22C6E0C-9DC5-4B91-B75E-57555E8CF0C0}" ShortID="912760702">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="anvil" ID="{9CC62A54-53B5-4FB5-840C-ADC1E5FCDA54}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="blobFishLand" ID="{4043DF5E-5AB2-4344-B4A5-BEFFD11B9703}">
+							<ChildrenList>
+								<Action Name="" ID="{EEC5F4DF-8A9C-4368-B059-1584D1D3911B}" ShortID="159795757">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="blobFish" ID="{CB6E4A47-9C8E-4637-B647-7671E687E82F}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="frisbeeLand" ID="{7AAEF46A-0886-414D-83F2-23AF787BF309}">
+							<ChildrenList>
+								<Action Name="" ID="{0DB5004F-91F2-4655-8934-ECD6EC02A9A3}" ShortID="509392411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="frisbee" ID="{3EF1CA60-5646-41AC-A521-409A2578156B}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tackLand" ID="{7913B00D-36D6-4D07-9796-1AEF8F283AE2}"/>
+						<Event Name="partyHatLand" ID="{D73A451E-8AD6-4A5F-B6CC-4502C2FF5F86}">
+							<ChildrenList>
+								<Action Name="" ID="{956A4FF8-7EAD-4076-9D04-0A742FA4712F}" ShortID="100391714">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="partyHat" ID="{E880AB1F-9896-4B55-BAD2-3211292227A6}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ballLand" ID="{3D100273-3386-4E4F-B257-7334D4E03E07}">
+							<ChildrenList>
+								<Action Name="" ID="{B959670B-715E-473C-9509-3AA3DC5F3055}" ShortID="745121705">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rubberBall" ID="{67501634-F666-413A-8D7C-2D67548873BC}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="duckLand" ID="{564E4D83-A55B-468F-A8FB-2B0553CA7DC0}">
+							<ChildrenList>
+								<Action Name="" ID="{D76C8226-C652-4659-8E8C-1CCF948EE6C6}" ShortID="720286935">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rubberDuck" ID="{EA42E237-52B0-41A6-B1E5-BEFACB317251}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="teethLand" ID="{310288E9-629F-438E-AEA6-7F280DAEAC65}"/>
+						<Event Name="cubeLand" ID="{FADF3020-96FD-4B37-8582-E9575ECC461A}">
+							<ChildrenList>
+								<Action Name="" ID="{970FC64C-1D69-4E4F-BAC1-203943EBF2CF}" ShortID="526106686">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="woodCube" ID="{074FCA5D-EA2F-4AA4-A384-4CE8CA005E96}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -746,132 +746,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" ShortID="939855230">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>40</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{9D31C895-CA3E-4337-862B-0D56275175AD}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="playerRolling" ID="{7438DB46-FCFD-4B64-AA94-495F4B6EF194}">
-											<PropertyList>
-												<Property Name="CrossfadeDuration" Type="Real64" Value="300"/>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.20818292276964"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.205902968392596"/>
-												<Property Name="LoopBegin" Type="Real64" Value="4.67932497210692"/>
-												<Property Name="LoopEnd" Type="Real64" Value="15.3560266427532"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="4.20513053690941"/>
-												<Property Name="TrimEnd" Type="Real64" Value="16.0279205396133"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>playerRolling.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="764381067"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{C596DF9E-EB03-457E-8E20-3FF79BAE56B2}" ShortID="66080003">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Pitch"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}" WorkUnitID="{32DB7F56-C960-445E-AECC-2D5B5F1F07D2}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{C8A6027B-30DC-43B3-B820-563FEB9B1891}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="65537"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>200</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>1000</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<RTPC Name="" ID="{345EEE74-1B0B-49BD-A064-89744F1CF368}" ShortID="413683244">
-														<PropertyList>
-															<Property Name="PropertyName" Type="string" Value="Volume"/>
-														</PropertyList>
-														<ReferenceList>
-															<Reference Name="ControlInput">
-																<ObjectRef Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}" WorkUnitID="{32DB7F56-C960-445E-AECC-2D5B5F1F07D2}"/>
-															</Reference>
-															<Reference Name="Curve">
-																<Custom>
-																	<Curve Name="" ID="{03CA73FB-82CD-4C6F-A517-E1CB15627744}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>0</XPos>
-																				<YPos>-8</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>100</XPos>
-																				<YPos>2</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</Custom>
-															</Reference>
-														</ReferenceList>
-													</RTPC>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-									<ActiveSourceList>
-										<ActiveSource Name="playerRolling" ID="{7438DB46-FCFD-4B64-AA94-495F4B6EF194}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<RandomSequenceContainer Name="rollStops" ID="{4FE4F8EA-3DCB-462C-9183-08486D7C2A09}" ShortID="630980753">
 									<PropertyList>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -966,6 +840,145 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<ActorMixer Name="playerRolling" ID="{988AF4D1-6FC4-49A1-ACE5-6D250F77AADB}" ShortID="953775059">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" ShortID="939855230">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>40</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9D31C895-CA3E-4337-862B-0D56275175AD}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Player" ID="{72649B57-F12D-4D7E-BE1C-AED70828B682}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="playerRolling" ID="{7438DB46-FCFD-4B64-AA94-495F4B6EF194}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="300"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.20818292276964"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.205902968392596"/>
+														<Property Name="LoopBegin" Type="Real64" Value="4.67932497210692"/>
+														<Property Name="LoopEnd" Type="Real64" Value="15.3560266427532"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.20513053690941"/>
+														<Property Name="TrimEnd" Type="Real64" Value="16.0279205396133"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>playerRolling.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="764381067"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{C596DF9E-EB03-457E-8E20-3FF79BAE56B2}" ShortID="66080003">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Pitch"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}" WorkUnitID="{32DB7F56-C960-445E-AECC-2D5B5F1F07D2}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{C8A6027B-30DC-43B3-B820-563FEB9B1891}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="65537"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>200</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>1000</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{345EEE74-1B0B-49BD-A064-89744F1CF368}" ShortID="413683244">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="chairSpeed" ID="{F3A11F23-1383-4AAB-90DA-C477C62EF11C}" WorkUnitID="{32DB7F56-C960-445E-AECC-2D5B5F1F07D2}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{03CA73FB-82CD-4C6F-A517-E1CB15627744}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-8</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>2</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<ActiveSourceList>
+												<ActiveSource Name="playerRolling" ID="{7438DB46-FCFD-4B64-AA94-495F4B6EF194}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="playerKicks" ID="{CFD92949-AF36-42CC-8EE5-49685DE16143}" ShortID="279862270">

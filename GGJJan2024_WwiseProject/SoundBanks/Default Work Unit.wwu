@@ -52,7 +52,7 @@
 						<ObjectRef Name="musicStateStack" ID="{BB9C845C-F5AB-4EE4-B587-52540320E7F4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testClick" ID="{40CEBC37-97B5-4F79-9FD2-5A2D597E6C58}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="playerObjectDrop" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerObjectFell" ID="{73C0EF08-798A-4FD5-A6B1-06C538204115}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
