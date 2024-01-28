@@ -64,5 +64,7 @@ public class FartCharacter : MonoBehaviour
     public void Stop()
     {
         active = false;
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
     }
 }
