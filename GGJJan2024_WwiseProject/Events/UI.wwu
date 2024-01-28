@@ -75,7 +75,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="menuStart" ID="{12B51207-8ECE-4E0D-9E9A-40FE90B61EAF}"/>
 						<Event Name="menuPlayerJoin" ID="{1439598D-8B54-4CDE-B0CA-69A2BE102D2A}">
 							<ChildrenList>
 								<Action Name="" ID="{CA5B141A-6C0E-4BC0-82B5-BDBC3FB94600}" ShortID="159583072">

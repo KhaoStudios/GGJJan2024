@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
         if (checkForWin(winner))
         {
             //Load a the victory scene
+            AkSoundEngine.PostEvent("musicStateScore", this.gameObject);
             actionList.Add(new LoadSceneAction(VictorySceneIndex,0.0f,0.5f,true));
         }
         else
@@ -114,8 +115,30 @@ public class GameManager : MonoBehaviour
                 Repopulatedeck();
             }
             int randomGameIndex = ValidGameScenesCurrentDeck[Random.Range(0, ValidGameScenesCurrentDeck.Count)];
-            actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
             ValidGameScenesCurrentDeck.Remove(randomGameIndex);
+            actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
+            switch (randomGameIndex)
+            {
+                case 1:
+                    AkSoundEngine.PostEvent("musicStateStack", this.gameObject);
+                    break;
+                case 2:
+                    AkSoundEngine.PostEvent("musicStateFart", this.gameObject);
+                    break;
+                case 3:
+                    AkSoundEngine.PostEvent("musicStateRace", this.gameObject);
+                    break;
+                case 4:
+                    AkSoundEngine.PostEvent("musicStateSpin", this.gameObject);
+                    break;
+                case 5:
+                    AkSoundEngine.PostEvent("musicStateMenu", this.gameObject);
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+                actionList.Add(new LoadSceneAction(randomGameIndex, 0.0f,0.5f,true));
         }
         
         actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f,false,Action.Group.None,Action.EaseType.Cubic));

@@ -17,6 +17,8 @@ public class InputVerifier : PlayerController
 
     public float offset = 1.0f;
 
+    public GameObject settingsMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,12 +50,24 @@ public class InputVerifier : PlayerController
         else
         {
             joinChecker.StartGame();
-            AkSoundEngine.PostEvent("menuNext", this.gameObject);
         }
 
     }
 
+    public override void OnPrimaryButtonPressed()
+    {
+        // Toggle settings
+        ToggleSettings();
+    }
 
+    public override void OnSecondaryButtonPressed()
+    {
+        ToggleSettings();
+    }
 
-
+    public void ToggleSettings()
+    {
+        // Toggle settings
+        settingsMenu.SetActive(!settingsMenu.activeInHierarchy);
+    }
 }

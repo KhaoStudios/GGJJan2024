@@ -121,6 +121,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="musicStateScore" ID="{126B5436-3823-4061-987C-5AE0B7576128}">
+							<ChildrenList>
+								<Action Name="" ID="{DD8F4A21-F665-42B4-AD4A-D3C25A1FBC79}" ShortID="40261853">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="scoreScreen" ID="{C30E3767-F5B2-42C4-A1CC-5EF5FD7AD874}" WorkUnitID="{33533F33-6DD3-46A5-BB0C-A1808CC652BC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
