@@ -106,7 +106,8 @@ public class Mover : PlayerController //for banana game
                     {
                         PlayerReajusting = false;
                         BananaUpright = true;
-                        transform.eulerAngles = Vector3.zero;
+                        Rotation.x = 0;
+                        transform.eulerAngles = Rotation;
                     }
                     TimeInBalance += Time.deltaTime;
                 }

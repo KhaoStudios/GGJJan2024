@@ -52,9 +52,9 @@ MonoBehaviour:
     canvas: {fileID: 3427666683744014081}
     dur: 0.9
   curtain: {fileID: 6661861750815569735}
-  VictorySceneIndex: 6
+  VictorySceneIndex: 4
   MainMenuSceneIndex: 0
-  ValidGameScenes: 0200000005000000
+  ValidGameScenes: 010000000200000003000000
 --- !u!1 &3427666683744014081
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,10 +21,12 @@ public class FinishLine : MonoBehaviour
         if (other.gameObject.name.Equals("Player1"))
         {
             GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
+            Destroy(this);
         }
         if (other.gameObject.name.Equals("Player2"))
         {
             GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
+            Destroy(this);
         }
     }
 }
