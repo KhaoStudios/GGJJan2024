@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Minigame Info Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8904606da6176a5428798c2f168220da, type: 2}
-  m_sharedMaterial: {fileID: -5787338771932468720, guid: 8904606da6176a5428798c2f168220da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c1475abdf48c177498b3f65e9210261b, type: 2}
+  m_sharedMaterial: {fileID: -4331602702800507566, guid: c1475abdf48c177498b3f65e9210261b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

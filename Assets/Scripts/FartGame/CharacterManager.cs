@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Principal;
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
@@ -22,6 +23,7 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.DisplayInfo("Who's farting??");
         StartCoroutine(StartAudioPlay());
 
         AllCharacters = new List<GameObject>();
@@ -31,7 +33,7 @@ public class CharacterManager : MonoBehaviour
             // Find new random position
             Vector3 newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
             // Instantiate it
-            GameObject gam = Instantiate(CharacterPrefab, newPos, Quaternion.Euler(30, 0, 0));
+            GameObject gam = Instantiate(CharacterPrefab, newPos, Quaternion.identity);
             // Give it a distinct name for debug purposes and change its color
             gam.name = "FartCharacter" + i.ToString();
             FartCharacter fartChar = gam.GetComponent<FartCharacter>();
@@ -46,7 +48,7 @@ public class CharacterManager : MonoBehaviour
         Vector3 newPos2 = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
 
         PlayerCharacter.transform.position = newPos2;
-        PlayerCharacter.transform.rotation = Quaternion.Euler(30, 0, 0);
+        PlayerCharacter.transform.rotation = Quaternion.identity;
         PlayerCharacter.GetComponent<FartPlayer>().ReplaceModel(GetRandomPlayerModel());
         AllCharacters.Add(PlayerCharacter);
         
