@@ -19,12 +19,12 @@ public class TestMinigame : MonoBehaviour
     {
         if (Input.GetKeyDown(player1Code))
         {
-            GameManager.Instance.EndMinigame(GameManager.players.Player1);
+            GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
         }
 
         if (Input.GetKeyDown(player2Code))
         {
-            GameManager.Instance.EndMinigame(GameManager.players.Player2);
+            GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
         }
             
     }

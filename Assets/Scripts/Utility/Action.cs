@@ -137,7 +137,7 @@ namespace Act
         /// <param name="delay"></param>
         /// <param name="blocking"></param>
         /// <param name="group"></param>
-        public Action(float dur,  float delay, bool blocking, Group group, EaseType ease = EaseType.Linear)
+        public Action(float dur = 0, float delay = 0, bool blocking = false, Group group = Group.None, EaseType ease = EaseType.Linear)
         {
             // Initialize the actions
             duration = dur;
