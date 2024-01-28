@@ -55,9 +55,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
-
-        Player1Wins = 0;
-        Player2Wins = 0;
+        
         actionList = new ActionList();
     }
 
@@ -69,7 +67,15 @@ public class GameManager : MonoBehaviour
         actionList.Update(Time.deltaTime);
     }
 
-    public void EndMinigame(players winner)
+    public void StartGame()
+    {
+        Player1Wins = 0;
+        Player2Wins = 0;
+        overallWinner = players.None;
+        StartNextMinigame(players.None);
+    }
+
+    public void StartNextMinigame(players winner)
     {
         float xPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.x;
         float yPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.y;
@@ -90,7 +96,7 @@ public class GameManager : MonoBehaviour
             actionList.Add(new LoadSceneAction(DieRoll(2),0.0f,0.5f,true));
         }
         
-        actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f));
+        actionList.Add(new UIMove(topPos,curtain,curtainMoveValues.dur, 2.0f,false,Action.Group.None,Action.EaseType.Cubic));
     }
 
     bool checkForWin(players winner)
