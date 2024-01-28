@@ -84,7 +84,7 @@ public class PieceManager : MonoBehaviour
         Vector2 rotation1 = player1.GetSecondaryInputVector() * angularSpeed * Time.deltaTime;
         if (rotation1.x != 0)
         {
-            player1Piece.transform.Rotate(new Vector3(rotation1.x, 0, 0));
+            player1Piece.transform.Rotate(new Vector3(rotation1.x, 0, rotation1.y));
         }
 
         translate1.x = Mathf.Clamp(translate1.x + player1Piece.transform.position.x, Player1SpawnLocation.transform.position.x - radius, Player1SpawnLocation.transform.position.x + radius);
