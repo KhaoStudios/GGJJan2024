@@ -28,13 +28,13 @@ namespace ChairGame
         public float KickCooldown;
         private float kickTimer;
         private bool kickReady;
+        private bool rolling;
 
         public float BounceMultiplier = 0.75f;
         public float BoostMultiplier = 2;
         
         private Vector3 oldVelocity;
         
-    
         // Start is called before the first frame update
         private void Awake()
         {
@@ -46,9 +46,15 @@ namespace ChairGame
         // Update is called once per frame
         private void Update()
         {
+            float speed = myRB.velocity.magnitude;
+            
+            if (speed > 0.1f)
+                Debug.Log(speed);
+            
             SpinChair();
             DecaySpin();
             CoolDown();
+            UpdateRollSound();
             actionList.Update(Time.deltaTime);
             oldVelocity = myRB.velocity;
         }
@@ -58,36 +64,11 @@ namespace ChairGame
             if (kickReady) KickOff();
         }
         
-        private void SpinChair()
-        {
-            spinSpeed = spinDir ? spinSpeed : spinSpeed * -1f;
-            
-            Vector3 chairAngles = chairTrans.localEulerAngles;
-            chairAngles.y += spinSpeed * Time.deltaTime;
-
-            chairTrans.localEulerAngles = chairAngles;
-            spinSpeed = Mathf.Abs(spinSpeed);
-        }
-
-        private void BoostSpin()
-        {
-            spinDir = !spinDir;
-            spinSpeed += StartingSpinSpeed * SpinBoostMultiplier;
-        }
         
-        private void DecaySpin()
-        {
-            Debug.Log("Spin Speed: " + spinSpeed);
-            
-            if (spinSpeed > StartingSpinSpeed)
-                spinSpeed -= SpinBoostDecay * Time.deltaTime;
-
-            if (spinSpeed < StartingSpinSpeed)
-                spinSpeed = StartingSpinSpeed;
-        }
 
         private void KickOff()
         {
+            spinDir = !spinDir;
             bool boost = BoostTrigger.TouchingWall();
             Rigidbody otherRB = BoostTrigger.TouchingPlayer();
             
@@ -114,7 +95,12 @@ namespace ChairGame
                 AkSoundEngine.PostEvent("playerKickStrong", gameObject);
             else
                 AkSoundEngine.PostEvent("playerKickNormal", gameObject);
-            
+
+            if (!rolling)
+            {
+                AkSoundEngine.PostEvent("playerRolling", gameObject);
+                rolling = true;
+            }
             
             Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
             Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
@@ -135,6 +121,49 @@ namespace ChairGame
                 Act.Action.Group.None, Act.Action.EaseType.Cubic));
         }
 
+        private void SpinChair()
+        {
+            spinSpeed = spinDir ? spinSpeed : spinSpeed * -1f;
+            
+            Vector3 chairAngles = chairTrans.localEulerAngles;
+            chairAngles.y += spinSpeed * Time.deltaTime;
+
+            chairTrans.localEulerAngles = chairAngles;
+            spinSpeed = Mathf.Abs(spinSpeed);
+        }
+
+        private void BoostSpin()
+        {
+            spinSpeed += StartingSpinSpeed * SpinBoostMultiplier;
+        }
+        
+        private void DecaySpin()
+        {
+            //Debug.Log("Spin Speed: " + spinSpeed);
+            
+            if (spinSpeed > StartingSpinSpeed)
+                spinSpeed -= SpinBoostDecay * Time.deltaTime;
+
+            if (spinSpeed < StartingSpinSpeed)
+                spinSpeed = StartingSpinSpeed;
+        }
+
+        private void UpdateRollSound()
+        {
+            if (rolling)
+            {
+                float velocity = myRB.velocity.magnitude;
+                
+                AkSoundEngine.SetRTPCValue("chairSpeed", velocity * 2f, gameObject);
+                
+                if (myRB.GetAccumulatedForce().sqrMagnitude > 0) return;
+                if (velocity > 5f) return;
+                
+                AkSoundEngine.PostEvent("playerRollEnd", gameObject);
+                rolling = false;
+            }
+        }
+        
         private void CoolDown()
         {
             kickTimer -= Time.deltaTime;
