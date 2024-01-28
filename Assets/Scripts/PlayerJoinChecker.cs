@@ -48,6 +48,7 @@ public class PlayerJoinChecker : MonoBehaviour
     {
         if (BothPlayersJoined)
         {
+            AkSoundEngine.PostEvent("menuNext", this.gameObject);
             Debug.Log("Player join checker: StartGame");
             //SceneManager.LoadScene("BananaGame");
             GameManager.Instance.StartGame();

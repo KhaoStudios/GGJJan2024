@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
         if (checkForWin(winner))
         {
             //Load a the victory scene
+            AkSoundEngine.PostEvent("musicStateScore", this.gameObject);
             actionList.Add(new LoadSceneAction(VictorySceneIndex,0.0f,0.5f,true));
         }
         else

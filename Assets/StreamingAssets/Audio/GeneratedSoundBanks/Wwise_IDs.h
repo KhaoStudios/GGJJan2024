@@ -42,7 +42,6 @@ namespace AK
         static const AkUniqueID MENUHOVER = 303266102U;
         static const AkUniqueID MENUNEXT = 2944776955U;
         static const AkUniqueID MENUPLAYERJOIN = 3374714595U;
-        static const AkUniqueID MENUSTART = 1447920996U;
         static const AkUniqueID MUSICSTART = 1122283870U;
         static const AkUniqueID MUSICSTATEFART = 3547976248U;
         static const AkUniqueID MUSICSTATEMENU = 2633181064U;

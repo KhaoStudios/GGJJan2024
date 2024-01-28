@@ -49,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{3873A095-8407-1B5E-01F2-3C43390AA094}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{33EC12BD-B9AA-111D-7147-0E5A409FDC33}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -661,7 +661,6 @@
 						<MediaRef Id="953599475"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1447920996" Name="menuStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1122283870" Name="musicStart" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -880,5 +879,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2CD75213-9F94-AB46-5902-14E461F9B7B1}</FileHash>
+	<FileHash>{E930DEE7-58BA-9B6E-D6E4-234AB7B14259}</FileHash>
 </SoundBanksInfo>
