@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID CARGONE = 411168428U;
         static const AkUniqueID CARHONK = 2009521539U;
         static const AkUniqueID CHAIRCOLLIDE = 2107827546U;
+        static const AkUniqueID EIGHTSECONDCOUNTDOWN = 1119290663U;
         static const AkUniqueID FAILUREDING = 3649084381U;
         static const AkUniqueID FARTALERT = 785996010U;
         static const AkUniqueID FARTBIG = 3936762106U;
@@ -51,13 +52,14 @@ namespace AK
         static const AkUniqueID PLAYERRUNOVER = 4176432927U;
         static const AkUniqueID PLAYERSLIP = 3973166888U;
         static const AkUniqueID PLAYERSQUISHED = 554093570U;
+        static const AkUniqueID SCOREBOARDPOPUP = 2425254643U;
         static const AkUniqueID SLIDEREND = 4271478305U;
         static const AkUniqueID SLIDERSTART = 2671641362U;
         static const AkUniqueID SUCCESSDING = 2891550330U;
         static const AkUniqueID TESTBOOP = 2770287305U;
         static const AkUniqueID TESTCLICK = 2444254063U;
         static const AkUniqueID TESTDING = 1336322353U;
-        static const AkUniqueID TIMEUP = 796366129U;
+        static const AkUniqueID TIMEOVER = 684664796U;
     } // namespace EVENTS
 
     namespace STATES

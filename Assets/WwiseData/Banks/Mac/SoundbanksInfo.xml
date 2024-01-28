@@ -49,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{93574ABE-30B7-29A2-8A8A-312EE8FEC914}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{58B35569-5A10-6140-C0AF-8F2B971CBBBF}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -57,9 +57,17 @@
 					<ShortName>balance-game.wav</ShortName>
 					<CachePath>SFX/balance-game_56CEF360.wem</CachePath>
 				</File>
+				<File Id="31041013" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-007.wav</ShortName>
+					<CachePath>SFX/playerCollide-007_6C68C218.wem</CachePath>
+				</File>
 				<File Id="35538467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-003.wav</ShortName>
 					<CachePath>SFX/rotateClicks-003_8E324C96.wem</CachePath>
+				</File>
+				<File Id="51892871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-005.wav</ShortName>
+					<CachePath>SFX/playerCollide-005_E2D07B4E.wem</CachePath>
 				</File>
 				<File Id="54295250" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>331610__applauseav__acme-siren.wav</ShortName>
@@ -73,6 +81,10 @@
 					<ShortName>bigToot.wav</ShortName>
 					<CachePath>SFX/bigToot_51A783F6.wem</CachePath>
 				</File>
+				<File Id="76146995" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-001.wav</ShortName>
+					<CachePath>SFX/playerCollide-001_0E64E8B2.wem</CachePath>
+				</File>
 				<File Id="77529459" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CrowdNoise.wav</ShortName>
 					<CachePath>SFX/CrowdNoise_87FABF81.wem</CachePath>
@@ -84,6 +96,10 @@
 				<File Id="84886037" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>concreteFootsteps-012.wav</ShortName>
 					<CachePath>SFX/concreteFootsteps-012_8E324C96.wem</CachePath>
+				</File>
+				<File Id="101045052" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>chair-game.wav</ShortName>
+					<CachePath>SFX/chair-game_56CEF360.wem</CachePath>
 				</File>
 				<File Id="155027772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion.wav</ShortName>
@@ -109,6 +125,10 @@
 					<ShortName>rotateClicks-016.wav</ShortName>
 					<CachePath>SFX/rotateClicks-016_8E324C96.wem</CachePath>
 				</File>
+				<File Id="192204945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>timerOver.wav</ShortName>
+					<CachePath>SFX/timerOver_AEFEA39A.wem</CachePath>
+				</File>
 				<File Id="206639946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-007.wav</ShortName>
 					<CachePath>SFX/rotateClicks-007_8E324C96.wem</CachePath>
@@ -116,6 +136,10 @@
 				<File Id="220806882" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>concreteFootsteps-009.wav</ShortName>
 					<CachePath>SFX/concreteFootsteps-009_8E324C96.wem</CachePath>
+				</File>
+				<File Id="237612579" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-004.wav</ShortName>
+					<CachePath>SFX/playerCollide-004_83631589.wem</CachePath>
 				</File>
 				<File Id="253380222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>concreteFootsteps-004.wav</ShortName>
@@ -149,6 +173,14 @@
 					<ShortName>parkAmbience.wav</ShortName>
 					<CachePath>SFX/parkAmbience_8A3A44F4.wem</CachePath>
 				</File>
+				<File Id="300427170" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>eightSecondTimerTick.wav</ShortName>
+					<CachePath>SFX/eightSecondTimerTick_8E324C96.wem</CachePath>
+				</File>
+				<File Id="331391851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-008.wav</ShortName>
+					<CachePath>SFX/playerCollide-008_F887B0BF.wem</CachePath>
+				</File>
 				<File Id="373450163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-012.wav</ShortName>
 					<CachePath>SFX/rotateClicks-012_8E324C96.wem</CachePath>
@@ -160,6 +192,10 @@
 				<File Id="388535887" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>voiceStack.wav</ShortName>
 					<CachePath>SFX/voiceStack_E07FE593.wem</CachePath>
+				</File>
+				<File Id="417358394" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>title_maybe.wav</ShortName>
+					<CachePath>SFX/title_maybe_56CEF360.wem</CachePath>
 				</File>
 				<File Id="425738417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-008.wav</ShortName>
@@ -225,6 +261,10 @@
 					<ShortName>voiceKick.wav</ShortName>
 					<CachePath>SFX/voiceKick_594460DE.wem</CachePath>
 				</File>
+				<File Id="700515408" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-006.wav</ShortName>
+					<CachePath>SFX/playerCollide-006_63230B92.wem</CachePath>
+				</File>
 				<File Id="703624119" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>gore - wood beating flesh wet blood splat - medium - 11.wav</ShortName>
 					<CachePath>SFX/gore - wood beating flesh wet blood splat - medium - 11_9FA512F7.wem</CachePath>
@@ -264,6 +304,14 @@
 				<File Id="814688312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>fart-game-intro.wav</ShortName>
 					<CachePath>SFX/fart-game-intro_8E324C96.wem</CachePath>
+				</File>
+				<File Id="825006533" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-003.wav</ShortName>
+					<CachePath>SFX/playerCollide-003_8197A45E.wem</CachePath>
+				</File>
+				<File Id="832726527" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>playerCollide-002.wav</ShortName>
+					<CachePath>SFX/playerCollide-002_98229BCD.wem</CachePath>
 				</File>
 				<File Id="884571146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>concreteFootsteps-008.wav</ShortName>
@@ -390,7 +438,23 @@
 						<MediaRef Id="517821936"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2107827546" Name="chairCollide" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2107827546" Name="chairCollide" DurationType="OneShot" DurationMin="0.4665691" DurationMax="0.9148068">
+					<MediaRefs>
+						<MediaRef Id="31041013"/>
+						<MediaRef Id="51892871"/>
+						<MediaRef Id="76146995"/>
+						<MediaRef Id="237612579"/>
+						<MediaRef Id="331391851"/>
+						<MediaRef Id="700515408"/>
+						<MediaRef Id="825006533"/>
+						<MediaRef Id="832726527"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1119290663" Name="eightSecondCountdown" DurationType="OneShot" DurationMin="8.139628" DurationMax="8.876327">
+					<MediaRefs>
+						<MediaRef Id="300427170"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3649084381" Name="failureDing" DurationType="OneShot" DurationMin="0.7422686" DurationMax="0.7422686">
 					<MediaRefs>
 						<MediaRef Id="763554135"/>
@@ -485,6 +549,18 @@
 							<SwitchValue GroupType="State" GroupId="1091790943" Id="4092420579"/>
 							<MediaRefs>
 								<MediaRef Id="3417086"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="417358394"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1091790943" Id="1034249585"/>
+							<MediaRefs>
+								<MediaRef Id="101045052"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -582,6 +658,11 @@
 						<MediaRef Id="256798514"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2425254643" Name="scoreBoardPopUp" DurationType="OneShot" DurationMin="0.75777394" DurationMax="0.95473534">
+					<MediaRefs>
+						<MediaRef Id="723360948"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4271478305" Name="sliderEnd" DurationType="OneShot" DurationMin="0.13981359" DurationMax="0.13981359">
 					<MediaRefs>
 						<MediaRef Id="1010716763"/>
@@ -612,9 +693,9 @@
 						<MediaRef Id="159714313"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="796366129" Name="timeUp" DurationType="OneShot" DurationMin="0.75777394" DurationMax="0.95473534">
+				<Event Id="684664796" Name="timeOver" DurationType="OneShot" DurationMin="0.5961113" DurationMax="0.6500639">
 					<MediaRefs>
-						<MediaRef Id="723360948"/>
+						<MediaRef Id="192204945"/>
 					</MediaRefs>
 				</Event>
 			</Events>
@@ -635,5 +716,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2E521751-E05F-4A47-4099-B24ED58857B9}</FileHash>
+	<FileHash>{1E245C16-7CA0-6C91-C51C-30E121652DD7}</FileHash>
 </SoundBanksInfo>

@@ -63,7 +63,7 @@ public class FartSelector : PlayerController
         if (rightChoice)
         {
             Debug.Log("Right choice");
-            AkSoundEngine.PostEvent("successDing", this.gameObject);
+            AkSoundEngine.PostEvent("playerSquished", this.gameObject);
             GameManager.Instance.StartNextMinigame(GameManager.players.Player2);
             Destroy(gameObject);
         }

@@ -243,7 +243,7 @@
 										<ActiveSource Name="dripHover" ID="{41A396E2-B0B3-4558-A6ED-2881B26B3254}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="timeUp" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" ShortID="319079535">
+								<Sound Name="scoreBoard" ID="{21B61C5D-DD7B-4C41-9CDF-12CF0AFDD6F2}" ShortID="319079535">
 									<PropertyList>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
@@ -746,6 +746,82 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="voiceStack" ID="{8DBE39E5-1FF5-44EF-8E9B-BDD1321853D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="timerStuff" ID="{5C61E598-C388-4747-8B74-C4CB5500688E}" ShortID="975104107">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{79E8BBF2-D487-4685-8E4E-3DA4EED58360}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="75"/>
+													<Property Name="Min" Type="Real64" Value="-75"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="eightSecondTimerTick" ID="{A4638272-EE87-4550-82CE-6025322E724E}" ShortID="862469816">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="eightSecondTimerTick" ID="{F63BD8CB-2EDF-4AC3-8D31-E56B9F79711B}">
+											<Language>SFX</Language>
+											<AudioFile>eightSecondTimerTick.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="300427170"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="eightSecondTimerTick" ID="{F63BD8CB-2EDF-4AC3-8D31-E56B9F79711B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="timerOver" ID="{40B12700-17C8-4341-BD5F-CA4ACD28C2A7}" ShortID="837286002">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="timerOver" ID="{7BD498E2-2208-4B48-B04F-04E99A2B8C2E}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.481025299600533"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.10352862849534"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>timerOver.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="192204945"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="timerOver" ID="{7BD498E2-2208-4B48-B04F-04E99A2B8C2E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

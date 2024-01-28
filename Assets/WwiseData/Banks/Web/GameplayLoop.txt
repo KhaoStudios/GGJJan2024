@@ -6,12 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	303266102	menuHover			\Default Work Unit\UI\menuSounds\menuHover	
 	411168428	carGone			\Default Work Unit\NPCs\bananaGame\carGone	
 	420782237	levelKickTalk			\Default Work Unit\UI\levelSounds\levelKickTalk	
-	554093570	playerSquished			\Default Work Unit\Player\bananaGame\playerSquished	
+	554093570	playerSquished			\Default Work Unit\Player\fartGame\playerSquished	
 	672392345	playerKickNormal			\Default Work Unit\Player\spinGame\playerKickNormal	
+	684664796	timeOver			\Default Work Unit\UI\timerStuff\timeOver	
 	785996010	fartAlert			\Default Work Unit\NPCs\fartGame\fartAlert	
-	796366129	timeUp			\Default Work Unit\UI\levelSounds\timeUp	
 	1089682851	musicStateStack			\Default Work Unit\Music\musicStateSwaps\musicStateStack	
 	1098376466	playerRollEnd			\Default Work Unit\Player\spinGame\playerRollEnd	
+	1119290663	eightSecondCountdown			\Default Work Unit\UI\timerStuff\eightSecondCountdown	
 	1122283870	musicStart			\Default Work Unit\Music\musicStart	
 	1317058574	musicStateRace			\Default Work Unit\Music\musicStateSwaps\musicStateRace	
 	1336322353	testDing			\Default Work Unit\UI\testSounds\testDing	
@@ -22,6 +23,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1933175613	playerRotateStart			\Default Work Unit\Objects\stackGame\playerRotateStart	
 	2009521539	carHonk			\Default Work Unit\NPCs\bananaGame\carHonk	
 	2107827546	chairCollide			\Default Work Unit\Player\spinGame\chairCollide	
+	2425254643	scoreBoardPopUp			\Default Work Unit\UI\levelSounds\scoreBoardPopUp	
 	2444254063	testClick			\Default Work Unit\UI\testSounds\testClick	
 	2452814208	levelBananaTalk			\Default Work Unit\UI\levelSounds\levelBananaTalk	
 	2633181064	musicStateMenu			\Default Work Unit\Music\musicStateSwaps\musicStateMenu	
@@ -61,21 +63,27 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	3417086	balance-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\balance-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\stackGameMusic\balance-game\balance-game		430166
+	31041013	playerCollide-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-007_6C68C218.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-007		5825
 	35538467	rotateClicks-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-003		2599
+	51892871	playerCollide-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-005_E2D07B4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-005		4714
 	54295250	sirenSlip	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\331610__applauseav__acme-siren_3306B3BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\slips\sirenSlip		8866
 	56784899	concreteFootsteps-005	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-005_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-005		5081
 	68312502	bigToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\bigToot_51A783F6.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\bigToot		47447
+	76146995	playerCollide-001	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-001_0E64E8B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-001		8259
 	77529459	crowdNoise	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\CrowdNoise_87FABF81.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\crowdNoise		1060981
 	83768231	concreteFootsteps-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-002		3666
 	84886037	concreteFootsteps-012	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-012_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-012		3852
+	101045052	chair-game	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\chair-game_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\spinGameMusic\chair-game\chair-game		743816
 	155027772	wackyCar	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_17BED8E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\wackyCar		60367
 	159714313	Ding	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\mailReady_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Ding		115587
 	163174107	rotateClicks-014	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-014_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-014		2572
 	172104628	rotateClicks-011	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-011_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-011		2919
 	173635344	rotateClicks-015	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-015_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-015		2247
 	180050267	rotateClicks-016	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-016_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-016		1984
+	192204945	timerOver	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timerOver_AEFEA39A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\timerOver		6769
 	206639946	rotateClicks-007	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-007_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-007		2234
 	220806882	concreteFootsteps-009	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-009_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-009		5584
+	237612579	playerCollide-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-004_83631589.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-004		5369
 	253380222	concreteFootsteps-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-004_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-004		5041
 	256702298	quietToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\quietToot_DFF69CC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\quietToot		11891
 	256798514	squishSqueak	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\squishSqueak_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerSquished\squishSqueak		10937
@@ -84,9 +92,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	261767146	clickForward	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\clickForward_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\clickForward		5009
 	271732942	midToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\midToot_1528F9A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\midToot		20095
 	275017575	parkAmbience	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\parkAmbience_8A3A44F4.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Ambient\Ambient\ambientSwitch\parkAmbience		1024564
+	300427170	eightSecondTimerTick	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\eightSecondTimerTick_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\timerStuff\eightSecondTimerTick		108339
+	331391851	playerCollide-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-008_F887B0BF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-008		7893
 	373450163	rotateClicks-012	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-012_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-012		1964
 	388029286	concreteFootsteps-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-006_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-006		3987
 	388535887	voiceStack	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceStack_E07FE593.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceStack		9507
+	417358394	title_maybe	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\title_maybe_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\menuGameMusic\title_maybe\title_maybe		290045
 	425738417	rotateClicks-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-008_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-008		2951
 	429584414	rotateClicks-009	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-009_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-009		2688
 	434667566	clickBack	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\clickBack_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\clickBack		2487
@@ -103,8 +114,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	651480257	concreteFootsteps-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-003_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-003		4120
 	658984190	playerKickNormal	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\weakKick_E746A9B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\playerKicks\playerKickNormal		3293
 	677695302	voiceKick	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceKick_594460DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceKick		4983
+	700515408	playerCollide-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-006_63230B92.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-006		8791
 	703624119	bananaSplat	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\gore - wood beating flesh wet blood splat - medium - 11_9FA512F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\bananaSplat		8751
-	723360948	timeUp	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timeUp_904AED52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\timeUp		4799
+	723360948	scoreBoard	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\timeUp_904AED52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\scoreBoard		4799
 	737435134	dripHover	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\dripHover_487DC610.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\menuSounds\dripHover		3384
 	759086605	voiceHide	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\voiceHide_86270F00.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceHide		9317
 	763554135	scoreDown	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\scoreDown_031F6344.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\scoreSystem\scoreDown		6705
@@ -113,6 +125,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	780191265	rotateClicks-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-004_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-004		2547
 	810188556	scoreUp	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\scoreUp_B5F21F75.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\scoreSystem\scoreUp		8394
 	814688312	fartIntro	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\fart-game-intro_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\fartIntro		94870
+	825006533	playerCollide-003	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-003_8197A45E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-003		6556
+	832726527	playerCollide-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\playerCollide-002_98229BCD.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\pinballCollides\playerCollide-002		7302
 	884571146	concreteFootsteps-008	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\concreteFootsteps-008_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\bananaSteps\bananaStep\concreteFootsteps-008		4138
 	886132094	rotateClicks-006	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\rotateClicks-006_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-006		2247
 	887665778	Boop	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Web\SFX\GameStart_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\testSounds\Boop		9819

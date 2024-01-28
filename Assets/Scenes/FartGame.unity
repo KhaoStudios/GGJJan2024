@@ -1706,6 +1706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3683470965366346924, guid: dcdce56370eff6644984162879988d46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4058461542356224236, guid: dcdce56370eff6644984162879988d46, type: 3}
       propertyPath: m_Name
       value: SelectorBase

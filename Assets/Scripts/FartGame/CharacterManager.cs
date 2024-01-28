@@ -21,6 +21,8 @@ public class CharacterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(StartAudioPlay());
+
         AllCharacters = new List<GameObject>();
         // for each npc
         for (int i = 0; i < number; i++)
@@ -49,6 +51,12 @@ public class CharacterManager : MonoBehaviour
         
         //PlayerCharacter.GetComponent<Renderer>().material.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
 
+    }
+
+    IEnumerator StartAudioPlay()
+    {
+        yield return new WaitForSeconds(0.25f);
+        AkSoundEngine.PostEvent("levelFartTalk", this.gameObject);
     }
 
     public void DisableExclamationOnAll()

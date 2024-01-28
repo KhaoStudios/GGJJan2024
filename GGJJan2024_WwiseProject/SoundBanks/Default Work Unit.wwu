@@ -21,6 +21,7 @@
 						<ObjectRef Name="bananaStep" ID="{E380FFFE-7ED1-451A-9F86-EEA0BC8D4880}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testDing" ID="{56C7B9AD-BDE1-4534-AEFC-8EDDDACC7E12}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerRollEnd" ID="{096634D3-9CAF-4549-8CAC-CD3AA0532E83}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="timeOver" ID="{8A6F72F8-5760-4569-A816-1DB64242E497}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="chairCollide" ID="{85A0BA16-A458-4588-AB09-363CE430D753}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="fartMassive" ID="{9754BE29-C43F-45B8-9A27-8F38252CBE4B}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuNext" ID="{AA5E679B-B590-4602-8581-1849C82BDE70}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
@@ -41,11 +42,12 @@
 						<ObjectRef Name="musicStateMenu" ID="{1A089FD5-C98F-4B0D-B386-685776AD49C4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateSpin" ID="{5241EE94-9F04-4B2A-B345-AFF9CB9067D0}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="levelFartTalk" ID="{B8C570C1-EA63-4B46-BB6B-730914CBC73D}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="eightSecondCountdown" ID="{48A205DA-B753-4B48-9D41-F336FBD0FB66}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="carHonk" ID="{8B69F56E-62C5-4B5B-B9D1-220154DEF3CB}" WorkUnitID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerRotateStart" ID="{81994DC4-3977-4C9C-A65D-9216BD5C0AC3}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuPlayerJoin" ID="{1439598D-8B54-4CDE-B0CA-69A2BE102D2A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuStart" ID="{12B51207-8ECE-4E0D-9E9A-40FE90B61EAF}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="timeUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="scoreBoardPopUp" ID="{B38B942F-E70D-4E4F-88C7-73D54F5B9D3B}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStateStack" ID="{BB9C845C-F5AB-4EE4-B587-52540320E7F4}" WorkUnitID="{FF4DBBC3-EC27-4B6E-A218-AF030357DBA6}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="testClick" ID="{40CEBC37-97B5-4F79-9FD2-5A2D597E6C58}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>

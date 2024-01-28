@@ -60,6 +60,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}">
+							<ChildrenList>
+								<Action Name="" ID="{2CAD8A7D-0BFB-4BBB-A0FF-DD4CBF3D34E3}" ShortID="268791212">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="spinGame" ID="{1D6F6A92-0E45-4363-B4A2-172A2F8899EF}" ShortID="793782440">
@@ -122,22 +133,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="chairCollide" ID="{85A0BA16-A458-4588-AB09-363CE430D753}"/>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="bananaGame" ID="{19D0FA57-9480-43C2-9DFC-D6B0DB224305}" ShortID="400492108">
-					<ChildrenList>
-						<Event Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}">
+						<Event Name="chairCollide" ID="{85A0BA16-A458-4588-AB09-363CE430D753}">
 							<ChildrenList>
-								<Action Name="" ID="{2CAD8A7D-0BFB-4BBB-A0FF-DD4CBF3D34E3}" ShortID="268791212">
+								<Action Name="" ID="{FDE4629D-2A06-49E5-AA26-A3368C22757D}" ShortID="7622309">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="squishSqueak" ID="{A5CB58CF-B1B7-4920-8268-D1DB3D248412}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+											<ObjectRef Name="pinballCollides" ID="{97137C06-ED3A-4C28-A305-0438EACA00D8}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="bananaGame" ID="{19D0FA57-9480-43C2-9DFC-D6B0DB224305}" ShortID="400492108">
+					<ChildrenList>
 						<Event Name="playerSlip" ID="{46B35065-ED50-4F38-878E-A2E70B8C326E}">
 							<ChildrenList>
 								<Action Name="" ID="{D1A82220-F0C2-4FED-A985-18276FF653A9}" ShortID="1015387621">
