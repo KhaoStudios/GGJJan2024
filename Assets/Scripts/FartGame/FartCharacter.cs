@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class FartCharacter : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class FartCharacter : MonoBehaviour
     public Vector3 target;  // the target position it is aiming towards
     public float waitTimer; // wait timer
     public ActionList act;  // action list
+    Rigidbody rb;
 
     // Minimum and maximum positions on map
     public float minimumX = -10.0f;
@@ -39,6 +41,7 @@ public class FartCharacter : MonoBehaviour
     {
         // set up action list
         act = new ActionList();
+        rb = GetComponent<Rigidbody>();
     }
     void Start()
     {
@@ -70,7 +73,7 @@ public class FartCharacter : MonoBehaviour
         act.Update(Time.deltaTime);
 
         // if the list is empty
-        if(act.Empty())
+        if (act.Empty())
         {
             // Get a new position and decide whether or not to wait. 
             MoveToRandomPosition();
@@ -87,6 +90,12 @@ public class FartCharacter : MonoBehaviour
         {
             newPos = new Vector3(Random.Range(minimumX, maximumX), 2, Random.Range(minimumY, maximumY));
             moveDistance = Mathf.Abs(Vector3.Distance(newPos, transform.position));
+        }
+
+        Vector3 moveDirection = newPos - transform.position;
+        if (moveDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(-moveDirection);
         }
 
         float movetime = Random.Range(0.8f, 1.5f) * moveDistance;
@@ -117,6 +126,6 @@ public class FartCharacter : MonoBehaviour
         // Stop and limit velocity
         active = false;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 }

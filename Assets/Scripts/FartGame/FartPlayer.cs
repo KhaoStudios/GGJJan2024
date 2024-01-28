@@ -51,10 +51,15 @@ public class FartPlayer : PlayerController
         // if active
         if(active)
         {
-            // Get the unput vector and set it
-            Vector2 move = inputVector;
             //transform.position += new Vector3(move.x, 0, move.y) * Time.deltaTime * speed;
-            GetComponent<Rigidbody>().velocity = new Vector3(move.x, 0, move.y) * speed;
+
+            Vector3 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
+            GetComponent<Rigidbody>().velocity = moveDirection * speed;
+
+            if (moveDirection !=  Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(-moveDirection);
+            }
         }
 
     }
@@ -63,6 +68,7 @@ public class FartPlayer : PlayerController
     {
         active = false;
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
 

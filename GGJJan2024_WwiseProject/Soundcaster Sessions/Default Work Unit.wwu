@@ -108,11 +108,11 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="musicVolume" ID="{696BEAE4-8F04-42E4-9472-8D921D38DE54}"/>
+							<GameParameterRef Name="gameMusicVolume" ID="{696BEAE4-8F04-42E4-9472-8D921D38DE54}"/>
 							<Value>80</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="masterVolume" ID="{93F04437-7A8D-4984-A5CB-28647F87AB86}"/>
+							<GameParameterRef Name="gameMasterVolume" ID="{93F04437-7A8D-4984-A5CB-28647F87AB86}"/>
 							<Value>80</Value>
 						</RTPCValue>
 						<RTPCValue>
@@ -120,7 +120,7 @@
 							<Value>44.9818621523579</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="sfxVolume" ID="{D138DC06-75E5-4CCC-9CCA-46C489E45A92}"/>
+							<GameParameterRef Name="gameSFXVolume" ID="{D138DC06-75E5-4CCC-9CCA-46C489E45A92}"/>
 							<Value>80</Value>
 						</RTPCValue>
 					</RTPCValueList>
