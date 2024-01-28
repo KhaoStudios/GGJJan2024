@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Controls.Player_Controllers
+namespace ChairGame
 {
     [RequireComponent(typeof(Rigidbody))]
     public class ChairController : PlayerController
