@@ -84,13 +84,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{ECDF21D3-A155-4EFC-8219-4B9C1EC4055C}" ShortID="883183562">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="playerKickNormal" ID="{3B1243AF-CD1C-446B-B31C-242FF88D8AD7}">
@@ -99,13 +92,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="playerKickNormal" ID="{17EFBB64-5755-46A4-A34F-9E52EB239835}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{F69C6A19-EDA7-4784-8BAC-097C5FEF9B40}" ShortID="746453416">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -139,6 +125,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="pinballCollides" ID="{97137C06-ED3A-4C28-A305-0438EACA00D8}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerRolling" ID="{A1CCE94A-03A8-413E-A8D3-1B1582105742}">
+							<ChildrenList>
+								<Action Name="" ID="{29C25083-3EC1-4B55-9EFC-33D26F34CE3F}" ShortID="329644818">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerRolling" ID="{0BCD1030-C65E-41B1-928C-76BB37437EFB}" WorkUnitID="{F86C5B38-5F20-4CC2-A843-F1662D5F49E6}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
