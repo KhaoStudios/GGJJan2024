@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1852,6 +1852,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291759926}
   m_CullTransparentMesh: 1
+--- !u!1 &1321798606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2886274901087315950, guid: 3ed117fa778554b4fb32b4feab9a75c9, type: 3}
+  m_PrefabInstance: {fileID: 2367321958554649150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1331422827 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2937168069940685180, guid: 050384acd1f0bb141bf029e72da6680a, type: 3}
@@ -2633,6 +2638,10 @@ PrefabInstance:
       value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 2011410156002762575, guid: 3ed117fa778554b4fb32b4feab9a75c9, type: 3}
+      propertyPath: ReadyPanel
+      value: 
+      objectReference: {fileID: 1321798606}
+    - target: {fileID: 2011410156002762575, guid: 3ed117fa778554b4fb32b4feab9a75c9, type: 3}
       propertyPath: settingsMenu
       value: 
       objectReference: {fileID: 1049542116}
@@ -2656,6 +2665,10 @@ PrefabInstance:
       propertyPath: offset
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2665953082349932479, guid: 3ed117fa778554b4fb32b4feab9a75c9, type: 3}
+      propertyPath: ReadyPanel
+      value: 
+      objectReference: {fileID: 1321798606}
     - target: {fileID: 2665953082349932479, guid: 3ed117fa778554b4fb32b4feab9a75c9, type: 3}
       propertyPath: settingsMenu
       value: 

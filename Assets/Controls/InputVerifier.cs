@@ -9,10 +9,11 @@ public class InputVerifier : PlayerController
 {
     public PlayerJoinChecker joinChecker;
     public GameObject PlayerJoined;
+    public GameObject ReadyPanel;
     public bool joined { get; private set; }
-    
+
     public GameObject canvas;
-    
+
     private ActionList al;
 
     public float offset = 1.0f;
@@ -33,12 +34,12 @@ public class InputVerifier : PlayerController
 
     public override void OnJoinedButtonPressed()
     {
-        
+
         float xPos = canvas.GetComponent<RectTransform>().position.x;
         float yPos = canvas.GetComponent<RectTransform>().position.y;
 
         Vector3 centerPos = new Vector3(xPos * offset, yPos, 0.0f);
-        
+
         if (!joined)
         {
             PlayerJoined?.SetActive(true);
@@ -58,11 +59,15 @@ public class InputVerifier : PlayerController
     {
         // Toggle settings
         ToggleSettings();
+        ToggleReadyScreen();
+        //Toggle ready screen
+
     }
 
     public override void OnSecondaryButtonPressed()
     {
         ToggleSettings();
+        ToggleReadyScreen();
     }
 
     public void ToggleSettings()
@@ -70,5 +75,10 @@ public class InputVerifier : PlayerController
         // Toggle settings
         settingsMenu.SetActive(!settingsMenu.activeInHierarchy);
         AkSoundEngine.PostEvent("menuBack", this.gameObject);
+    }
+
+    public void ToggleReadyScreen()
+    {
+        ReadyPanel.SetActive(!ReadyPanel.activeInHierarchy);
     }
 }
