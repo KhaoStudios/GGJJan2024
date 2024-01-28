@@ -6,7 +6,7 @@
 				<MusicSwitchContainer Name="gameplayMusicSwitch" ID="{24E8C158-DB5A-40C3-987F-67747683B0BF}" ShortID="350796857">
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8023A005-5926-489D-97CC-9F095BE60EB7}"/>
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{936C7E23-6D64-43A8-BDE2-FDFC948FA0A0}" WorkUnitID="{76A68119-C14B-4D6C-A2A5-02A33289F5BE}"/>

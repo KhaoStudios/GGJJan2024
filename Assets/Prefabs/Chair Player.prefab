@@ -1457,8 +1457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerIndex: 0
-  ChairPivot: {fileID: 5700377454029943683}
   BoostTrigger: {fileID: 4655754329658177544}
+  ChairPivot: {fileID: 5700377454029943683}
   LeftKneePivot: {fileID: 2462241996209763255}
   RightKneePivot: {fileID: 2865260439763850076}
   KickCurve:
@@ -1485,7 +1485,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  StartingSpinSpeed: 100
+  StartingSpinSpeed: 150
+  SpinBoostMultiplier: 3
+  SpinBoostDecay: 50
   KickForce: 10
   KickCooldown: 1
   BounceMultiplier: 0.75
