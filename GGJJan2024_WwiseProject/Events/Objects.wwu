@@ -140,6 +140,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="hornLand" ID="{B8E0E064-E09C-432E-BC77-9B15A0E6E6BB}">
+							<ChildrenList>
+								<Action Name="" ID="{7E3A0AEB-48CE-4614-B13C-E35F90A94C26}" ShortID="8050579">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hornDrop" ID="{2D9A00EF-8326-4955-B5A9-21242090BDF8}" WorkUnitID="{0AB70911-0D2A-412B-8811-8D3F781F9D3B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

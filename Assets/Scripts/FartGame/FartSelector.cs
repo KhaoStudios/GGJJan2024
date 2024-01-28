@@ -60,6 +60,7 @@ public class FartSelector : PlayerController
         AkSoundEngine.PostEvent("playerHammer", this.gameObject);
 
         StartCoroutine(RevealChoice(fartPlayer != null));
+        GameManager.Instance.DisplayInfo(fartPlayer != null ? "Correct!" : "Wrong!");
     }
 
     public IEnumerator RevealChoice(bool rightChoice)
