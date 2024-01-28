@@ -1459,8 +1459,7 @@ MonoBehaviour:
   playerIndex: 0
   BoostTrigger: {fileID: 4655754329658177544}
   ChairPivot: {fileID: 5700377454029943683}
-  LeftKneePivot: {fileID: 2462241996209763255}
-  RightKneePivot: {fileID: 2865260439763850076}
+  LegsPivot: {fileID: 0}
   KickCurve:
     serializedVersion: 2
     m_Curve:
@@ -1500,8 +1499,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8259373013276264256}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.01
+  m_Drag: 0.05
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
