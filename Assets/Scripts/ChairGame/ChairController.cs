@@ -10,8 +10,9 @@ namespace ChairGame
     {
         public BoostDetector BoostTrigger;
         public GameObject ChairPivot;
-        public GameObject LeftKneePivot;
-        public GameObject RightKneePivot;
+        public GameObject LegsPivot;
+        //public GameObject LeftKneePivot;
+        //public GameObject RightKneePivot;
         public AnimationCurve KickCurve;
         
         private Transform chairTrans;
@@ -101,14 +102,19 @@ namespace ChairGame
                 AkSoundEngine.PostEvent("playerRolling", gameObject);
                 rolling = true;
             }
-            
-            Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
-            Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
+
+            Vector3 legsRot = LegsPivot.transform.localEulerAngles;
+            //Vector3 leftRot = LeftKneePivot.transform.localEulerAngles;
+            //Vector3 rightRot = RightKneePivot.transform.localEulerAngles;
             Vector3 rotOffset = new Vector3(-65f, 0f, 0f);
 
             float kickDur = 0.33f;
             
-            // left leg up
+            actionList.Add(new Rotate(LegsPivot, legsRot + rotOffset, kickDur, KickCurve));
+            actionList.Add(new Rotate(LegsPivot, legsRot, KickCooldown - kickDur, kickDur, false,
+                Act.Action.Group.None, Act.Action.EaseType.Cubic));
+            
+            /*// left leg up
             actionList.Add(new Rotate(LeftKneePivot, leftRot + rotOffset, kickDur, KickCurve));
             // left leg down
             actionList.Add(new Rotate(LeftKneePivot, leftRot, KickCooldown - kickDur, kickDur, false,
@@ -118,7 +124,7 @@ namespace ChairGame
             actionList.Add(new Rotate(RightKneePivot, rightRot + rotOffset, kickDur, KickCurve));
             // right leg down
             actionList.Add(new Rotate(RightKneePivot, rightRot, KickCooldown - kickDur, kickDur, false,
-                Act.Action.Group.None, Act.Action.EaseType.Cubic));
+                Act.Action.Group.None, Act.Action.EaseType.Cubic));*/
         }
 
         private void SpinChair()
@@ -140,9 +146,12 @@ namespace ChairGame
         private void DecaySpin()
         {
             //Debug.Log("Spin Speed: " + spinSpeed);
-            
+
             if (spinSpeed > StartingSpinSpeed)
-                spinSpeed -= SpinBoostDecay * Time.deltaTime;
+            {
+                float decayRate = rolling ? SpinBoostDecay : SpinBoostDecay * 2;
+                spinSpeed -= decayRate * Time.deltaTime;
+            }
 
             if (spinSpeed < StartingSpinSpeed)
                 spinSpeed = StartingSpinSpeed;

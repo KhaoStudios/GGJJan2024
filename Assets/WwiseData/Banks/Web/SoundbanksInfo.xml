@@ -48,7 +48,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{6E5F1F91-2EC8-0BBC-EFFE-4F84DD6590C7}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{DCE87BB9-DDCC-9B1A-63D5-B4F45A125724}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -107,6 +107,10 @@
 				<File Id="101045052" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>chair-game.wav</ShortName>
 					<CachePath>SFX/chair-game_56CEF360.wem</CachePath>
+				</File>
+				<File Id="123024092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EFX INT Clown Horn 01 .wav</ShortName>
+					<CachePath>SFX/EFX INT Clown Horn 01 _434DE83D.wem</CachePath>
 				</File>
 				<File Id="144351935" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>partyHat-002.wav</ShortName>
@@ -216,10 +220,6 @@
 					<ShortName>partyHat-001.wav</ShortName>
 					<CachePath>SFX/partyHat-001_81710A4B.wem</CachePath>
 				</File>
-				<File Id="417358394" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>title_maybe.wav</ShortName>
-					<CachePath>SFX/title_maybe_56CEF360.wem</CachePath>
-				</File>
 				<File Id="425738417" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>rotateClicks-008.wav</ShortName>
 					<CachePath>SFX/rotateClicks-008_8E324C96.wem</CachePath>
@@ -250,7 +250,11 @@
 				</File>
 				<File Id="517821936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>carHonk.wav</ShortName>
-					<CachePath>SFX/carHonk_D6144F38.wem</CachePath>
+					<CachePath>SFX/carHonk_EDA1DF42.wem</CachePath>
+				</File>
+				<File Id="531465361" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>menu.wav</ShortName>
+					<CachePath>SFX/menu_56CEF360.wem</CachePath>
 				</File>
 				<File Id="532530202" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>voiceRace.wav</ShortName>
@@ -531,7 +535,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="411168428" Name="carGone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="0.6142673" DurationMax="0.6698631">
+				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="0.30713364" DurationMax="0.33493155">
 					<MediaRefs>
 						<MediaRef Id="517821936"/>
 					</MediaRefs>
@@ -607,6 +611,11 @@
 						<MediaRef Id="618342093"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="399836117" Name="hornLand" DurationType="OneShot" DurationMin="0.34069088" DurationMax="0.371526">
+					<MediaRefs>
+						<MediaRef Id="123024092"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2452814208" Name="levelBananaTalk" DurationType="OneShot" DurationMin="0.6817576" DurationMax="0.6817576">
 					<MediaRefs>
 						<MediaRef Id="532530202"/>
@@ -671,7 +680,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1091790943" Id="2607556080"/>
 							<MediaRefs>
-								<MediaRef Id="417358394"/>
+								<MediaRef Id="531465361"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -721,6 +730,11 @@
 				<Event Id="268427392" Name="playerHammer" DurationType="OneShot" DurationMin="1.3777672" DurationMax="1.4596936">
 					<MediaRefs>
 						<MediaRef Id="770228991"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1981496715" Name="playerHitHonk" DurationType="OneShot" DurationMin="0.30713364" DurationMax="0.33493155">
+					<MediaRefs>
+						<MediaRef Id="517821936"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="672392345" Name="playerKickNormal" DurationType="OneShot" DurationMin="0.3970613" DurationMax="0.4206718">
@@ -854,5 +868,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{16821086-0BA4-B168-0AB8-732CBF2566F7}</FileHash>
+	<FileHash>{D85C8A6C-B8C4-D92A-E8ED-AF17EE7F6A16}</FileHash>
 </SoundBanksInfo>
