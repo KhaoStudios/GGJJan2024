@@ -77,10 +77,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRef: {fileID: 2578842329139003564}
-  tm: {fileID: 0}
-  timer: 0
+  fartStrengthTimer: 0
   fart: {fileID: 543919312748725253, guid: ff1e86242dfaa304d9b904f1afbd4197, type: 3}
   active: 0
+  FartMeter: {fileID: 0}
+  FartColorLow: {r: 0.45544696, g: 0.66666657, b: 0.16142549, a: 1}
+  FartColorMed: {r: 0, g: 0, b: 0, a: 0}
+  FartColorHigh: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7680457682116687564
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class PlayerJoinChecker : MonoBehaviour
             {
                 BothPlayersJoined = true;
                 al.Add(new UIMove(centerPos, ReadyPanel, 0.85f, 0, false, Action.Group.None,
-                    Action.EaseType.EaseOutBounce));
+                    Action.EaseType.EaseInElastic));
             }
         }
 

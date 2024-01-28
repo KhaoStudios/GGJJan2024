@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int MainMenuSceneIndex;
     [SerializeField] private List<int> ValidGameScenes;
 
+    [SerializeField] private GameObject TitleGameObject;
+    [SerializeField] private TextMeshProUGUI titleText;
+
     public players overallWinner { get; private set; }
     
     ActionList actionList;
@@ -151,6 +154,20 @@ public class GameManager : MonoBehaviour
     public void IncrementPlayer2Lives(int i = 1)
     {
         Player2Wins += i;
+    }
+
+    public void DisplayInfo(string info)
+    {
+        titleText.text = info;
+        
+        float xPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.x;
+        float yPos = curtainMoveValues.canvas.GetComponent<RectTransform>().position.y;
+
+        Vector3 buttonPos = new Vector3(xPos, yPos, 0.0f);
+        Vector3 topPos = new Vector3(xPos, yPos * 3, 0.0f);
+
+        actionList.Add(new UIMove(buttonPos,TitleGameObject,1.0f,0.0f,true,Action.Group.None,Action.EaseType.EaseInElastic));
+        actionList.Add(new UIMove(topPos,TitleGameObject,0.75f, 1.3f,false,Action.Group.None,Action.EaseType.Cubic));
     }
 
     int DieRoll(int roll)
