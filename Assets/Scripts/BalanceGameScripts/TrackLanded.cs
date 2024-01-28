@@ -32,7 +32,7 @@ public class TrackLanded : MonoBehaviour
             }
             else if (gameObject.GetComponent<MeshRenderer>().sharedMaterial.name.Contains("Horn-Jack 1"))
             {
-                //AkSoundEngine.PostEvent("hornLand", gameObject);
+                AkSoundEngine.PostEvent("hornLand", gameObject);
             }
             else if (gameObject.GetComponent<MeshRenderer>().sharedMaterial.name.Contains("Horn-Jack"))
             {

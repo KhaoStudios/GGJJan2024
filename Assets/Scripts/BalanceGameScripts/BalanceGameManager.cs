@@ -59,6 +59,7 @@ public class PieceManager : MonoBehaviour
         time -= Time.deltaTime;
         if(time > startTime)
         {
+            AkSoundEngine.PostEvent("playerRotateStop", player1Piece.gameObject);
             return;
         }
         if(time <= 0)
@@ -234,5 +235,8 @@ public class PieceManager : MonoBehaviour
         player2HasPiece = false;
     }
 
-
+    public float GetTime()
+    {
+        return time;
+    }
 }
