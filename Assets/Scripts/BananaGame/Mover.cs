@@ -62,7 +62,6 @@ public class Mover : PlayerController //for banana game
            RB.AddForce(new Vector3(5f, 10f, 0));
            TimeSinceLastBounce = 0;
            AkSoundEngine.PostEvent("bananaStep", this.gameObject);
-
         }
         else
         {
@@ -153,6 +152,8 @@ public class Mover : PlayerController //for banana game
             if (other.gameObject.name.Contains("Car"))
             {
                 AkSoundEngine.PostEvent("playerRunOver", this.gameObject);
+                AkSoundEngine.PostEvent("carHonk", this.gameObject);
+
             }
             AkSoundEngine.PostEvent("playerSlip", this.gameObject);
 
