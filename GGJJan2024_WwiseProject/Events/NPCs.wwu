@@ -52,6 +52,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="removeAllDrivingCars" ID="{8CF383DC-1492-469D-BDAE-559D5435BA7A}">
+							<ChildrenList>
+								<Action Name="" ID="{BE1E62ED-B48B-4EEB-80A1-8C8C488C6A42}" ShortID="514703630">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wackyCar" ID="{002922CA-0666-42DB-8E73-37881C7626D4}" WorkUnitID="{7E5D7C3D-8EC7-4D79-88C1-F26878B25FE3}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="fartGame" ID="{E546F62F-DE91-4E69-8A06-F019A7897C1D}" ShortID="172441565">

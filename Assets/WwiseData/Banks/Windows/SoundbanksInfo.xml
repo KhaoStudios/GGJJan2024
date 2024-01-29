@@ -49,7 +49,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{33EC12BD-B9AA-111D-7147-0E5A409FDC33}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{7BB9CEFA-C11B-46F9-A002-83BC088816AF}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -255,7 +255,7 @@
 				</File>
 				<File Id="517821936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>carHonk.wav</ShortName>
-					<CachePath>SFX/carHonk_EDA1DF42.wem</CachePath>
+					<CachePath>SFX/carHonk_D6144F38.wem</CachePath>
 				</File>
 				<File Id="531465361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>menu.wav</ShortName>
@@ -540,7 +540,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="411168428" Name="carGone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="0.30713364" DurationMax="0.33493155">
+				<Event Id="2009521539" Name="carHonk" DurationType="OneShot" DurationMin="0.6142673" DurationMax="0.6698631">
 					<MediaRefs>
 						<MediaRef Id="517821936"/>
 					</MediaRefs>
@@ -742,7 +742,7 @@
 						<MediaRef Id="770228991"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1981496715" Name="playerHitHonk" DurationType="OneShot" DurationMin="0.30713364" DurationMax="0.33493155">
+				<Event Id="1981496715" Name="playerHitHonk" DurationType="OneShot" DurationMin="0.6142673" DurationMax="0.6698631">
 					<MediaRefs>
 						<MediaRef Id="517821936"/>
 					</MediaRefs>
@@ -810,6 +810,7 @@
 						<MediaRef Id="256798514"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1396965386" Name="removeAllDrivingCars" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2425254643" Name="scoreBoardPopUp" DurationType="OneShot" DurationMin="0.75777394" DurationMax="0.95473534">
 					<MediaRefs>
 						<MediaRef Id="723360948"/>
@@ -879,5 +880,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EF183446-B55B-8E45-5EAD-9C0B31937167}</FileHash>
+	<FileHash>{5B424C17-6CFE-BF2C-4D86-2B1E95EE1525}</FileHash>
 </SoundBanksInfo>

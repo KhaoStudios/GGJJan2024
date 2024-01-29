@@ -34,6 +34,7 @@
 						<ObjectRef Name="playerSquished" ID="{6FACCF55-D3FB-460C-A8F4-C1D71857E93B}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="fartMid" ID="{EFFCAEFC-99AC-4669-841E-923FF57D7E3C}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="duckLand" ID="{564E4D83-A55B-468F-A8FB-2B0553CA7DC0}" WorkUnitID="{2C0D0DAF-F181-4E51-9B15-704D599CFD71}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="removeAllDrivingCars" ID="{8CF383DC-1492-469D-BDAE-559D5435BA7A}" WorkUnitID="{FEF611DA-A95A-4A4D-A323-182740DB11AD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerRunOver" ID="{8E46B94C-35B5-46B6-A745-46285A016CF0}" WorkUnitID="{4C826A2F-2711-42F1-B6B3-A478799D9985}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="menuHover" ID="{612AF763-1492-472C-8248-C4983A8D6C3A}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="levelStackTalk" ID="{D834A284-7686-4750-AED4-B8261E985B98}" WorkUnitID="{614DC307-B67D-4CAB-8A02-77B1243436D2}" Origin="Manual" Filter="7"/>

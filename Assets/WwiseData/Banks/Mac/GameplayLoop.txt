@@ -21,6 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1122283870	musicStart			\Default Work Unit\Music\musicStart	
 	1317058574	musicStateRace			\Default Work Unit\Music\musicStateSwaps\musicStateRace	
 	1336322353	testDing			\Default Work Unit\UI\testSounds\testDing	
+	1396965386	removeAllDrivingCars			\Default Work Unit\NPCs\bananaGame\removeAllDrivingCars	
 	1426002253	fartSmall			\Default Work Unit\Player\fartGame\fartSmall	
 	1553801141	playerKickStrong			\Default Work Unit\Player\spinGame\playerKickStrong	
 	1720073155	ambienceStart			\Default Work Unit\Ambient\ambienceStart	
@@ -124,7 +125,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	495127621	anvilHits-004	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\anvilHits-004_FE230951.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\anvil\anvilHits-004		8468
 	503819537	DEEPToot	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\DEEPToot_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\toots\DEEPToot		65323
 	505247250	rubberBall	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\rubberBall_DEB8F7A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Objects\stackGameDrops\rubberBall\rubberBall		6733
-	517821936	carHonk	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\carHonk_EDA1DF42.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\carHonk		5308
+	517821936	carHonk	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\carHonk_D6144F38.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\carHonk		5308
 	531465361	menu	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\menu_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\gameplayMusicSwitch\menuGameMusic\menu\menu		999108
 	532530202	voiceRace	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\voiceRace_A0694F73.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\levelStingers\voiceRace		9560
 	539289836	rotateClicks-002	D:\Game_Production\UnityProjects\GGJJan2024\GGJJan2024_WwiseProject\.cache\Mac\SFX\rotateClicks-002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\rotateClicks\rotateClicks-002		2390

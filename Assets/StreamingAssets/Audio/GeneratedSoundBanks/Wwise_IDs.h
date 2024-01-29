@@ -61,6 +61,7 @@ namespace AK
         static const AkUniqueID PLAYERRUNOVER = 4176432927U;
         static const AkUniqueID PLAYERSLIP = 3973166888U;
         static const AkUniqueID PLAYERSQUISHED = 554093570U;
+        static const AkUniqueID REMOVEALLDRIVINGCARS = 1396965386U;
         static const AkUniqueID SCOREBOARDPOPUP = 2425254643U;
         static const AkUniqueID SLIDEREND = 4271478305U;
         static const AkUniqueID SLIDERSTART = 2671641362U;
