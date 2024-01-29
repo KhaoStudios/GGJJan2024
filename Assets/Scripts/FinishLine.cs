@@ -18,6 +18,7 @@ public class FinishLine : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        AkSoundEngine.PostEvent("removeAllDrivingCars", this.gameObject);
         if (other.gameObject.name.Equals("Player1"))
         {
             GameManager.Instance.StartNextMinigame(GameManager.players.Player1);
