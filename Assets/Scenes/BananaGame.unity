@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964146, b: 0.5748184, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657934, g: 0.49641562, b: 0.5748193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -625,77 +625,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 61.40001, y: 1, z: 50.90001}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &284392805
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 284392808}
-  - component: {fileID: 284392807}
-  - component: {fileID: 284392806}
-  m_Layer: 0
-  m_Name: WwiseGlobal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &284392806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284392805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitBank: {fileID: 11400000, guid: 4f338843c98f425459b0a2b4d787710b, type: 2}
---- !u!114 &284392807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284392805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682c19b71a36a70499797691c46848c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: b606d744e7cf5664eb46cb42aa25235f, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
---- !u!4 &284392808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284392805}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1335,7 +1264,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 10.879165
+  field of view: 11.599652
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1361,7 +1290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011966263}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5070981, y: -0.0005101977, z: 0.0003001785, w: 0.8618882}
+  m_LocalRotation: {x: 0.507098, y: -0.0005102363, z: 0.00030020115, w: 0.86188823}
   m_LocalPosition: {x: -4.7349997, y: 46.1465, z: -42.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2087,19 +2016,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3823121441305814914, guid: 0705bec3a7a960e429544af8c0b8edcc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8618882
+      value: 0.86188823
       objectReference: {fileID: 0}
     - target: {fileID: 3823121441305814914, guid: 0705bec3a7a960e429544af8c0b8edcc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5070981
+      value: 0.507098
       objectReference: {fileID: 0}
     - target: {fileID: 3823121441305814914, guid: 0705bec3a7a960e429544af8c0b8edcc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0005101977
+      value: -0.0005102363
       objectReference: {fileID: 0}
     - target: {fileID: 3823121441305814914, guid: 0705bec3a7a960e429544af8c0b8edcc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0003001785
+      value: 0.00030020115
       objectReference: {fileID: 0}
     - target: {fileID: 5854169134999902634, guid: 0705bec3a7a960e429544af8c0b8edcc, type: 3}
       propertyPath: m_Targets.Array.data[0].target
@@ -2825,7 +2754,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1011966266}
-  - {fileID: 284392808}
   - {fileID: 281693330}
   - {fileID: 731788920030551782}
   - {fileID: 836692159}

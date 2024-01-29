@@ -469,6 +469,7 @@
 								<Sound Name="carHonk" ID="{46497AC1-7FBF-4442-94F2-53563E08F6BA}" ShortID="1054342175">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
