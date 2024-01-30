@@ -14,6 +14,7 @@ namespace ChairGame
         //public GameObject LeftKneePivot;
         //public GameObject RightKneePivot;
         public AnimationCurve KickCurve;
+        public ParticleSystem KickParticles;
         
         private Transform chairTrans;
         private Rigidbody myRB;
@@ -88,7 +89,9 @@ namespace ChairGame
                 otherRB.AddForce(-kickDir * force);
                 BoostSpin();
             }
-            
+
+            Instantiate(KickParticles, transform.position, Quaternion.identity);
+
             myRB.AddForce(kickDir * force);
             kickTimer = KickCooldown;
 

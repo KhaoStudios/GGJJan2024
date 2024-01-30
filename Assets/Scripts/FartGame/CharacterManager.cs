@@ -59,7 +59,7 @@ public class CharacterManager : MonoBehaviour
     IEnumerator StartAudioPlay()
     {
         yield return new WaitForSeconds(0.25f);
-        AkSoundEngine.PostEvent("levelFartTalk", this.gameObject);
+         AkSoundEngine.PostEvent("levelFartTalk", this.gameObject);
     }
 
     public void DisableExclamationOnAll()

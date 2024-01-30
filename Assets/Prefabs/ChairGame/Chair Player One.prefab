@@ -385,6 +385,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  KickParticles: {fileID: 2672430605586212312, guid: acbe89f23d1b3424da6fecbbdd2136bc, type: 3}
   StartingSpinSpeed: 150
   SpinBoostMultiplier: 3
   SpinBoostDecay: 50

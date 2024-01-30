@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class TrackLanded : MonoBehaviour
 {
+    PieceManager pieceManager;
+    private void Start()
+    {
+        pieceManager = FindObjectOfType<PieceManager>();
+    }
+
     // Start is called before the first frame update
     bool landed = false;
     private void OnCollisionEnter(Collision collision)
     {
         if(landed == false)
         {
+            if (pieceManager != null)
+            {
+                Instantiate(pieceManager.LandParticles, transform.position, Quaternion.identity);
+            }
+
             if (gameObject.GetComponent<MeshRenderer>().sharedMaterial.name.Contains("Anvil"))
             {
                 AkSoundEngine.PostEvent("anvilLand", gameObject);

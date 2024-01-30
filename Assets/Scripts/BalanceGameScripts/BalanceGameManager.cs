@@ -14,6 +14,8 @@ public class PieceManager : MonoBehaviour
     public PlayerController player1;
     public PlayerController player2;
 
+    public ParticleSystem LandParticles;
+
     public float speed;
     public float angularSpeed;
 
