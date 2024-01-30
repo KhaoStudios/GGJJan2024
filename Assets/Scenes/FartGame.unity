@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerAmount: {fileID: 1707834145}
   TimerHelp: {fileID: 1934972403}
-  startTimer: 45
+  startTimer: 30
 --- !u!4 &56751403
 Transform:
   m_ObjectHideFlags: 0

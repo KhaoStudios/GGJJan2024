@@ -1742,8 +1742,8 @@ MonoBehaviour:
   angularSpeed: 300
   Player1SpawnLocation: {fileID: 496730187}
   Player2SpawnLocation: {fileID: 1950065156}
-  player1Height: {fileID: 410309332}
-  player2Height: {fileID: 1151982354}
+  player1Height: {fileID: 1151982354}
+  player2Height: {fileID: 410309332}
   avaliablePieces:
   - {fileID: 4413886931031587797, guid: 5f9dd98d3c564e14cbacc9a9903e4017, type: 3}
   - {fileID: 6897802039729564875, guid: 5ec8567b25e320849bf7299b77617cc1, type: 3}
